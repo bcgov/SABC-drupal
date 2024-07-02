@@ -1,0 +1,12 @@
+uuid: 80b03b17-f841-468d-ac33-67beddf71a8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: bcsc_spouse
+label: bcsc_spouse
+weight: 13
+is_admin: null
+permissions:
+  - 'delete own files'

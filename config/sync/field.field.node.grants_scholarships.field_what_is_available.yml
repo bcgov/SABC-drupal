@@ -1,0 +1,21 @@
+uuid: 855f541a-9dfe-4343-892b-061f91f149ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_what_is_available
+    - node.type.grants_scholarships
+  module:
+    - text
+id: node.grants_scholarships.field_what_is_available
+field_name: field_what_is_available
+entity_type: node
+bundle: grants_scholarships
+label: 'What is available?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

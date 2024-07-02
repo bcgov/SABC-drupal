@@ -1,0 +1,12 @@
+name : SABC Repayment Rate Lookup
+description : Repayment Rate Lookup
+#core: 8.x
+core_version_requirement: ^9 || ^10
+package: 'SABC Modules'
+type: module
+libraries:
+  - js/sabc_repayment_rate.js
+  - css/sabc_repayment_rate.css
+dependencies:
+  - drupal:block
+  - jquery_ui_slider:jquery_ui_slider

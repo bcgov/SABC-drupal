@@ -1,0 +1,35 @@
+a[data-toggle="popover"] {
+    font-weight: normal !important;
+}
+.popover-content{
+    font-weight: normal !important;
+}
+div.error {
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.popover {
+    width: 300px;
+}
+
+.form-type-checkbox label.control-label{
+    display: block !important;
+    float: none !important;
+}
+
+.form-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon-info:before {
+    content: "\f315";
+}
+
+[class^="icon-"].pull-right, [class*=" icon-"].pull-right {
+    margin-left: .3em;
+}
+
+.pull-right {
+    float: right;
+}

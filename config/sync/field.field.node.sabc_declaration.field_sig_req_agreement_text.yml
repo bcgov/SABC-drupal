@@ -1,0 +1,21 @@
+uuid: 10bbf79c-97f5-449d-b0aa-df100b5d6447
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sig_req_agreement_text
+    - node.type.sabc_declaration
+  module:
+    - text
+id: node.sabc_declaration.field_sig_req_agreement_text
+field_name: field_sig_req_agreement_text
+entity_type: node
+bundle: sabc_declaration
+label: 'Agreement text (pg 2)'
+description: 'Agreement text for declaration'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

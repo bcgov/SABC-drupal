@@ -1,0 +1,8 @@
+uuid: abe1936d-e8c1-4f28-b48a-53d82406dcf3
+langcode: en
+status: true
+dependencies: {  }
+id: basic_block
+label: 'Basic Block'
+revision: 0
+description: 'Generic utility blocks'

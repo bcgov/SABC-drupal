@@ -1,0 +1,21 @@
+uuid: 066ce23d-b30f-4aef-999b-72aac78033f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_dec_page_footer
+    - node.type.sabc_new_dec
+  module:
+    - text
+id: node.sabc_new_dec.field_new_dec_page_footer
+field_name: field_new_dec_page_footer
+entity_type: node
+bundle: sabc_new_dec
+label: 'Page footer'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

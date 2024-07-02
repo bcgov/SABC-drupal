@@ -1,0 +1,29 @@
+uuid: a1d6bd74-dbdd-4e16-8215-781c42911404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_section
+    - node.type.content_snippets
+    - taxonomy.vocabulary.sabc_page_names
+id: node.content_snippets.field_page_section
+field_name: field_page_section
+entity_type: node
+bundle: content_snippets
+label: 'Page Section'
+description: 'Select a page section for this content snippet.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sabc_page_names: sabc_page_names
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

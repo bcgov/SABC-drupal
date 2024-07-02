@@ -1,0 +1,6 @@
+name: 'SABC Glossary Tool Tips'
+description: 'Tool tips for SABC site.'
+core: 10.x
+core_version_requirement: ^9 || ^10
+package: 'SABC Modules'
+type: module

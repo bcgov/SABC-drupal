@@ -1,0 +1,42 @@
+uuid: b19bcaee-6fe8-4b0c-8883-50da9dde8601
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.content_snippets.body
+    - field.field.node.content_snippets.field_anchor_id
+    - field.field.node.content_snippets.field_forms
+    - field.field.node.content_snippets.field_help_section_tags
+    - field.field.node.content_snippets.field_is_external_meta_tag_neede
+    - field.field.node.content_snippets.field_order_id
+    - field.field.node.content_snippets.field_page_section
+    - field.field.node.content_snippets.field_prog_year
+    - field.field.node.content_snippets.field_site_section_tags
+    - field.field.node.content_snippets.field_snippet_tags
+    - field.field.node.content_snippets.field_title_image
+    - node.type.content_snippets
+  module:
+    - user
+id: node.content_snippets.search_result
+targetEntityType: node
+bundle: content_snippets
+mode: search_result
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_anchor_id: true
+  field_forms: true
+  field_help_section_tags: true
+  field_is_external_meta_tag_neede: true
+  field_order_id: true
+  field_page_section: true
+  field_prog_year: true
+  field_site_section_tags: true
+  field_snippet_tags: true
+  field_title_image: true

@@ -1,0 +1,96 @@
+uuid: bd1922ba-f809-4b87-8d0d-77abf6792155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_repayment_help.field_about_the_program
+    - field.field.node.sabc_repayment_help.field_am_i_eligible_
+    - field.field.node.sabc_repayment_help.field_excerpt
+    - field.field.node.sabc_repayment_help.field_frequently_asked_questions
+    - field.field.node.sabc_repayment_help.field_how_do_i_apply_
+    - field.field.node.sabc_repayment_help.field_is_external_meta_tag_neede
+    - field.field.node.sabc_repayment_help.field_taxonomy
+    - field.field.node.sabc_repayment_help.field_what_are_my_responsibiliti
+    - field.field.node.sabc_repayment_help.field_what_is_available
+    - node.type.sabc_repayment_help
+  module:
+    - text
+    - user
+id: node.sabc_repayment_help.default
+targetEntityType: node
+bundle: sabc_repayment_help
+mode: default
+content:
+  field_about_the_program:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_am_i_eligible_:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_excerpt:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_frequently_asked_questions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_how_do_i_apply_:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_is_external_meta_tag_neede:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_taxonomy:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_what_are_my_responsibiliti:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_what_is_available:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

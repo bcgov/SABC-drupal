@@ -1,0 +1,69 @@
+uuid: 7ef8c3d8-04d5-465a-b54d-ccacd60f9160
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_alerts_system_target_range.field_alert_type
+    - field.field.node.sabc_alerts_system_target_range.field_system_down_message_
+    - field.field.node.sabc_alerts_system_target_range.field_system_error_body
+    - field.field.node.sabc_alerts_system_target_range.field_system_general_message
+    - field.field.node.sabc_alerts_system_target_range.field_system_success_body
+    - field.field.node.sabc_alerts_system_target_range.field_system_warning_message
+    - node.type.sabc_alerts_system_target_range
+  module:
+    - options
+    - text
+    - user
+id: node.sabc_alerts_system_target_range.default
+targetEntityType: node
+bundle: sabc_alerts_system_target_range
+mode: default
+content:
+  field_alert_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_system_down_message_:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_system_error_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_system_general_message:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_system_success_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_system_warning_message:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

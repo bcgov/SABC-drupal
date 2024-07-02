@@ -1,0 +1,23 @@
+uuid: c981c15a-7716-43b1-8264-0d12848e5338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_external_meta_tag_neede
+    - node.type.content_snippets
+id: node.content_snippets.field_is_external_meta_tag_neede
+field_name: field_is_external_meta_tag_neede
+entity_type: node
+bundle: content_snippets
+label: 'Is External Meta Tag needed?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

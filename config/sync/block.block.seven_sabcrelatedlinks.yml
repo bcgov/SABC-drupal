@@ -1,0 +1,31 @@
+uuid: 562d5cf0-4d2c-4acb-93e6-d143b226aaf1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:768a8082-42ad-4eb9-89d8-e9623fcbfb85'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_sabcrelatedlinks
+theme: seven
+region: header
+weight: -10
+provider: null
+plugin: 'block_content:768a8082-42ad-4eb9-89d8-e9623fcbfb85'
+settings:
+  id: 'block_content:768a8082-42ad-4eb9-89d8-e9623fcbfb85'
+  label: 'SABC Related Links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

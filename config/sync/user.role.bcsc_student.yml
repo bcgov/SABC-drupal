@@ -1,0 +1,12 @@
+uuid: 302ecb1f-6085-4630-a8aa-54dc6d6043e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: bcsc_student
+label: bcsc_student
+weight: 11
+is_admin: null
+permissions:
+  - 'delete own files'

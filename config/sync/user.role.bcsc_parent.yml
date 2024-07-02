@@ -1,0 +1,12 @@
+uuid: 9f22633a-a64a-40e3-8544-ece8afbc1dce
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: bcsc_parent
+label: bcsc_parent
+weight: 12
+is_admin: null
+permissions:
+  - 'delete own files'

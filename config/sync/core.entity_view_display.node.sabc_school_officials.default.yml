@@ -1,0 +1,83 @@
+uuid: 2b7d0c1d-95c1-4f06-ab97-a264b75c356a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_school_officials.body
+    - field.field.node.sabc_school_officials.field_file_description
+    - field.field.node.sabc_school_officials.field_form_taxonomy_so
+    - field.field.node.sabc_school_officials.field_forms_school_officials
+    - field.field.node.sabc_school_officials.field_order_id_so
+    - field.field.node.sabc_school_officials.field_smart_forms
+    - field.field.node.sabc_school_officials.field_url_school_officials
+    - node.type.sabc_school_officials
+  module:
+    - file
+    - text
+    - user
+id: node.sabc_school_officials.default
+targetEntityType: node
+bundle: sabc_school_officials
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_file_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_form_taxonomy_so:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_forms_school_officials:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_order_id_so:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ' '
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_smart_forms:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_url_school_officials:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

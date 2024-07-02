@@ -1,0 +1,130 @@
+uuid: 28be4a44-745b-4588-8515-2270002c8ca9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.grants_scholarships.field_am_i_eligible_
+    - field.field.node.grants_scholarships.field_excerpt_gs
+    - field.field.node.grants_scholarships.field_how_do_i_apply_
+    - field.field.node.grants_scholarships.field_is_external_meta_tag_neede
+    - field.field.node.grants_scholarships.field_taxonomy
+    - field.field.node.grants_scholarships.field_url_grants_scholarsh
+    - field.field.node.grants_scholarships.field_what_is_available
+    - node.type.grants_scholarships
+  module:
+    - path
+    - text
+id: node.grants_scholarships.default
+targetEntityType: node
+bundle: grants_scholarships
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_am_i_eligible_:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_excerpt_gs:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_how_do_i_apply_:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_is_external_meta_tag_neede:
+    type: boolean_checkbox
+    weight: 122
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_taxonomy:
+    type: entity_reference_autocomplete
+    weight: 121
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_url_grants_scholarsh:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_what_is_available:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

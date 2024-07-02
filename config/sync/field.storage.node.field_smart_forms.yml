@@ -1,0 +1,23 @@
+uuid: 131f6a2e-4d4e-4adb-b426-b8a36bbd58c1
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_smart_forms
+field_name: field_smart_forms
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

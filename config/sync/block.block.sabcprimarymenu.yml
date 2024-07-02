@@ -1,0 +1,30 @@
+uuid: 638df1ad-d1b2-42d0-83b4-c6e446a40c10
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-primary-menu
+  module:
+    - system
+  theme:
+    - sabc
+id: sabcprimarymenu
+theme: sabc
+region: nav_main
+weight: -5
+provider: null
+plugin: 'system_menu_block:menu-primary-menu'
+settings:
+  id: 'system_menu_block:menu-primary-menu'
+  label: 'SABC Primary Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/admin/*'

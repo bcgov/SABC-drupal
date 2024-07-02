@@ -1,0 +1,31 @@
+uuid: a24c43cc-b409-47fd-8741-82c06c7601b8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:39eb743b-90ae-4242-8642-07c2e469ad8a'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_formslibrarysubnav
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:39eb743b-90ae-4242-8642-07c2e469ad8a'
+settings:
+  id: 'block_content:39eb743b-90ae-4242-8642-07c2e469ad8a'
+  label: 'Forms Library Subnav'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /form-library

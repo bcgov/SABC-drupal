@@ -1,0 +1,21 @@
+uuid: 262ede79-1263-4eb6-b114-aa375d5d0927
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_dec_title_pg_2_
+    - node.type.sabc_new_dec
+  module:
+    - text
+id: node.sabc_new_dec.field_new_dec_title_pg_2_
+field_name: field_new_dec_title_pg_2_
+entity_type: node
+bundle: sabc_new_dec
+label: Declaration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

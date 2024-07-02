@@ -1,0 +1,23 @@
+uuid: a3bbbd64-6290-4bc9-a7b0-c8ca0157a6f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_system_general_message
+    - node.type.sabc_alerts_system_target_range
+  module:
+    - text
+id: node.sabc_alerts_system_target_range.field_system_general_message
+field_name: field_system_general_message
+entity_type: node
+bundle: sabc_alerts_system_target_range
+label: 'System General Message'
+description: 'This message displays 1 hour before the start time of message.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

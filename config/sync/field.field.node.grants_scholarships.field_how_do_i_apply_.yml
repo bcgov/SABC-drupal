@@ -1,0 +1,21 @@
+uuid: a4fb7a7d-bf16-4d42-bb88-278cdcd77427
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how_do_i_apply_
+    - node.type.grants_scholarships
+  module:
+    - text
+id: node.grants_scholarships.field_how_do_i_apply_
+field_name: field_how_do_i_apply_
+entity_type: node
+bundle: grants_scholarships
+label: 'How do I apply?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

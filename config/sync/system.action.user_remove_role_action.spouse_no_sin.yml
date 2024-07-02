@@ -1,0 +1,14 @@
+uuid: a3cfb6e0-b0ad-4e99-a7d4-1c17dc69edc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spouse_no_sin
+  module:
+    - user
+id: user_remove_role_action.spouse_no_sin
+label: 'Remove the spouse_no_sin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: spouse_no_sin

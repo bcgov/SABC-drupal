@@ -1,0 +1,23 @@
+uuid: f4a71764-3bbc-4365-9657-8dabbcd43be2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sabc_pathway_pages
+  module:
+    - text
+id: node.sabc_pathway_pages.body
+field_name: body
+entity_type: node
+bundle: sabc_pathway_pages
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

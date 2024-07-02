@@ -1,0 +1,22 @@
+uuid: a284d74e-8958-4219-a47c-a47fbc5978dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sabc_blog_path
+label: 'SABC Blog Path'
+type: 'canonical_entities:node'
+pattern: '/news/[node:field_blog_category]/[node:title]'
+selection_criteria:
+  595313a4-c08a-440f-9f8d-36e5ae1c9646:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 595313a4-c08a-440f-9f8d-36e5ae1c9646
+    context_mapping:
+      node: node
+    bundles:
+      sabc_blog: sabc_blog
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,24 @@
+uuid: 4e2fd7bd-4abb-470d-a6e7-e1bc959500d4
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.sabc_alerts_block_view
+  module:
+    - views
+  theme:
+    - seven
+id: seven_views_block__sabc_alerts_block_view_sabc_alerts_block
+theme: seven
+region: highlighted
+weight: -15
+provider: null
+plugin: 'views_block:sabc_alerts_block_view-sabc_alerts_block'
+settings:
+  id: 'views_block:sabc_alerts_block_view-sabc_alerts_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 118d18b9-766c-4cde-a480-8f870af2a2f1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sabc
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: sabc_local_tasks
+theme: sabc
+region: content
+weight: -14
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

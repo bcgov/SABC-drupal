@@ -1,0 +1,23 @@
+uuid: e1d6c4b8-67ed-4f02-a181-a9d6ce79f580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_system_warning_message
+    - node.type.sabc_alerts_system_target_range
+  module:
+    - text
+id: node.sabc_alerts_system_target_range.field_system_warning_message
+field_name: field_system_warning_message
+entity_type: node
+bundle: sabc_alerts_system_target_range
+label: 'System Warning message'
+description: "This message will display 10min before the alert start time. Eg 'Going down in 10min time..'"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

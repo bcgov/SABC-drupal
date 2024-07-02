@@ -1,0 +1,8 @@
+uuid: d4c708ae-b8bd-4523-8850-771eaedd7783
+langcode: en
+status: true
+dependencies: {  }
+name: 'SABC Site Section Tags'
+vid: tags
+description: 'SABC site taxonamy'
+weight: 0

@@ -1,0 +1,14 @@
+uuid: 2145ab7a-87e2-4e3b-824d-c34225c0dcfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bcsc_parent
+  module:
+    - user
+id: user_add_role_action.bcsc_parent
+label: 'Add the bcsc_parent role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bcsc_parent

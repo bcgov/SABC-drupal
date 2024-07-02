@@ -1,0 +1,27 @@
+uuid: 7e1abceb-5e6e-4d1d-a46e-c88831d7aac2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_forms_school_officials
+    - node.type.sabc_school_officials
+  module:
+    - file
+id: node.sabc_school_officials.field_forms_school_officials
+field_name: field_forms_school_officials
+entity_type: node
+bundle: sabc_school_officials
+label: Forms
+description: 'Use this field to upload non-smart forms (non-LiveCycle). '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: school-officials
+  file_extensions: 'pdf fdf xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

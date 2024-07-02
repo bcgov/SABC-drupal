@@ -1,0 +1,21 @@
+uuid: 3ca59817-b2d3-4ad5-8ded-d0699150cb49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_e_consent_title
+    - node.type.sabc_e_consent
+  module:
+    - text
+id: node.sabc_e_consent.field_e_consent_title
+field_name: field_e_consent_title
+entity_type: node
+bundle: sabc_e_consent
+label: E-Consent
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

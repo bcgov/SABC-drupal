@@ -1,0 +1,23 @@
+uuid: a6142991-5352-42d3-babc-593446af3510
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_id
+    - node.type.sabc_forms
+id: node.sabc_forms.field_order_id
+field_name: field_order_id
+entity_type: node
+bundle: sabc_forms
+label: 'Order ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

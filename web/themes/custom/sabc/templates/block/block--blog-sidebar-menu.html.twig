@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Theme override for the search form block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values, including:
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: A list HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template. Includes:
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ * @see search_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'row',
+    'container-inline',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  <br/>
+</div>
+
+<ul>
+  <li class="first ">
+    <a href="/news" title="All News">All News</a>
+  </li>
+  <li class="">
+    <a href="/news/system_updates" title="System Updates">System Updates<div class="hide-on-phones badge badge-blog">2</div></a>
+  </li>
+  <li class="active-trail">
+    <a href="/news/grants-and-scholarships" title="Grants &amp; scholarships">Grants &amp; scholarships<div class="hide-on-phones badge badge-blog">3</div></a>
+  </li>
+  <li class="">
+    <a href="/news/general" title="General">General<div class="hide-on-phones badge badge-blog">14</div></a>
+  </li>
+  <li class="">
+    <a href="/news/loans" title="Loans">Loans<div class="hide-on-phones badge badge-blog">4</div></a>
+  </li>
+</ul>
+
+

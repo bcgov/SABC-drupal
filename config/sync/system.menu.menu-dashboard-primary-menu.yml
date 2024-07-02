@@ -1,0 +1,8 @@
+uuid: 232e9f22-bbc1-4b70-886f-37d46c9c613c
+langcode: en
+status: true
+dependencies: {  }
+id: menu-dashboard-primary-menu
+label: 'Dashboard Primary Menu'
+description: 'Main Menu for Dashboard only'
+locked: false

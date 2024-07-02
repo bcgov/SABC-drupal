@@ -1,0 +1,14 @@
+uuid: 689a4376-6f11-4e80-84b0-aede6a28ab58
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bcsc_student
+  module:
+    - user
+id: user_add_role_action.bcsc_student
+label: 'Add the bcsc_student role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bcsc_student

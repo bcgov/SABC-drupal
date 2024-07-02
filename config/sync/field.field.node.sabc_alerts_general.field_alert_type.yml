@@ -1,0 +1,21 @@
+uuid: 2da179d0-3c82-4a73-b14c-20c1ccb1e713
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_type
+    - node.type.sabc_alerts_general
+  module:
+    - options
+id: node.sabc_alerts_general.field_alert_type
+field_name: field_alert_type
+entity_type: node
+bundle: sabc_alerts_general
+label: 'Alert Type'
+description: 'Select the type of alert you would like. Represented by type & color of alert'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

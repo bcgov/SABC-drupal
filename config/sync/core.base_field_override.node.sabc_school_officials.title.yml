@@ -1,0 +1,18 @@
+uuid: 9706df08-a97e-41cd-91ce-2d092d8ca5b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sabc_school_officials
+id: node.sabc_school_officials.title
+field_name: title
+entity_type: node
+bundle: sabc_school_officials
+label: 'Form Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

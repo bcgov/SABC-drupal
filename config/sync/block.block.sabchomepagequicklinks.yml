@@ -1,0 +1,31 @@
+uuid: 60c593ed-c08f-4a6a-84ba-0a88e1ea4549
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:b2b131f6-8226-432b-8b83-b463d28383b6'
+  module:
+    - block_content
+    - system
+  theme:
+    - sabc
+id: sabchomepagequicklinks
+theme: sabc
+region: home_col_2
+weight: -7
+provider: null
+plugin: 'block_content:b2b131f6-8226-432b-8b83-b463d28383b6'
+settings:
+  id: 'block_content:b2b131f6-8226-432b-8b83-b463d28383b6'
+  label: 'SABC Home Page quick links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

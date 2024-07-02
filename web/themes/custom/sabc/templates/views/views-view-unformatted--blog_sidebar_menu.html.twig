@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{#
+ {% if title %}
+  <h3>{{ title }}</h3>
+  {% endif %}
+#}
+
+<nav id="block-sabcprimary-sidemenu" class="sabc-news-sidebar-menu">
+  <ul class="navbar-nav navbar-expand-xl">
+
+    {% set current = path('<current>') %} 
+    {% set isRoot = current == '/news' %}
+    {% set rootClass = isRoot ? ' is-active' : '' %}
+
+    <li class="nav-item">
+      <a href="/news" title="All News" class="nav-item nav-link {{rootClass}}">All News</a>
+    </li>
+
+    {% for row in view.result %}
+      {% set l_name = view.field.name.value(row) %}
+      {% set l_tid = view.field.tid.value(row) %}
+      {% set l_count = view.field.name_1.value(row) %}
+      {% set termpath = path('entity.taxonomy_term.canonical', {'taxonomy_term': l_tid})|render %}
+      {% set termsplit = termpath|split('/') %} 
+      {% set term = termsplit|last %} 
+      {% set active = term in current %}
+      {% set a_classes = [ 
+        'nav-link',
+        'nav-item',
+        active ? 'is-active',
+      ] %}
+
+      <li class="nav-item">
+        <a class="{{ a_classes|join(' ') }}" href="/news/{{ term }}" title="{{ l_name }}">{{ l_name }}<span class="count">{{ l_count }}</span></a>
+      </li>
+
+    {% endfor %}
+  </ul>
+</nav>
+

@@ -1,0 +1,19 @@
+uuid: acdc3d6a-457d-4582-95bd-9928866b590c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_new_dec_page_footer
+field_name: field_new_dec_page_footer
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

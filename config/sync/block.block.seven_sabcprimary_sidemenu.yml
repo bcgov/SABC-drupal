@@ -1,0 +1,30 @@
+uuid: 80ba3d4e-cc9c-426a-9b08-577c503b522d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-primary-menu
+  module:
+    - system
+  theme:
+    - seven
+id: seven_sabcprimary_sidemenu
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-primary-menu'
+settings:
+  id: 'system_menu_block:menu-primary-menu'
+  label: 'SABC Primary Side Menu'
+  label_display: '0'
+  provider: system
+  level: 2
+  depth: 1
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "dashboard*\r\nhelp-centre*\r\n<front>"

@@ -1,0 +1,31 @@
+uuid: 5346aff0-d4ee-48a7-ad7f-c22e98d6000a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:9fe642d1-47f8-4865-8d4c-d5f2e9fd9f8c'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_applicationprocessingdates
+theme: seven
+region: header
+weight: -12
+provider: null
+plugin: 'block_content:9fe642d1-47f8-4865-8d4c-d5f2e9fd9f8c'
+settings:
+  id: 'block_content:9fe642d1-47f8-4865-8d4c-d5f2e9fd9f8c'
+  label: 'Application Processing Dates'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

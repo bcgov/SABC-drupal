@@ -1,0 +1,7 @@
+sabc_tool_tips:
+  version: 1.x
+  dependencies:
+    - core/jquery
+  js:
+    js/tool_tips.js: {}
+    

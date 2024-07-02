@@ -1,0 +1,19 @@
+uuid: ed8f1a63-8700-4b88-9dff-3e6a68b49026
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_grants_scholarsh
+    - node.type.grants_scholarships
+id: node.grants_scholarships.field_url_grants_scholarsh
+field_name: field_url_grants_scholarsh
+entity_type: node
+bundle: grants_scholarships
+label: URL
+description: 'Full link path required. Alternative link path for pages found here: /explore/grants-scholarships (Kayako#25046). If link provided will hijack page path link. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

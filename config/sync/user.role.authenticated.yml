@@ -1,0 +1,26 @@
+uuid: 58aef5a9-4430-4cf8-bb2e-cc557a406000
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - file
+    - filter
+    - mailsystem
+    - media
+    - search
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - administer_mailsystem
+  - 'delete own files'
+  - 'search content'
+  - 'use text format filtered_html'
+  - 'view media'

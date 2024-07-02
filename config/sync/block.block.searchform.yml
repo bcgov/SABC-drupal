@@ -1,0 +1,27 @@
+uuid: e7831b62-0748-4880-a320-e526e190cb63
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - sabc
+id: searchform
+theme: sabc
+region: home_col_1
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,122 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.0",
+        "doctrine/common": "^3.1",
+        "drupal/bootstrap4": "^3.0",
+        "drupal/bootstrap_layout_builder": "^2.1",
+        "drupal/bootstrap_styles": "^1.1",
+        "drupal/ckeditor": "1.0",
+        "drupal/classy": "^1.0",
+        "drupal/core-composer-scaffold": "10.2.6",
+        "drupal/core-project-message": "10.2.6",
+        "drupal/core-recommended": "10.2.6",
+        "drupal/core-vendor-hardening": "^10.1.6",
+        "drupal/ctools": "^3.14",
+        "drupal/devel": "^5.0",
+        "drupal/easy_breadcrumb": "^2.0",
+        "drupal/gin": "^3.0@RC",
+        "drupal/jquery_ui": "^1.7",
+        "drupal/jquery_ui_slider": "^2.1",
+        "drupal/libraries": "^4.0",
+        "drupal/mailsystem": "^4.4",
+        "drupal/media_library_theme_reset": "^1.5",
+        "drupal/pathauto": "^1.12",
+        "drupal/rdf": "2.0",
+        "drupal/scheduler": "^1.5",
+        "drupal/seven": "^1.0",
+        "drupal/symfony_mailer": "^1.4",
+        "drupal/token": "^1.14",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/upgrade_status": "^4.3",
+        "drupal/views_taxonomy_term_name_depth": "^7.2",
+        "drupal/views_taxonomy_term_name_into_id": "^1.0@RC",
+        "drupal/workbench": "1.4",
+        "drupal/workbench_access": "^2.0",
+        "drush/drush": "^12",
+        "kint-php/kint": "^3.3"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    }
+}

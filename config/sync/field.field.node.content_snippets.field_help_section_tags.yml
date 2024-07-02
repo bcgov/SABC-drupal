@@ -1,0 +1,29 @@
+uuid: c6ed660e-d885-44a6-be06-9421bc3371ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_help_section_tags
+    - node.type.content_snippets
+    - taxonomy.vocabulary.help_tags
+id: node.content_snippets.field_help_section_tags
+field_name: field_help_section_tags
+entity_type: node
+bundle: content_snippets
+label: 'Help Section Tags'
+description: '<ins>Please select the Help section where you want your content to appear under.  These tags are <b>not</b> required!</ins>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      help_tags: help_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,27 @@
+uuid: 8a5ddd03-348f-44bb-945b-1bc39156eb01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smart_forms
+    - node.type.sabc_school_officials
+  module:
+    - file
+id: node.sabc_school_officials.field_smart_forms
+field_name: field_smart_forms
+entity_type: node
+bundle: sabc_school_officials
+label: 'Smart Forms'
+description: "Use this field for Smart Forms only (such as Adobe LiveCycle forms) that will be forced to be downloaded to the user's browser. DO NOT use both the Smart Forms and Forms fields simultaneously. "
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: smart-forms
+  file_extensions: 'pdf fdf'
+  max_filesize: '20 MB'
+  description_field: false
+field_type: file

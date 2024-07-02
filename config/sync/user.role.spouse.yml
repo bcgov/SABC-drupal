@@ -1,0 +1,12 @@
+uuid: d16470d6-6963-4cd9-8640-c9a3d2d60030
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: spouse
+label: spouse
+weight: 6
+is_admin: null
+permissions:
+  - 'delete own files'

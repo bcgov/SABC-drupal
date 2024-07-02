@@ -1,0 +1,8 @@
+sabc_tool_tips.tips:
+  path: '/ajax/tool-tips'
+  defaults:
+    _controller: '\Drupal\sabc_tool_tips\Controller\ToolTipsController::getToolTips'
+    _title: 'Tool tips'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'

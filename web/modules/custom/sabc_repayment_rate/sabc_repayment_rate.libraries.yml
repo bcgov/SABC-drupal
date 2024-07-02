@@ -1,0 +1,12 @@
+sabc_repayment_rate:
+  version: 1.x
+  css:
+    layout:
+      css/sabc_repayment_rate.css: {}
+    theme:
+      css/sabc_repayment_rate.css: {}
+  js:
+    js/sabc_repayment_rate.js: {}
+  dependencies:
+    - jquery_ui_slider/slider
+

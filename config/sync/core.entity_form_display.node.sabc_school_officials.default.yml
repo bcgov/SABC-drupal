@@ -1,0 +1,131 @@
+uuid: 2469c65a-7980-4eb5-87d3-3c1d8cfd4179
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_school_officials.body
+    - field.field.node.sabc_school_officials.field_file_description
+    - field.field.node.sabc_school_officials.field_form_taxonomy_so
+    - field.field.node.sabc_school_officials.field_forms_school_officials
+    - field.field.node.sabc_school_officials.field_order_id_so
+    - field.field.node.sabc_school_officials.field_smart_forms
+    - field.field.node.sabc_school_officials.field_url_school_officials
+    - node.type.sabc_school_officials
+  module:
+    - file
+    - path
+    - text
+id: node.sabc_school_officials.default
+targetEntityType: node
+bundle: sabc_school_officials
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_file_description:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_form_taxonomy_so:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_forms_school_officials:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_order_id_so:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_smart_forms:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_url_school_officials:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

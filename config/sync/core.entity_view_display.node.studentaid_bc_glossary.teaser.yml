@@ -1,0 +1,32 @@
+uuid: 1a603b3c-29d0-40cd-9463-c0fd37f90f65
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.studentaid_bc_glossary.body
+    - field.field.node.studentaid_bc_glossary.field_glossary_tag
+    - node.type.studentaid_bc_glossary
+  module:
+    - text
+    - user
+id: node.studentaid_bc_glossary.teaser
+targetEntityType: node
+bundle: studentaid_bc_glossary
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_glossary_tag: true

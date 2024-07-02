@@ -1,0 +1,14 @@
+uuid: 9a293ca3-0389-46bc-898f-daae3ff54fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bcsc_spouse
+  module:
+    - user
+id: user_remove_role_action.bcsc_spouse
+label: 'Remove the bcsc_spouse role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bcsc_spouse

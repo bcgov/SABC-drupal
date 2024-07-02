@@ -1,0 +1,12 @@
+sabc_institution:
+  version: 1.x
+  dependencies:
+  - core/drupal
+  css:
+    layout:
+      css/sabc_institution.css: {}
+    theme:
+      css/sabc_institution.css: {}
+  js:
+    js/sabc_institution.js: {}
+    js/datatables.min.js: {}

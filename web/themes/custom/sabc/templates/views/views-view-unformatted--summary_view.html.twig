@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<div class="container p-0 sabc_view_content">
+
+  {% for summary_row in view.result|filter(r => r._entity.bundle() == "content_summary") %}
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="content-title">{{ view.field.title.value(summary_row) }}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-8">
+        <div>{{ view.field.field_summary_description.value(summary_row) | raw }}</div>
+        <div>
+          <ul class="anchors">
+            {% for snippet_result in view.result|filter(r => r._entity.bundle() == "content_snippets") %}
+
+              <li>
+                <a href="#{{ view.field.field_anchor_id.value(snippet_result) }}">
+                  <span class="{{ view.field.field_title_image.value(snippet_result) }}"></span>
+                  {{ view.field.title.value(snippet_result) }}
+                </a>
+              </li>
+
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        {{ rows[0].content }}
+      </div>
+
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12">
+        {% if view.field.field_page_section.value(summary_row) == '40' %}
+          {{ drupal_view('grants_scholarships', 'default') }}
+        {% elseif view.field.field_page_section.value(summary_row) == '54' %}
+          {{ drupal_view('repayment_help', 'default') }}
+        {% endif %}
+      <div>
+    </div>
+  {% endfor %}
+ 
+
+
+
+{# {{ kint(rows[0]) }}
+{{ kint(rows[0].content['#row']._entity) }}
+{{ kint(rows[0].content['#view'].field.field_page_image) }}
+{{ rows[0].content['#view'].field.field_page_image.content }} #}

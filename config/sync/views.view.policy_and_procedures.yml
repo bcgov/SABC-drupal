@@ -1,0 +1,1177 @@
+uuid: 14f9663f-fcb5-4088-a3ad-535eb3fe7f7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_description
+    - field.storage.node.field_form_taxonomy_so
+    - field.storage.node.field_forms_school_officials
+    - field.storage.node.field_order_id_so
+    - field.storage.node.field_smart_forms
+    - field.storage.node.field_url_school_officials
+    - node.type.sabc_school_officials
+    - system.menu.menu-primary-menu
+  module:
+    - file
+    - node
+    - taxonomy
+    - text
+    - user
+id: policy_and_procedures
+label: 'Institution Officials'
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Institution Officials'
+      fields:
+        field_url_school_officials:
+          id: field_url_school_officials
+          table: node__field_url_school_officials
+          field: field_url_school_officials
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: URL
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        view_node_1:
+          id: view_node_1
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
+          label: 'Content URL'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: false
+        filemime:
+          id: filemime
+          table: file_managed
+          field: filemime
+          relationship: field_forms_school_officials_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: file
+          entity_field: filemime
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_filemime
+          settings:
+            link_to_file: false
+            filemime_image: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_forms_school_officials:
+          id: field_forms_school_officials
+          table: node__field_forms_school_officials
+          field: field_forms_school_officials
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Forms
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_smart_forms:
+          id: field_smart_forms
+          table: node__field_smart_forms
+          field: field_smart_forms
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Smart Forms'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: file_url_plain
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        filemime_1:
+          id: filemime_1
+          table: file_managed
+          field: filemime
+          relationship: field_smart_forms_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: file
+          entity_field: filemime
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_filemime
+          settings:
+            link_to_file: false
+            filemime_image: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        filesize:
+          id: filesize
+          table: file_managed
+          field: filesize
+          relationship: field_forms_school_officials_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: file
+          entity_field: filesize
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_size
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        filesize_1:
+          id: filesize_1
+          table: file_managed
+          field: filesize
+          relationship: field_smart_forms_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: file
+          entity_field: filesize
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: file_size
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_form_taxonomy_so:
+          id: field_form_taxonomy_so
+          table: node__field_form_taxonomy_so
+          field: field_form_taxonomy_so
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_file_description:
+          id: field_file_description
+          table: node__field_file_description
+          field: field_file_description
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'File Description'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_order_id_so:
+          id: field_order_id_so
+          table: node__field_order_id_so
+          field: field_order_id_so
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Order ID'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if field_forms_school_officials %}\r\n   <a href=\"{{ field_forms_school_officials }}\" target=\"_blank\">{{ title }}</a>\r\n<p>{{ field_file_description }} </p>\r\n{% elseif field_smart_forms %}\r\n    <a href=\"{{ field_smart_forms }}\"  target=\"_blank\">{{ title }}</a>\r\n<p>{{ field_file_description }} </p>\r\n{% elseif field_url_school_officials %}\r\n    <a href=\"{{ field_url_school_officials }}\" >{{ title }}</a>\r\n<p>{{ field_file_description }} </p>\r\n{% else %}\r\n   <a href=\"{{ view_node_1 }}\"  target=\"_blank\">{{ title }}</a>\r\n<p>{{ field_file_description }} </p>\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: span
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if filesize %}\r\n   <span class=\"right\">{{filesize}} - {{ filemime }}</span>\r\n{% elseif filesize_1 %}\r\n   <span class=\"right\">{{filesize_1}} - {{ filemime_1 }}</span>\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_form_taxonomy_so
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: weight
+          exposed: false
+        field_order_id_so_value:
+          id: field_order_id_so_value
+          table: node__field_order_id_so
+          field: field_order_id_so_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: field_order_id_so_value
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            sabc_school_officials: sabc_school_officials
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        body_value:
+          id: body_value
+          table: node__body
+          field: body_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      style:
+        type: table
+        options:
+          grouping:
+            -
+              field: field_form_taxonomy_so
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: false
+          columns:
+            field_url_school_officials: field_url_school_officials
+            view_node_1: view_node_1
+            filemime: filemime
+            field_forms_school_officials: field_forms_school_officials
+            field_smart_forms: field_smart_forms
+            filemime_1: filemime_1
+            filesize: filesize
+            filesize_1: filesize_1
+            field_form_taxonomy_so: field_form_taxonomy_so
+            field_file_description: field_file_description
+            field_order_id_so: field_order_id_so
+            title: field_form_taxonomy_so
+            nothing: nothing
+          default: '-1'
+          info:
+            field_url_school_officials:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view_node_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            filemime:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_forms_school_officials:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_smart_forms:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            filemime_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            filesize:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            filesize_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_form_taxonomy_so:
+              sortable: false
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_file_description:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_order_id_so:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships:
+        field_form_taxonomy_so:
+          id: field_form_taxonomy_so
+          table: node__field_form_taxonomy_so
+          field: field_form_taxonomy_so
+          relationship: none
+          group_type: group
+          admin_label: 'field_form_taxonomy_so: Taxonomy term'
+          plugin_id: standard
+          required: false
+        field_forms_school_officials_target_id:
+          id: field_forms_school_officials_target_id
+          table: node__field_forms_school_officials
+          field: field_forms_school_officials_target_id
+          relationship: none
+          group_type: group
+          admin_label: 'file from field_forms_school_officials'
+          plugin_id: standard
+          required: false
+        field_smart_forms_target_id:
+          id: field_smart_forms_target_id
+          table: node__field_smart_forms
+          field: field_smart_forms_target_id
+          relationship: none
+          group_type: group
+          admin_label: 'file from field_smart_forms'
+          plugin_id: standard
+          required: false
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "<hr/>\r\n<!--<a href=\"https://partners.aved.gov.bc.ca\" class=\"btn btn-secondary btn-block\" target=\"_blank\">Login to the Partner Portal</a>-->\r\n\r\n<div class=\"download\">\r\n  <p class=\"link\"> <a href=\"/sites/all/files/school-officials/policy_manual.pdf\" class=\"btn btn-large btn-info\" target=\"_blank\"><span class=\"fa fa-download\"></span> Download Manual</a> </p>\r\n  <div class=\"details\">\r\n    <p class=\"name\">    StudentAid BC policy manual </p>\r\n    <p class=\"size\"> PDF - 1890.03 KB</p>\r\n  </div>\r\n</div>\r\n\r\n<h3>The StudentAid BC Policy Manual is a comprehensive guide to the policies governing the StudentAid BC program.</h3>\r\n\r\n<hr />\r\n<p>Officials from post-secondary education institutions can find additional information, resources and forms related to the administration of StudentAid BC in the sections below.</p>\r\n\r\n<p>The <a href=\"/sites/all/files/school-officials/admin_manual.pdf\" target=\"_blank\">StudentAid BC Administration Manual</a> provides instructions for private post-secondary institution officials about how to administer StudentAid BC policies.</p>\r\n\r\n<div class=\"alert alert-info\">All forms are in PDF format and require <a href=\"http://get.adobe.com/reader/\">Adobe Reader 9.1</a> or higher.</div>"
+            format: full_html
+          tokenize: false
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_file_description'
+        - 'config:field.storage.node.field_form_taxonomy_so'
+        - 'config:field.storage.node.field_forms_school_officials'
+        - 'config:field.storage.node.field_order_id_so'
+        - 'config:field.storage.node.field_smart_forms'
+        - 'config:field.storage.node.field_url_school_officials'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: institution-officials
+      menu:
+        type: normal
+        title: 'Institution Officials'
+        description: ''
+        weight: -45
+        enabled: true
+        expanded: true
+        menu_name: menu-primary-menu
+        parent: ''
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_file_description'
+        - 'config:field.storage.node.field_form_taxonomy_so'
+        - 'config:field.storage.node.field_forms_school_officials'
+        - 'config:field.storage.node.field_order_id_so'
+        - 'config:field.storage.node.field_smart_forms'
+        - 'config:field.storage.node.field_url_school_officials'

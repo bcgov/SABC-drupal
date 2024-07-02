@@ -1,0 +1,12 @@
+sabc_forms.admin:
+  title: 'SABC Custom Settings'
+  description: 'Manage SABC Custom Settings.'
+  parent: system.admin_config_system
+  route_name: sabc_forms.sabc_private_data_form
+  menu_name: sabc_forms
+sabc_forms.private_data:
+  title: 'Manage SABC Private Data'
+  description: 'Manage SABC Private Data.'
+  parent: sabc_forms.admin
+  route_name: sabc_forms.sabc_private_data_form
+  menu_name: sabc_forms

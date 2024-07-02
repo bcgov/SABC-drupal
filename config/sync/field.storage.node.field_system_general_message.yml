@@ -1,0 +1,19 @@
+uuid: dccca4b6-a35a-4bce-923d-1947876af6e3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_system_general_message
+field_name: field_system_general_message
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

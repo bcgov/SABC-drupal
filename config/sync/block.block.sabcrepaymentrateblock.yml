@@ -1,0 +1,25 @@
+uuid: c36ff9a0-8c38-493d-8c49-7ed1698c9a58
+langcode: en
+status: false
+dependencies:
+  module:
+    - sabc_repayment_rate
+    - system
+  theme:
+    - sabc
+id: sabcrepaymentrateblock
+theme: sabc
+region: content
+weight: -15
+provider: null
+plugin: sabc_repayment_rate_block
+settings:
+  id: sabc_repayment_rate_block
+  label: 'Loan repayment calculator'
+  label_display: '0'
+  provider: sabc_repayment_rate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /plan/debt

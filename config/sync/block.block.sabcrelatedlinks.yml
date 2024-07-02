@@ -1,0 +1,25 @@
+uuid: 7c77fc3f-0c7e-443e-b25e-41852320faa8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:768a8082-42ad-4eb9-89d8-e9623fcbfb85'
+  module:
+    - block_content
+  theme:
+    - sabc
+id: sabcrelatedlinks
+theme: sabc
+region: footer_nav
+weight: -10
+provider: null
+plugin: 'block_content:768a8082-42ad-4eb9-89d8-e9623fcbfb85'
+settings:
+  id: 'block_content:768a8082-42ad-4eb9-89d8-e9623fcbfb85'
+  label: 'SABC Related Links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

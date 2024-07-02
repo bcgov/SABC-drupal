@@ -1,0 +1,208 @@
+uuid: 6093c9de-0854-4c45-b33c-c8891eb613f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.blog_format
+    - filter.format.ckedit
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.php_code
+    - node.type.article
+    - node.type.content_snippets
+    - node.type.content_summary
+    - node.type.grants_scholarships
+    - node.type.page
+    - node.type.sabc_alerts_general
+    - node.type.sabc_alerts_system_target_range
+    - node.type.sabc_blog
+    - node.type.sabc_declaration
+    - node.type.sabc_e_consent
+    - node.type.sabc_forms
+    - node.type.sabc_new_dec
+    - node.type.sabc_pathway_pages
+    - node.type.sabc_policy_and_procedures
+    - node.type.sabc_reminders
+    - node.type.sabc_repayment_help
+    - node.type.sabc_school_officials
+    - node.type.studentaid_bc_glossary
+    - node.type.webform
+  module:
+    - block
+    - block_content
+    - config
+    - contextual
+    - devel
+    - easy_breadcrumb
+    - field_ui
+    - file
+    - filter
+    - image
+    - mailsystem
+    - media
+    - node
+    - path
+    - pathauto
+    - scheduler
+    - search
+    - symfony_mailer
+    - system
+    - taxonomy
+    - toolbar
+    - update
+    - views_ui
+    - workbench
+    - workbench_access
+id: administrator
+label: administrator
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access devel information'
+  - 'access files overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'access workbench'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer display modes'
+  - 'administer easy breadcrumb'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer mailer'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer scheduler'
+  - 'administer search'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer users'
+  - 'administer views'
+  - 'administer workbench'
+  - 'administer workbench access'
+  - administer_mailsystem
+  - 'assign workbench access'
+  - 'batch update workbench access'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create article content'
+  - 'create content_snippets content'
+  - 'create content_summary content'
+  - 'create grants_scholarships content'
+  - 'create page content'
+  - 'create sabc_alerts_general content'
+  - 'create sabc_alerts_system_target_range content'
+  - 'create sabc_blog content'
+  - 'create sabc_declaration content'
+  - 'create sabc_e_consent content'
+  - 'create sabc_forms content'
+  - 'create sabc_new_dec content'
+  - 'create sabc_pathway_pages content'
+  - 'create sabc_policy_and_procedures content'
+  - 'create sabc_reminders content'
+  - 'create sabc_repayment_help content'
+  - 'create sabc_school_officials content'
+  - 'create studentaid_bc_glossary content'
+  - 'create url aliases'
+  - 'create webform content'
+  - 'delete any article content'
+  - 'delete any content_snippets content'
+  - 'delete any content_summary content'
+  - 'delete any grants_scholarships content'
+  - 'delete any page content'
+  - 'delete any sabc_blog content'
+  - 'delete any sabc_forms content'
+  - 'delete any sabc_pathway_pages content'
+  - 'delete any sabc_reminders content'
+  - 'delete any sabc_repayment_help content'
+  - 'delete any sabc_school_officials content'
+  - 'delete any studentaid_bc_glossary content'
+  - 'delete own article content'
+  - 'delete own content_snippets content'
+  - 'delete own content_summary content'
+  - 'delete own files'
+  - 'delete own grants_scholarships content'
+  - 'delete own page content'
+  - 'delete own sabc_blog content'
+  - 'delete own sabc_forms content'
+  - 'delete own sabc_pathway_pages content'
+  - 'delete own sabc_reminders content'
+  - 'delete own sabc_repayment_help content'
+  - 'delete own sabc_school_officials content'
+  - 'delete own studentaid_bc_glossary content'
+  - 'edit any article content'
+  - 'edit any content_snippets content'
+  - 'edit any content_summary content'
+  - 'edit any grants_scholarships content'
+  - 'edit any page content'
+  - 'edit any sabc_alerts_general content'
+  - 'edit any sabc_alerts_system_target_range content'
+  - 'edit any sabc_blog content'
+  - 'edit any sabc_forms content'
+  - 'edit any sabc_pathway_pages content'
+  - 'edit any sabc_reminders content'
+  - 'edit any sabc_repayment_help content'
+  - 'edit any sabc_school_officials content'
+  - 'edit any studentaid_bc_glossary content'
+  - 'edit own article content'
+  - 'edit own content_snippets content'
+  - 'edit own content_summary content'
+  - 'edit own grants_scholarships content'
+  - 'edit own page content'
+  - 'edit own sabc_alerts_general content'
+  - 'edit own sabc_alerts_system_target_range content'
+  - 'edit own sabc_blog content'
+  - 'edit own sabc_forms content'
+  - 'edit own sabc_pathway_pages content'
+  - 'edit own sabc_reminders content'
+  - 'edit own sabc_repayment_help content'
+  - 'edit own sabc_school_officials content'
+  - 'edit own studentaid_bc_glossary content'
+  - 'export configuration'
+  - 'import configuration'
+  - 'notify of path changes'
+  - 'schedule publishing of nodes'
+  - 'search content'
+  - 'select account cancellation method'
+  - 'synchronize configuration'
+  - 'use text format blog_format'
+  - 'use text format ckedit'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use text format php_code'
+  - 'view own unpublished content'
+  - 'view scheduled content'
+  - 'view the administration theme'
+  - 'view update notifications'
+  - 'view workbench access information'

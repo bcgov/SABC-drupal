@@ -1,0 +1,29 @@
+uuid: a8345235-25ef-4dc1-9f04-fb1c53427edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxonomy
+    - node.type.sabc_repayment_help
+    - taxonomy.vocabulary.sabc_program_taxonomy
+id: node.sabc_repayment_help.field_taxonomy
+field_name: field_taxonomy
+entity_type: node
+bundle: sabc_repayment_help
+label: Taxonomy
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sabc_program_taxonomy: sabc_program_taxonomy
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

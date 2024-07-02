@@ -1,0 +1,8 @@
+uuid: 9296858a-282d-48f6-b7f2-8cd815b85f82
+langcode: en
+status: true
+dependencies: {  }
+id: partner-portal-info
+label: 'Partner Portal Info'
+description: 'School Officials Secondary Nav'
+locked: false

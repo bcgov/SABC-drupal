@@ -1,0 +1,8 @@
+uuid: 7174901f-4993-454d-8c04-e41be97f241f
+langcode: en
+status: true
+dependencies: {  }
+name: 'SABC Content Tags'
+vid: sabc_content_tags
+description: ''
+weight: 0

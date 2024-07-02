@@ -1,0 +1,19 @@
+uuid: b2e2c3cb-29bb-4241-a26a-5e075fd18691
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_system_warning_message
+field_name: field_system_warning_message
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

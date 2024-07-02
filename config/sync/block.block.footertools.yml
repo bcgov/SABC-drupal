@@ -1,0 +1,25 @@
+uuid: 8aea0faf-e628-4aac-8405-e48fd58a6d54
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:84ccd68a-aa45-4959-a36b-2299a74d2cfa'
+  module:
+    - block_content
+  theme:
+    - sabc
+id: footertools
+theme: sabc
+region: footer_nav
+weight: -11
+provider: null
+plugin: 'block_content:84ccd68a-aa45-4959-a36b-2299a74d2cfa'
+settings:
+  id: 'block_content:84ccd68a-aa45-4959-a36b-2299a74d2cfa'
+  label: 'Footer Tools'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

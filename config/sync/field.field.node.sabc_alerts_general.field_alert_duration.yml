@@ -1,0 +1,23 @@
+uuid: 15eaebcf-7f0b-4edc-8f24-69b4bf1d906f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_duration
+    - node.type.sabc_alerts_general
+  module:
+    - options
+id: node.sabc_alerts_general.field_alert_duration
+field_name: field_alert_duration
+entity_type: node
+bundle: sabc_alerts_general
+label: 'Alert Duration'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '30'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

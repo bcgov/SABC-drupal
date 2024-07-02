@@ -1,0 +1,21 @@
+uuid: 165674ea-1c34-4b65-87d7-c10388615002
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_page_location
+    - node.type.sabc_alerts_general
+  module:
+    - options
+id: node.sabc_alerts_general.field_alert_page_location
+field_name: field_alert_page_location
+entity_type: node
+bundle: sabc_alerts_general
+label: 'What page(s) would you like the alert to appear on?'
+description: "Page(s) the alert will appear on. ' ' represents the page path(s). * represents a wild card that will match everything."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

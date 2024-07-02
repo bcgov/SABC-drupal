@@ -1,0 +1,31 @@
+uuid: c3a22222-83d6-4a45-9dfd-a0203f07ba5b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:65afbcec-256e-4676-b5bd-fc47c84c73ba'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_sabctwitterfeed_2
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:65afbcec-256e-4676-b5bd-fc47c84c73ba'
+settings:
+  id: 'block_content:65afbcec-256e-4676-b5bd-fc47c84c73ba'
+  label: 'SABC Twitter Feed'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/help-centre*\r\n!<front>\r\n!/node/514"

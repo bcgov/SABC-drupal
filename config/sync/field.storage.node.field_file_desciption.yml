@@ -1,0 +1,19 @@
+uuid: 13e79bad-b709-4d5b-9c94-8b074bc6cccb
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_file_desciption
+field_name: field_file_desciption
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

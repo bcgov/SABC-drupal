@@ -1,0 +1,21 @@
+uuid: 40511e1e-30a2-4e1d-b45e-fc9ddbdcb7df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_type
+    - node.type.sabc_alerts_system_target_range
+  module:
+    - options
+id: node.sabc_alerts_system_target_range.field_alert_type
+field_name: field_alert_type
+entity_type: node
+bundle: sabc_alerts_system_target_range
+label: 'Alert Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

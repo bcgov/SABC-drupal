@@ -1,0 +1,24 @@
+uuid: e0243d86-0136-485e-b007-b2276df03d2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sabc_alerts_block_view
+  module:
+    - views
+  theme:
+    - sabc
+id: views_block__sabc_alerts_block_view_sabc_alerts_block
+theme: sabc
+region: highlighted
+weight: -16
+provider: null
+plugin: 'views_block:sabc_alerts_block_view-sabc_alerts_block'
+settings:
+  id: 'views_block:sabc_alerts_block_view-sabc_alerts_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

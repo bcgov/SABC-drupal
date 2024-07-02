@@ -1,0 +1,30 @@
+uuid: abccfce3-1b7b-4ef7-8deb-9839f45c5b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.sabc_blog_taxonomy.field_category_url
+    - taxonomy.vocabulary.sabc_blog_taxonomy
+  module:
+    - text
+id: taxonomy_term.sabc_blog_taxonomy.default
+targetEntityType: taxonomy_term
+bundle: sabc_blog_taxonomy
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_category_url:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

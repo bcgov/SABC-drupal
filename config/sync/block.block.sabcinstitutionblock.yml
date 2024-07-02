@@ -1,0 +1,28 @@
+uuid: 8e9c557b-2d99-4f3b-867f-70334bdb66ca
+langcode: en
+status: false
+dependencies:
+  module:
+    - sabc_institution
+    - system
+  theme:
+    - sabc
+id: sabcinstitutionblock
+theme: sabc
+region: content
+weight: -10
+provider: null
+plugin: sabc_institution_block
+settings:
+  id: sabc_institution_block
+  label: 'Sabc institution block'
+  label_display: visible
+  provider: sabc_institution
+  institution: ''
+  view_all: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /apply/designated

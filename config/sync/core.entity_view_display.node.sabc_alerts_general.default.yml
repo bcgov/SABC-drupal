@@ -1,0 +1,63 @@
+uuid: 02f34d80-9b33-4a64-bbd1-d43b2661b72d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_alerts_general.body
+    - field.field.node.sabc_alerts_general.field_alert_duration
+    - field.field.node.sabc_alerts_general.field_alert_page_location
+    - field.field.node.sabc_alerts_general.field_alert_type
+    - field.field.node.sabc_alerts_general.field_order_id
+    - node.type.sabc_alerts_general
+  module:
+    - options
+    - text
+    - user
+id: node.sabc_alerts_general.default
+targetEntityType: node
+bundle: sabc_alerts_general
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_alert_duration:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_alert_page_location:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_alert_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_order_id:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

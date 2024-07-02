@@ -1,0 +1,29 @@
+uuid: da1cc2fb-a1a1-4a1b-b820-bbe6a2e4a115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxonomy
+    - node.type.grants_scholarships
+    - taxonomy.vocabulary.sabc_program_taxonomy
+id: node.grants_scholarships.field_taxonomy
+field_name: field_taxonomy
+entity_type: node
+bundle: grants_scholarships
+label: Taxonomy
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sabc_program_taxonomy: sabc_program_taxonomy
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

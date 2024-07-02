@@ -1,0 +1,8 @@
+uuid: fd9d70f8-7bc0-4a45-873b-ee8c9de417fb
+langcode: en
+status: true
+dependencies: {  }
+name: 'SABC Help Section Tags'
+vid: help_tags
+description: 'Help centre taxonomy'
+weight: 0

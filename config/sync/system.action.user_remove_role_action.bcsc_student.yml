@@ -1,0 +1,14 @@
+uuid: a4cf0f39-ca7d-446f-8005-3a65ed85cc6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bcsc_student
+  module:
+    - user
+id: user_remove_role_action.bcsc_student
+label: 'Remove the bcsc_student role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bcsc_student

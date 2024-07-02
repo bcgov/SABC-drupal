@@ -1,0 +1,23 @@
+uuid: ceb297a0-5ba7-4f6c-8577-73b76edcb5b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_id_so
+    - node.type.sabc_school_officials
+id: node.sabc_school_officials.field_order_id_so
+field_name: field_order_id_so
+entity_type: node
+bundle: sabc_school_officials
+label: 'Order ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

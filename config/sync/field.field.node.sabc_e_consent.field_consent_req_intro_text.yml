@@ -1,0 +1,21 @@
+uuid: 4b170ecd-8b79-4c1d-bf3c-6d26a4c0e092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consent_req_intro_text
+    - node.type.sabc_e_consent
+  module:
+    - text
+id: node.sabc_e_consent.field_consent_req_intro_text
+field_name: field_consent_req_intro_text
+entity_type: node
+bundle: sabc_e_consent
+label: 'Intro text (pg 1)'
+description: 'Intro page text for declaration'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

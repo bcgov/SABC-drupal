@@ -1,0 +1,21 @@
+uuid: 10745ae5-d203-467d-bd67-0f8dd2688806
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_the_program
+    - node.type.sabc_repayment_help
+  module:
+    - text
+id: node.sabc_repayment_help.field_about_the_program
+field_name: field_about_the_program
+entity_type: node
+bundle: sabc_repayment_help
+label: 'About the program'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

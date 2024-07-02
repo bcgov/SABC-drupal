@@ -1,0 +1,14 @@
+uuid: 6252ac98-2122-4bf9-91c0-ec981f5fbb0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.parent_no_sin
+  module:
+    - user
+id: user_remove_role_action.parent_no_sin
+label: 'Remove the parent_no_sin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: parent_no_sin

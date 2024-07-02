@@ -1,0 +1,18 @@
+uuid: 20c3b4e8-577a-4b6e-a71c-5cd82afcecac
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-primary-menu
+    parent: 'menu-primary-menu:menu_link_content:33ab4436-bae7-4e16-8789-4ab2e72f5627'
+name: 'SABC Grants & Scholarships'
+type: grants_scholarships
+description: 'StudentAid BC grants and scholarships'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,8 @@
+uuid: f7e3b113-0015-430b-a272-4a77c0f54ef3
+langcode: en
+status: true
+dependencies: {  }
+name: 'SABC Content Workflow'
+vid: sabc_content_workflow
+description: 'Basic content workflow'
+weight: 0

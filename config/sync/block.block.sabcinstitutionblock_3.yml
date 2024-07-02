@@ -1,0 +1,20 @@
+uuid: 9eb1b10f-7714-463a-9885-0e54dbd1bbb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - sabc_institution
+  theme:
+    - sabc
+id: sabcinstitutionblock_3
+theme: sabc
+region: sabc_institution_lookup
+weight: -16
+provider: null
+plugin: sabc_institution_block
+settings:
+  id: sabc_institution_block
+  label: 'Sabc institution block'
+  label_display: '0'
+  provider: sabc_institution
+visibility: {  }

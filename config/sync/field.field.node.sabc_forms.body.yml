@@ -1,0 +1,23 @@
+uuid: 8822170f-6232-4f0a-b92c-0057b683bafc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sabc_forms
+  module:
+    - text
+id: node.sabc_forms.body
+field_name: body
+entity_type: node
+bundle: sabc_forms
+label: 'Search Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

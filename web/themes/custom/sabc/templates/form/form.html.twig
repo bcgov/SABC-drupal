@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if element['#form_id'] == 'search_form' %}
+
+  <div id="help-centre-search-form">
+    <form action="{{element['#action']}}" method="get" id="search-block-form" accept-charset="UTF-8" data-drupal-form-fields="edit-keys">
+      <div class="input-group">
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search form-control oversize nomargin form-text" placeholder="Enter a question, keyword or topic..." />
+        <span class="input-group-btn">
+          <input class="btn btn-primary form-submit js-form-submit submit-button" type="submit" id="edit-submit" data-drupal-selector="edit-submit" name="op" value="Go" />
+        </span>
+      </div>
+    </form>
+  </div>
+
+{% else %}
+
+  <form{{ attributes }}>
+    {{ children }}
+  </form>
+
+{% endif %}

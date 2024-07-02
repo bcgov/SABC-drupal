@@ -1,0 +1,14 @@
+sabc_forms.sabc_designation_form:
+  path: '/designation-application'
+  defaults:
+    _form: 'Drupal\sabc_forms\Form\SabcDesignationForm'
+    _title: 'Institution Designation Application'
+  requirements:
+    _permission: 'access content'
+sabc_forms.sabc_private_data_form:
+  path: '/admin/config/sabc/private-data'
+  defaults:
+    _form: 'Drupal\sabc_forms\Form\SabcPrivateDataForm'
+    _title: 'Manage SABC Private Data'
+  requirements:
+    _permission: 'administer site configuration'

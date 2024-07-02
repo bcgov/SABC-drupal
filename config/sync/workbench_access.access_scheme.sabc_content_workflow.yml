@@ -1,0 +1,14 @@
+uuid: 74abe918-dfa1-4372-9752-383b53ce5e2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sabc_content_workflow
+id: sabc_content_workflow
+plural_label: 'SABC Content Workflow'
+label: 'SABC Content Workflow'
+scheme: taxonomy
+scheme_settings:
+  vocabularies:
+    - sabc_content_workflow
+  fields: {  }

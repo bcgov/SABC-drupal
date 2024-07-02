@@ -1,0 +1,28 @@
+uuid: 18f3144c-4acb-4e1d-9d3e-c90051a30b58
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

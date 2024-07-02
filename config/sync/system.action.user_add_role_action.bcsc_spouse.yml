@@ -1,0 +1,14 @@
+uuid: 9ae54dea-e7c2-4f43-b3f7-c73ff1c95205
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bcsc_spouse
+  module:
+    - user
+id: user_add_role_action.bcsc_spouse
+label: 'Add the bcsc_spouse role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bcsc_spouse

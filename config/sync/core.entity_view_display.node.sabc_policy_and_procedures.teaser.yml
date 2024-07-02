@@ -1,0 +1,30 @@
+uuid: aa1f3a87-9d68-44e0-9a3a-54b7f011d217
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_policy_and_procedures.body
+    - node.type.sabc_policy_and_procedures
+  module:
+    - text
+    - user
+id: node.sabc_policy_and_procedures.teaser
+targetEntityType: node
+bundle: sabc_policy_and_procedures
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

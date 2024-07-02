@@ -1,0 +1,21 @@
+uuid: 1d0bd148-1b62-4125-b32f-47006b1b222c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_desciption
+    - node.type.sabc_forms
+  module:
+    - text
+id: node.sabc_forms.field_file_desciption
+field_name: field_file_desciption
+entity_type: node
+bundle: sabc_forms
+label: 'File Desciption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

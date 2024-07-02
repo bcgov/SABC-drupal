@@ -1,0 +1,23 @@
+uuid: 32418ecb-e053-4c97-9867-c854d3e69e63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.studentaid_bc_glossary
+  module:
+    - text
+id: node.studentaid_bc_glossary.body
+field_name: body
+entity_type: node
+bundle: studentaid_bc_glossary
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

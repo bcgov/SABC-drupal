@@ -1,0 +1,82 @@
+uuid: b0bd7255-8deb-487d-b32e-01f098e0212e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.blog_format
+    - filter.format.ckedit
+    - filter.format.full_html
+    - node.type.content_snippets
+    - node.type.grants_scholarships
+    - node.type.page
+    - node.type.sabc_alerts_general
+    - node.type.sabc_alerts_system_target_range
+    - node.type.sabc_blog
+    - node.type.sabc_forms
+    - node.type.sabc_reminders
+    - node.type.sabc_repayment_help
+    - node.type.sabc_school_officials
+    - node.type.studentaid_bc_glossary
+  module:
+    - file
+    - filter
+    - node
+    - system
+    - toolbar
+    - workbench
+    - workbench_access
+id: editor
+label: editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'access workbench'
+  - 'batch update workbench access'
+  - 'create content_snippets content'
+  - 'create grants_scholarships content'
+  - 'create page content'
+  - 'create sabc_blog content'
+  - 'create sabc_forms content'
+  - 'create sabc_reminders content'
+  - 'create sabc_repayment_help content'
+  - 'create sabc_school_officials content'
+  - 'create studentaid_bc_glossary content'
+  - 'delete own content_snippets content'
+  - 'delete own files'
+  - 'delete own grants_scholarships content'
+  - 'delete own page content'
+  - 'delete own sabc_blog content'
+  - 'delete own sabc_reminders content'
+  - 'delete own sabc_repayment_help content'
+  - 'delete own sabc_school_officials content'
+  - 'delete own studentaid_bc_glossary content'
+  - 'edit any content_snippets content'
+  - 'edit any grants_scholarships content'
+  - 'edit any page content'
+  - 'edit any sabc_alerts_general content'
+  - 'edit any sabc_alerts_system_target_range content'
+  - 'edit any sabc_blog content'
+  - 'edit any sabc_forms content'
+  - 'edit any sabc_reminders content'
+  - 'edit any sabc_repayment_help content'
+  - 'edit any sabc_school_officials content'
+  - 'edit any studentaid_bc_glossary content'
+  - 'edit own content_snippets content'
+  - 'edit own grants_scholarships content'
+  - 'edit own page content'
+  - 'edit own sabc_alerts_general content'
+  - 'edit own sabc_alerts_system_target_range content'
+  - 'edit own sabc_blog content'
+  - 'edit own sabc_forms content'
+  - 'edit own sabc_reminders content'
+  - 'edit own sabc_repayment_help content'
+  - 'edit own sabc_school_officials content'
+  - 'edit own studentaid_bc_glossary content'
+  - 'use text format blog_format'
+  - 'use text format ckedit'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

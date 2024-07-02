@@ -1,0 +1,8 @@
+uuid: cbd19501-0cb3-4d02-a523-a09634a3551f
+langcode: en
+status: true
+dependencies: {  }
+name: 'SABC Glossary'
+vid: sabc_glossary
+description: 'Glossary tags'
+weight: 0

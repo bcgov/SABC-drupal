@@ -1,0 +1,21 @@
+uuid: a5eebd47-15bb-4736-90f9-9451444c8b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consent2_req_agreement
+    - node.type.sabc_e_consent
+  module:
+    - text
+id: node.sabc_e_consent.field_consent2_req_agreement
+field_name: field_consent2_req_agreement
+entity_type: node
+bundle: sabc_e_consent
+label: 'Agreement2 text (pg 2)'
+description: 'Agreement text for cra'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

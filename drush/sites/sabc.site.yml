@@ -1,0 +1,12 @@
+# File: sabc.site.yml
+d8:
+  user: root
+  root: /var/www/html
+  uri: http://localhost:8001
+d7:
+  host: sabc-d7-webserver
+  user: root
+  root: /var/www/html
+  uri: http://dev.studentaidbc.ca
+  ssh:
+    options: '-p 21'

@@ -1,0 +1,635 @@
+//***********************************************************************************************************************************************
+// Styles lifted directly from Drupal 7 compiled css and pasted as-is
+//***********************************************************************************************************************************************
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+.bootstrap-select button {
+  display: inline-block;
+  height: 42px;
+  line-height: 40px;
+  padding: 8px 15px;
+  margin-bottom: 12px;
+  color: #34495e;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: middle;
+  width: 100%;
+}
+.bootstrap-select button {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+textarea {
+  height: auto;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+.bootstrap-select button {
+  background-color: #ffffff;
+  border: 1px solid #217dbb;
+  -webkit-box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  -moz-box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+  -webkit-appearance: none;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+.bootstrap-select button:focus {
+  border-color: #3498db;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+  -moz-box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+}
+textarea[disabled],
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+.uneditable-input[disabled],
+.bootstrap-select button[disabled],
+textarea[readonly],
+input[type="text"][readonly],
+input[type="password"][readonly],
+input[type="datetime"][readonly],
+input[type="datetime-local"][readonly],
+input[type="date"][readonly],
+input[type="month"][readonly],
+input[type="time"][readonly],
+input[type="week"][readonly],
+input[type="number"][readonly],
+input[type="email"][readonly],
+input[type="url"][readonly],
+input[type="search"][readonly],
+input[type="tel"][readonly],
+input[type="color"][readonly],
+.uneditable-input[readonly],
+.bootstrap-select button[readonly] {
+  background-color: #f1f3f5;
+  color: #b9c8d8;
+  cursor: not-allowed;
+}
+textarea.oversize,
+input[type="text"].oversize,
+input[type="password"].oversize,
+input[type="datetime"].oversize,
+input[type="datetime-local"].oversize,
+input[type="date"].oversize,
+input[type="month"].oversize,
+input[type="time"].oversize,
+input[type="week"].oversize,
+input[type="number"].oversize,
+input[type="email"].oversize,
+input[type="url"].oversize,
+input[type="search"].oversize,
+input[type="tel"].oversize,
+input[type="color"].oversize,
+.uneditable-input.oversize,
+.bootstrap-select button.oversize {
+  font-size: 17.5px;
+  padding: 15px 23px;
+  height: 56px;
+  line-height: 54px;
+}
+textarea.small,
+input[type="text"].small,
+input[type="password"].small,
+input[type="datetime"].small,
+input[type="datetime-local"].small,
+input[type="date"].small,
+input[type="month"].small,
+input[type="time"].small,
+input[type="week"].small,
+input[type="number"].small,
+input[type="email"].small,
+input[type="url"].small,
+input[type="search"].small,
+input[type="tel"].small,
+input[type="color"].small,
+.uneditable-input.small,
+.bootstrap-select button.small {
+  padding: 4px 10px;
+  height: 34px;
+  line-height: 32px;
+}
+textarea.nomargin,
+input[type="text"].nomargin,
+input[type="password"].nomargin,
+input[type="datetime"].nomargin,
+input[type="datetime-local"].nomargin,
+input[type="date"].nomargin,
+input[type="month"].nomargin,
+input[type="time"].nomargin,
+input[type="week"].nomargin,
+input[type="number"].nomargin,
+input[type="email"].nomargin,
+input[type="url"].nomargin,
+input[type="search"].nomargin,
+input[type="tel"].nomargin,
+input[type="color"].nomargin,
+.uneditable-input.nomargin,
+.bootstrap-select button.nomargin {
+  margin: 0 !important;
+}
+@media only screen and (max-width: 767px) {
+  textarea.oversize,
+  input[type="text"].oversize,
+  input[type="password"].oversize,
+  input[type="datetime"].oversize,
+  input[type="datetime-local"].oversize,
+  input[type="date"].oversize,
+  input[type="month"].oversize,
+  input[type="time"].oversize,
+  input[type="week"].oversize,
+  input[type="number"].oversize,
+  input[type="email"].oversize,
+  input[type="url"].oversize,
+  input[type="search"].oversize,
+  input[type="tel"].oversize,
+  input[type="color"].oversize,
+  .uneditable-input.oversize {
+    font-size: 16px;
+    /* must be 16px to avoid mobile zoom */
+    padding: 4px 10px;
+    height: 56px;
+    line-height: 54px;
+  }
+}
+#search-form input[type="text"],
+#sabc-global-search-form input[type="text"] {
+  height: 42px;
+  line-height: 40px;
+  padding: 8px 15px;
+}
+@media only screen and (max-width: 480px) {
+  #search-form input[type="text"],
+  #sabc-global-search-form input[type="text"] {
+    margin-bottom: 0;
+  }
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  *margin-top: 0;
+  /* IE7 */
+  margin-top: 1px \9;
+  /* IE8-9 */
+  line-height: normal;
+}
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+select,
+input[type="file"] {
+  height: 42px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+  line-height: 40px;
+}
+select {
+  width: 100%;
+  border: 1px solid #217dbb;
+  background-color: #ffffff;
+}
+select[multiple],
+select[size] {
+  height: auto;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #b1c2c6;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #b1c2c6;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #b1c2c6;
+}
+
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: 24px;
+}
+ul {
+  list-style: none outside;
+}
+ol {
+  list-style: decimal;
+}
+ol.list,
+ul.square,
+ul.circle,
+ul.disc,
+.disc ul {
+  margin-left: 42px;
+}
+ul.list,
+ol.list,
+ul.square,
+ul.circle,
+ul.disc,
+.disk ul,
+ul.anchor {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #6a727a;
+}
+ul.square {
+  margin-left: 24px;
+  list-style: square outside;
+}
+ul.circle {
+  margin-left: 24px;
+  list-style: circle outside;
+}
+ul.disc,
+.disc ul {
+  margin-left: 24px;
+  list-style: disc outside;
+}
+ul.list li,
+ol.list li,
+ul.square li,
+ul.circle li,
+ul.disc li,
+.disc ul li {
+  margin: 6px 0 6px 0;
+  padding: 0;
+  line-height: 24px;
+}
+ul.pull-right {
+  float: right;
+  width: auto;
+  margin-bottom: 0;
+}
+ul.unstyled,
+ol.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media only screen and (max-width: 767px) {
+  ul.inline.mo-stacked,
+  ol.inline.mo-stacked {
+    margin-left: 0;
+    list-style: none;
+  }
+  ul.inline.mo-stacked > li,
+  ol.inline.mo-stacked > li {
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+ul.nice,
+ol.nice {
+  margin: 12px 0;
+  list-style: none;
+}
+ul.nice li,
+ol.nice li {
+  padding-left: 24px;
+  position: relative;
+  line-height: 26.4px;
+  font-size: 14px;
+  margin-bottom: 4.8px;
+  color: #7f818c;
+}
+ul.nice li span.bullet,
+ol.nice li span.bullet,
+ul.nice li span.number,
+ol.nice li span.number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 300;
+  font-size: 17.5px;
+}
+ul.nice li span.number,
+ol.nice li span.number {
+  color: #bbc1d1;
+  font-weight: 700;
+}
+ul.nice li span.bullet,
+ol.nice li span.bullet {
+  left: -3px;
+}
+ul.nice.nomargin,
+ol.nice.nomargin {
+  margin-top: 0;
+}
+ul.nice.nomargin li,
+ol.nice.nomargin li {
+  padding-left: 0;
+}
+
+
+.muted {
+  color: #7f818c !important;
+}
+
+.text-error {
+  color: #bd362f !important;
+}
+a.text-error:hover,
+a.text-error:focus {
+  color: #942a25;
+}
+
+
+dl {
+  margin-bottom: 24px;
+}
+dt,
+dd {
+  line-height: 24px;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 12px;
+}
+.dl-horizontal {
+  *zoom: 1;
+}
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.dl-horizontal:after {
+  clear: both;
+}
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+.dl-horizontal-med {
+  *zoom: 1;
+  margin-bottom: 0;
+}
+.dl-horizontal-med:before,
+.dl-horizontal-med:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.dl-horizontal-med:after {
+  clear: both;
+}
+.dl-horizontal-med dt {
+  float: left;
+  width: 85px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dl-horizontal-med dt.left {
+  text-align: left;
+}
+.dl-horizontal-med dd {
+  margin-left: 105px;
+}
+.dl-horizontal-small {
+  *zoom: 1;
+  margin-bottom: 0;
+}
+.dl-horizontal-small:before,
+.dl-horizontal-small:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.dl-horizontal-small:after {
+  clear: both;
+}
+.dl-horizontal-small dt {
+  float: left;
+  width: 20px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 20.86956522px;
+}
+.dl-horizontal-small dd {
+  margin-left: 30px;
+  line-height: 20.86956522px;
+}
+@media only screen and (max-width: 980px) {
+  .dl-horizontal dt,
+  .dl-horizontal-timeline dt,
+  .dl-horizontal-med dt {
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: left;
+  }
+  .dl-horizontal dd,
+  .dl-horizontal-timeline dd,
+  .dl-horizontal-med dd {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body#dashboard .dl-horizontal dt,
+  body#dashboard .dl-horizontal-timeline dt,
+  body#dashboard .dl-horizontal-med dt {
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: left;
+  }
+  body#dashboard .dl-horizontal dd,
+  body#dashboard .dl-horizontal-timeline dd,
+  body#dashboard .dl-horizontal-med dd {
+    margin-left: 0;
+  }
+}
+
+.pathway {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #f1f3f5;
+  display: block;
+  position: relative;
+  height: 260px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+.pathway.large {
+  height: 360px;
+}
+.pathway .inner {
+  padding: 15px 23px;
+}
+.pathway h2 {
+  color: #333;
+}
+.pathway .go {
+  position: absolute;
+  background: url('../../assets/img/pathway.png') no-repeat;
+  bottom: 0;
+  right: 0;
+  width: 69px;
+  height: 69px;
+  display: block;
+}
+.pathway .icon {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 24px 0;
+  color: #b5c0cb;
+}
+.pathway p {
+  color: #39424a;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+a:hover .pathway {
+  background: #f4f4f4;
+}
+a:hover .pathway h2 {
+  color: #0d7abf;
+}
+a:hover .pathway .go {
+  background: url('../../assets/img/pathway-hover.png') no-repeat;
+}
+a:hover .pathway h2 {
+  color: #0d7abf;
+}
+@media only screen and (max-width: 767px) {
+  .pathway {
+    height: auto;
+    margin-bottom: 18px;
+  }
+  .pathway .inner {
+    padding: 6px 12px;
+  }
+  .pathway .icon {
+    display: block;
+    float: left;
+    text-align: left;
+    margin: 0;
+    padding: 12px 12px 6px 0;
+  }
+  .pathway h2 {
+    padding-top: 12px;
+  }
+  .pathway p {
+    margin-left: 75px;
+    margin-bottom: 12px;
+  }
+}

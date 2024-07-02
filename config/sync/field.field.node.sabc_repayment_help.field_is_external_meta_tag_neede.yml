@@ -1,0 +1,23 @@
+uuid: ef2f652e-5551-45a2-ad1d-2ad397ae7aba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_external_meta_tag_neede
+    - node.type.sabc_repayment_help
+id: node.sabc_repayment_help.field_is_external_meta_tag_neede
+field_name: field_is_external_meta_tag_neede
+entity_type: node
+bundle: sabc_repayment_help
+label: 'Is External Meta Tag needed?'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

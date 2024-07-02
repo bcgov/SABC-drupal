@@ -1,0 +1,25 @@
+uuid: 8db45c31-676a-49ed-b310-ac132ef6eece
+langcode: en
+status: true
+dependencies:
+  module:
+    - help_centre
+    - system
+  theme:
+    - sabc
+id: sabchelpcentrecategorieslistblock
+theme: sabc
+region: content
+weight: 0
+provider: null
+plugin: sabc_help_centre_categories_list_block
+settings:
+  id: sabc_help_centre_categories_list_block
+  label: 'Sabc help centre categories list block'
+  label_display: '0'
+  provider: help_centre
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /help-centre

@@ -1,0 +1,14 @@
+uuid: 5dec5419-03bf-46ae-9494-57a2c0b03eba
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spouse_no_sin
+  module:
+    - user
+id: user_add_role_action.spouse_no_sin
+label: 'Add the spouse_no_sin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: spouse_no_sin

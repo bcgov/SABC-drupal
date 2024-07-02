@@ -1,0 +1,31 @@
+uuid: 1d04525c-12ca-4971-9586-cd277def3f6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:5d0e4d99-d450-48db-b0de-354b58de868f'
+  module:
+    - block_content
+    - system
+  theme:
+    - sabc
+id: dashboardlogin
+theme: sabc
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:5d0e4d99-d450-48db-b0de-354b58de868f'
+settings:
+  id: 'block_content:5d0e4d99-d450-48db-b0de-354b58de868f'
+  label: 'Dashboard Login'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/admin/*'

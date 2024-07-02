@@ -1,0 +1,25 @@
+uuid: a921c0e0-e235-4c5c-bed7-02ed40c3465f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:7e661129-0207-42aa-88b1-a1b40dda611d'
+  module:
+    - block_content
+  theme:
+    - seven
+id: seven_footer_gov_navigation2
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:7e661129-0207-42aa-88b1-a1b40dda611d'
+settings:
+  id: 'block_content:7e661129-0207-42aa-88b1-a1b40dda611d'
+  label: 'Footer Gov Navigation'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

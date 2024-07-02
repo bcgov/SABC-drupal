@@ -1,0 +1,34 @@
+uuid: cccf5e7d-2e0c-4cbd-a281-725800409408
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_e_consent.field_consent2_req_agreement
+    - field.field.node.sabc_e_consent.field_consent_req_agreement_text
+    - field.field.node.sabc_e_consent.field_consent_req_intro_text
+    - field.field.node.sabc_e_consent.field_e_consent_page_footer
+    - field.field.node.sabc_e_consent.field_e_consent_title
+    - field.field.node.sabc_e_consent.field_e_consent_title_pg_2_
+    - field.field.node.sabc_e_consent.field_program_year
+    - node.type.sabc_e_consent
+  module:
+    - user
+id: node.sabc_e_consent.teaser
+targetEntityType: node
+bundle: sabc_e_consent
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_consent2_req_agreement: true
+  field_consent_req_agreement_text: true
+  field_consent_req_intro_text: true
+  field_e_consent_page_footer: true
+  field_e_consent_title: true
+  field_e_consent_title_pg_2_: true
+  field_program_year: true

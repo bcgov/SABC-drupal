@@ -1,0 +1,19 @@
+uuid: 633c9549-1512-4d0f-87ca-ef67e267bb4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.sabc_forms
+id: node.sabc_forms.field_url
+field_name: field_url
+entity_type: node
+bundle: sabc_forms
+label: URL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

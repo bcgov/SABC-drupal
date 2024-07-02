@@ -1,0 +1,14 @@
+uuid: 8d17582a-f5bc-4bbc-92b1-8fad16f246e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.parent_no_sin
+  module:
+    - user
+id: user_add_role_action.parent_no_sin
+label: 'Add the parent_no_sin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: parent_no_sin

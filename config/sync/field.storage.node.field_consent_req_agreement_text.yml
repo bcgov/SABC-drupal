@@ -1,0 +1,19 @@
+uuid: 5247e24a-b913-489d-a439-d0fdd8e20fd6
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_consent_req_agreement_text
+field_name: field_consent_req_agreement_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

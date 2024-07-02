@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 815d8286-2dbb-4ea8-834b-eadc588e77d6
+name: 'StudentAid BC'
+mail: requestit@gov.bc.ca
+slogan: ''
+page:
+  403: /
+  404: /
+  front: /node/514
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * sabc theme file.
+ */
+
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function sabc_preprocess_html(&$variables) {
+  // Body colour theme.
+  $variables['b4_body_schema'] = theme_get_setting('b4_body_schema');
+  $variables['b4_body_bg_schema'] = theme_get_setting('b4_body_bg_schema');
+  // Debug
+  //ksm($variables);
+}
+
+function sabc_preprocess_region(&$variables) {
+  if (isset($variables['region']) && $variables['region'] == 'footer_tools') {
+    $variables['attributes']['class'][] = 'row';
+  }
+}
+
+
+function sabc_preprocess_block(&$variables) {
+  if(isset($variables['elements']['content']['#view']->result[0])){
+    $node = $variables['elements']['content']['#view']->result[0]->_entity;
+
+    if($node){
+      if ($node instanceof \Drupal\node\Entity\Node) {
+
+        if ($node->hasField('field_alert_type')) {
+                $variables['field_alert_type'] = $node->get('field_alert_type')->value;
+        }
+
+        if ($node->hasField('body')) {
+              $variables['body'] = $node->get('body')->value;
+        }
+      }
+    }
+  }
+  // Add Bootstrap classes to make footer blocks responsive
+  $block_id = $variables['elements']['#id'];
+  $block = \Drupal\block\Entity\Block::load($block_id);
+  $variables['region'] = $block->getRegion();
+  if ($variables['region'] == 'footer_nav') {
+    $variables['attributes']['class'][] = 'col-12 col-lg-3';
+  }
+  elseif ($variables['region'] == 'footer_tools') {
+    $variables['attributes']['class'][] = 'col-12 col-lg-4';
+  }
+}
+
+function sabc_preprocess_page(&$variables) {
+
+}
+
+function sabc_form_search_block_form_alter(&$form, $form_state) {
+  // Adds placeholder text to the search field.
+  $form['keys']['#attributes']['placeholder'] = t('Enter a question, keyword or topic...');
+  $form['actions']['submit']['#attributes']['value'][] = t('Go');
+}

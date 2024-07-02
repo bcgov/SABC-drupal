@@ -1,0 +1,14 @@
+uuid: 35852216-5577-43cb-a528-fa4d59102c6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.spouse
+  module:
+    - user
+id: user_remove_role_action.spouse
+label: 'Remove the spouse role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: spouse

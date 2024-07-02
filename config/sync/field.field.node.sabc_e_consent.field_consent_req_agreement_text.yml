@@ -1,0 +1,21 @@
+uuid: c158a701-f0a2-44f2-b601-af7475dd0778
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consent_req_agreement_text
+    - node.type.sabc_e_consent
+  module:
+    - text
+id: node.sabc_e_consent.field_consent_req_agreement_text
+field_name: field_consent_req_agreement_text
+entity_type: node
+bundle: sabc_e_consent
+label: 'Agreement text (pg 2)'
+description: 'Agreement text for declaration'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

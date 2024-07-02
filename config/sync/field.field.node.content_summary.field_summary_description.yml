@@ -1,0 +1,21 @@
+uuid: 065880dc-a759-43b5-a16b-c7b97f70a9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary_description
+    - node.type.content_summary
+  module:
+    - text
+id: node.content_summary.field_summary_description
+field_name: field_summary_description
+entity_type: node
+bundle: content_summary
+label: 'Summary Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

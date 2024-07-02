@@ -1,0 +1,15 @@
+uuid: 5aaec641-f7be-44bc-9b68-3d77d40e2a8c
+langcode: en
+status: true
+dependencies: {  }
+name: full_width_blog_image_heading
+label: full_width_blog_image_heading
+effects:
+  14d5e55d-405a-495f-ac10-0aac065afb2f:
+    uuid: 14d5e55d-405a-495f-ac10-0aac065afb2f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1133
+      height: 469
+      anchor: center-center

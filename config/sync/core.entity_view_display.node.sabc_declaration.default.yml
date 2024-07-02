@@ -1,0 +1,61 @@
+uuid: 1a79bc9c-4c51-43ec-b296-45200339d14b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_declaration.field_declaration_title
+    - field.field.node.sabc_declaration.field_declaration_title_pg_2_
+    - field.field.node.sabc_declaration.field_program_year
+    - field.field.node.sabc_declaration.field_sig_req_agreement_text
+    - field.field.node.sabc_declaration.field_sig_req_intro_text
+    - node.type.sabc_declaration
+  module:
+    - text
+    - user
+id: node.sabc_declaration.default
+targetEntityType: node
+bundle: sabc_declaration
+mode: default
+content:
+  field_declaration_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_declaration_title_pg_2_:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_program_year:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_sig_req_agreement_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sig_req_intro_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

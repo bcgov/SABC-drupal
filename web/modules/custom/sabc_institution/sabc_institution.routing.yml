@@ -1,0 +1,51 @@
+sabc_institution.data_load:
+  path: /institution-data-load
+  defaults:
+    _title: ''
+    _controller: '\Drupal\sabc_institution\Controller\DefaultController::sabcInstitutionDataLoad'
+  requirements:
+    _permission: 'access content'
+sabc_institution.details_page:
+  path: '/institution/{institution_code}'
+  defaults:
+    _title: ''
+    _controller: '\Drupal\sabc_institution\Controller\DefaultController::sabcInstitutionDetailsPage'
+  requirements:
+    _permission: 'access content'
+sabc_institution.details_page_ajax:
+  path: '/institution-details/{institution_code}'
+  defaults:
+    _title: 'Institution Ajax'
+    _controller: '\Drupal\sabc_institution\Controller\DefaultController::sabcInstitutionDetailsPageAjax'
+  requirements:
+    _permission: 'access content'
+sabc_institution.test_opener:
+  path: /institution-data-opener
+  defaults:
+    _title: ''
+    _controller: '\Drupal\sabc_institution\Controller\DefaultController::test_opener'
+  requirements:
+    _permission: 'access content'
+sabc_institution.school_detailed_records:
+  path: /school-details/%
+  defaults:
+    _title: ''
+    _controller: '\Drupal\sabc_institution\Controller\DefaultController::school_detailed_records'
+  requirements:
+    _permission: 'access content'
+soap_wsdl.soap_server:
+  path: '/services/access_soap_module/soap/{endpoint}'
+  defaults:
+    _controller: '\Drupal\sabc_institution\Controller\DefaultController::soap'
+  requirements:
+    _access: 'TRUE'
+    _method: 'GET|POST'
+  options:
+    no_cache: 'TRUE'
+sabc_institution.instition_form:
+  path: 'apply/designateddirect'
+  defaults:
+    _form:  '\Drupal\sabc_institution\Form\InstitutionForm'
+    _title: 'Check your school designation'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,29 @@
+uuid: 6fc5fa13-7bb3-418a-b2c8-92032946d15f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prog_year
+    - node.type.content_snippets
+    - taxonomy.vocabulary.sabc_py
+id: node.content_snippets.field_prog_year
+field_name: field_prog_year
+entity_type: node
+bundle: content_snippets
+label: prog_year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sabc_py: sabc_py
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

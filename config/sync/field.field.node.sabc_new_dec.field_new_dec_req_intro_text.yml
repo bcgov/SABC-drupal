@@ -1,0 +1,21 @@
+uuid: 2eec108f-7b5a-400a-9488-9f4bada1408a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_dec_req_intro_text
+    - node.type.sabc_new_dec
+  module:
+    - text
+id: node.sabc_new_dec.field_new_dec_req_intro_text
+field_name: field_new_dec_req_intro_text
+entity_type: node
+bundle: sabc_new_dec
+label: 'Intro text (pg 1)'
+description: 'Intro page text for declaration'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

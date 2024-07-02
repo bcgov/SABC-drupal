@@ -1,0 +1,9 @@
+sabc_institution.data_load:
+  route_name: sabc_institution.data_load
+  title: ''
+sabc_institution.details_page:
+  route_name: sabc_institution.details_page
+  title: ''
+sabc_institution.test_opener:
+  route_name: sabc_institution.test_opener
+  title: ''

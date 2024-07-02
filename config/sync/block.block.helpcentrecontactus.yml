@@ -1,0 +1,31 @@
+uuid: 828c3746-d620-413d-a5c3-27b065bdcd47
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:72b07aaf-f295-42c7-9f02-faabcacfbe83'
+  module:
+    - block_content
+    - system
+  theme:
+    - sabc
+id: helpcentrecontactus
+theme: sabc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:72b07aaf-f295-42c7-9f02-faabcacfbe83'
+settings:
+  id: 'block_content:72b07aaf-f295-42c7-9f02-faabcacfbe83'
+  label: 'Help Centre - Contact Us'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/help-centre*\r\n/search*"

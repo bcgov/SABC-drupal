@@ -1,0 +1,20 @@
+uuid: 67d7ec94-e10a-4683-a085-96a0d94dfb47
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_blog_category
+field_name: field_blog_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 36c45518-3098-4942-86b7-6cab8a197339
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:04c2c05e-c81b-4353-a9d6-c6a4724f2b4b'
+  module:
+    - block_content
+  theme:
+    - sabc
+id: footercontactinformation_2
+theme: sabc
+region: footer_tools
+weight: -13
+provider: null
+plugin: 'block_content:04c2c05e-c81b-4353-a9d6-c6a4724f2b4b'
+settings:
+  id: 'block_content:04c2c05e-c81b-4353-a9d6-c6a4724f2b4b'
+  label: 'Footer Contact Information'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

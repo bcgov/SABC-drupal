@@ -1,0 +1,33 @@
+uuid: 5bb35a66-9686-4889-a0e0-f10c7cdd6fae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_pathway_pages.body
+    - node.type.sabc_pathway_pages
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.sabc_pathway_pages.default
+targetEntityType: node
+bundle: sabc_pathway_pages
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

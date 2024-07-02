@@ -1,0 +1,22 @@
+uuid: 500c2b96-12bd-4c2a-a5f9-70a911e4c451
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sabc_grants_scholarships
+label: 'SABC Grants & Scholarships'
+type: 'canonical_entities:node'
+pattern: '/explore/grants-scholarships/[node:title]'
+selection_criteria:
+  52059989-21da-4890-9ff3-fa640ac68976:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 52059989-21da-4890-9ff3-fa640ac68976
+    context_mapping:
+      node: node
+    bundles:
+      grants_scholarships: grants_scholarships
+selection_logic: and
+weight: -5
+relationships: {  }

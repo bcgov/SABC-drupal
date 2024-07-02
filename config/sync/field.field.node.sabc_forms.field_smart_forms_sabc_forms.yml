@@ -1,0 +1,27 @@
+uuid: 3fe45b0b-1378-4dd4-8429-7f8a3c828c9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smart_forms_sabc_forms
+    - node.type.sabc_forms
+  module:
+    - file
+id: node.sabc_forms.field_smart_forms_sabc_forms
+field_name: field_smart_forms_sabc_forms
+entity_type: node
+bundle: sabc_forms
+label: 'Smart Forms'
+description: 'Use this field for "smart" forms/pdf''s. Files uploaded here, will be forced to download rather than being displayed in the user''s browser. Ideal for Adobe LiveCycle forms. DO NOT use both the Smart Forms and Forms fields simultaneously. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: smart-forms
+  file_extensions: pdf
+  max_filesize: '50 MB'
+  description_field: false
+field_type: file

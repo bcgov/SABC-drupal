@@ -1,0 +1,32 @@
+uuid: d2f97cdb-c801-40e0-9316-c4a31d190d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_alerts_system_target_range.field_alert_type
+    - field.field.node.sabc_alerts_system_target_range.field_system_down_message_
+    - field.field.node.sabc_alerts_system_target_range.field_system_error_body
+    - field.field.node.sabc_alerts_system_target_range.field_system_general_message
+    - field.field.node.sabc_alerts_system_target_range.field_system_success_body
+    - field.field.node.sabc_alerts_system_target_range.field_system_warning_message
+    - node.type.sabc_alerts_system_target_range
+  module:
+    - user
+id: node.sabc_alerts_system_target_range.teaser
+targetEntityType: node
+bundle: sabc_alerts_system_target_range
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_alert_type: true
+  field_system_down_message_: true
+  field_system_error_body: true
+  field_system_general_message: true
+  field_system_success_body: true
+  field_system_warning_message: true

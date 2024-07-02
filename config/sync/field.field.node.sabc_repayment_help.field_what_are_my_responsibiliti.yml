@@ -1,0 +1,21 @@
+uuid: d3285129-14ed-48e8-bf0a-ccef0bb38ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_what_are_my_responsibiliti
+    - node.type.sabc_repayment_help
+  module:
+    - text
+id: node.sabc_repayment_help.field_what_are_my_responsibiliti
+field_name: field_what_are_my_responsibiliti
+entity_type: node
+bundle: sabc_repayment_help
+label: 'What are my responsibilities?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

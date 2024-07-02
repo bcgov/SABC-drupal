@@ -1,0 +1,25 @@
+uuid: 92f428b9-43d8-4336-ad66-737a52630287
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:65afbcec-256e-4676-b5bd-fc47c84c73ba'
+  module:
+    - block_content
+  theme:
+    - sabc
+id: sabctwitterfeed
+theme: sabc
+region: footer_tools
+weight: -12
+provider: null
+plugin: 'block_content:65afbcec-256e-4676-b5bd-fc47c84c73ba'
+settings:
+  id: 'block_content:65afbcec-256e-4676-b5bd-fc47c84c73ba'
+  label: 'SABC Twitter Feed'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

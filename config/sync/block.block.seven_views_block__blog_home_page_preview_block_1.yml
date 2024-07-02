@@ -1,0 +1,30 @@
+uuid: 254c72ab-e4d6-4a66-b26b-c29538bd39ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_home_page_preview
+  module:
+    - system
+    - views
+  theme:
+    - seven
+id: seven_views_block__blog_home_page_preview_block_1
+theme: seven
+region: header
+weight: -12
+provider: null
+plugin: 'views_block:blog_home_page_preview-block_1'
+settings:
+  id: 'views_block:blog_home_page_preview-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '2'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,21 @@
+uuid: 95b6912e-e823-4389-92df-d498db4e8635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_am_i_eligible_
+    - node.type.grants_scholarships
+  module:
+    - text
+id: node.grants_scholarships.field_am_i_eligible_
+field_name: field_am_i_eligible_
+entity_type: node
+bundle: grants_scholarships
+label: 'Am I eligible?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

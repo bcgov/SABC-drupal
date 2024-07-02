@@ -1,0 +1,10 @@
+uuid: 3fef9fee-ab70-4806-90aa-eae36dd6b4aa
+langcode: en
+status: 1
+dependencies: {  }
+_core:
+  default_config_hash: G49mGekK1kT0DvjuC_ro4oOWqhvpG2eYGf9GpJfrPYY
+id: desktop
+label: Desktop
+base_class: col-lg
+weight: '-10'

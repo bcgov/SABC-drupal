@@ -1,0 +1,21 @@
+uuid: bfd26aac-118f-49e1-a308-94372c67adce
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_anchor_id
+field_name: field_anchor_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+name = SABC Search
+description = A cool search module.
+core = 7.x
+package = SABC Modules
+dependencies[] = search
+files[] = ../common/aeit.inc

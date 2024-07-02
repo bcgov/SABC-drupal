@@ -1,0 +1,23 @@
+uuid: a0203fe4-6326-4fca-854b-0bcc9ef4da71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sabc_reminders
+  module:
+    - text
+id: node.sabc_reminders.body
+field_name: body
+entity_type: node
+bundle: sabc_reminders
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

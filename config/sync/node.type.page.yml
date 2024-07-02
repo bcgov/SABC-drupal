@@ -1,0 +1,20 @@
+uuid: b4a05ac9-2783-4157-83aa-2c929f295b79
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+      - navigation
+      - menu-primary-menu
+    parent: 'management:194:'
+name: 'Basic page'
+type: page
+description: "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

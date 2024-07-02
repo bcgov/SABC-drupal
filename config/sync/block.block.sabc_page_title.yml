@@ -1,0 +1,27 @@
+uuid: 0849db93-6542-4a7a-81b1-1e85d6360e68
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sabc
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: sabc_page_title
+theme: sabc
+region: content
+weight: -15
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "<front>\r\n/plan/*\r\n/apply/*\r\n/maintain/*\r\n/repay/*\r\n/news\r\n/explore/*"

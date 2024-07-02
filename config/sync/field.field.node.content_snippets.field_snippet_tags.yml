@@ -1,0 +1,19 @@
+uuid: a211e08e-774c-4cf5-a380-7ae795c93591
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_snippet_tags
+    - node.type.content_snippets
+id: node.content_snippets.field_snippet_tags
+field_name: field_snippet_tags
+entity_type: node
+bundle: content_snippets
+label: Tags
+description: 'Enter tags separated by commas'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

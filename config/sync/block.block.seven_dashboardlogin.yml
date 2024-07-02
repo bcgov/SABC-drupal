@@ -1,0 +1,25 @@
+uuid: f4b8d4ad-6c13-48c6-a177-e9f1c054c750
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_block:5d0e4d99-d450-48db-b0de-354b58de868f'
+  module:
+    - block_content
+  theme:
+    - seven
+id: seven_dashboardlogin
+theme: seven
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:5d0e4d99-d450-48db-b0de-354b58de868f'
+settings:
+  id: 'block_content:5d0e4d99-d450-48db-b0de-354b58de868f'
+  label: 'Dashboard Login'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

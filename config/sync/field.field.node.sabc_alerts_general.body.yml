@@ -1,0 +1,23 @@
+uuid: abbf8d59-6f3e-4055-9162-1247d7bbf6d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sabc_alerts_general
+  module:
+    - text
+id: node.sabc_alerts_general.body
+field_name: body
+entity_type: node
+bundle: sabc_alerts_general
+label: 'Alert Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

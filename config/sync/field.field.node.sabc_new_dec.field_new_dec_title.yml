@@ -1,0 +1,21 @@
+uuid: 07977397-5462-441a-92fa-4572b0c5b419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_dec_title
+    - node.type.sabc_new_dec
+  module:
+    - text
+id: node.sabc_new_dec.field_new_dec_title
+field_name: field_new_dec_title
+entity_type: node
+bundle: sabc_new_dec
+label: Declaration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

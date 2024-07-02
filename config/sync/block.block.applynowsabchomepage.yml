@@ -1,0 +1,31 @@
+uuid: 53ead12e-5110-486f-943d-82445c97d1f4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:ec167fb5-3259-4dd4-9ab9-5e700cc956cc'
+  module:
+    - block_content
+    - system
+  theme:
+    - sabc
+id: applynowsabchomepage
+theme: sabc
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:ec167fb5-3259-4dd4-9ab9-5e700cc956cc'
+settings:
+  id: 'block_content:ec167fb5-3259-4dd4-9ab9-5e700cc956cc'
+  label: 'Apply Now SABC Homepage'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

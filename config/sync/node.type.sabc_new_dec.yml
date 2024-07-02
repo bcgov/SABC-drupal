@@ -1,0 +1,11 @@
+uuid: b3f9580c-dd8d-459b-9eb3-6ddf726e61f2
+langcode: en
+status: true
+dependencies: {  }
+name: 'SABC New Spouse Declaration'
+type: sabc_new_dec
+description: 'StudentAid BC Internet Application Spouse Declaration 20/21'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

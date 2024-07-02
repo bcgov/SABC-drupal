@@ -1,0 +1,42 @@
+uuid: a6e55bb1-919b-42e5-8dc4-8016b09cc06b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_blog.body
+    - field.field.node.sabc_blog.field_blog_category
+    - field.field.node.sabc_blog.field_blog_image
+    - image.style.blog_heading_image
+    - node.type.sabc_blog
+  module:
+    - image
+    - text
+    - user
+id: node.sabc_blog.teaser
+targetEntityType: node
+bundle: sabc_blog
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_blog_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: blog_heading_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_blog_category: true
+  links: true

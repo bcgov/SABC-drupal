@@ -1,0 +1,65 @@
+<?php
+
+	function sabc_tool_tips_menu(){
+		$items['ajax/tool-tips'] = array(
+			'type' => MENU_CALLBACK,
+			'page callback' => 'getToolTips',
+			'access arguments' => array('access content')
+		);
+
+		return $items;
+	}
+
+	function getToolTips(){
+
+		//MAKE SURE WE HAVE POST VALUES
+		if(!empty($_POST)){
+
+			$a = array(); //NEW ARRAY OF PROPERLY FORMATTED VALUES
+			$u = array_unique($_POST); //GET UNIQUE ARRAY VALUES NO POINT IN QUERYING FOR THE SAME VALUES IF WE HAVE THEM ALREADY
+
+			//LOOP THROUGH OUR RETURNED POSTS AND FORMAT FOR THE PROPER TITLES AND PUSH INTO A NEW ARRAY
+			foreach($u as $v){
+				array_push($a, ucwords(str_replace('_', ' ', $v)));
+				array_push($a, ucfirst(str_replace('_', ' ', $v)));
+				array_push($a, strtolower(str_replace('_', ' ', $v)));
+			}
+
+			//MAKE SURE WE HAVE VALUES IN OUR NEW FORMATTED ARRAY
+			if(!empty($a)){
+
+				//QUERY DB FOR NODES BASED ON ARRAY OF TITLES
+				$nodes = node_load_multiple(array(), array('title' => $a, 'type' => 'studentaid_bc_glossary'));
+
+				//PUSH BACK INTO AN ARRAY FOR RETURN
+				$r = array();
+
+				//LOOP THROUGH IF RETURN IS ARRAY AND NOT EMPTY
+				if(is_array($nodes) && !empty($nodes)){
+
+
+					foreach($nodes as $node){
+						//GET THE TITLE AND BODY AND PUT INTO AN ARRAY THAT WE WILL BE RETURNING
+						$r[strtolower(str_replace(' ', '_', $node->title))] = $node->body['und'][0]['value'];
+					}
+
+					//OUTPUT RESULT AS JSON
+					echo json_encode($r);
+				}
+				else
+				{
+					echo false;
+				}
+			}
+			else
+			{
+				echo false;
+			}
+		}
+		else
+		{
+			echo false;
+		}
+
+//		echo 'hello3';
+	}

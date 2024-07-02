@@ -1,0 +1,20 @@
+uuid: 29b3a678-ae46-43fa-b784-d84207e3f6c2
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_declaration_title
+field_name: field_declaration_title
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

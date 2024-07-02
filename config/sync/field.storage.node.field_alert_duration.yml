@@ -1,0 +1,33 @@
+uuid: 5943aac5-96be-4be0-a1f4-ab31d2909b67
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_alert_duration
+field_name: field_alert_duration
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '30'
+      label: '30 seconds'
+    -
+      value: '45'
+      label: '45 seconds'
+    -
+      value: '60'
+      label: '60 seconds'
+    -
+      value: xx
+      label: 'No limit(never hide)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

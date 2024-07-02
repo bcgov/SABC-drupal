@@ -1,0 +1,42 @@
+uuid: dcc4785c-4265-45ac-af7c-476f6ae5cfb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_school_officials.body
+    - field.field.node.sabc_school_officials.field_file_description
+    - field.field.node.sabc_school_officials.field_form_taxonomy_so
+    - field.field.node.sabc_school_officials.field_forms_school_officials
+    - field.field.node.sabc_school_officials.field_order_id_so
+    - field.field.node.sabc_school_officials.field_smart_forms
+    - field.field.node.sabc_school_officials.field_url_school_officials
+    - node.type.sabc_school_officials
+  module:
+    - text
+    - user
+id: node.sabc_school_officials.teaser
+targetEntityType: node
+bundle: sabc_school_officials
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_file_description: true
+  field_form_taxonomy_so: true
+  field_forms_school_officials: true
+  field_order_id_so: true
+  field_smart_forms: true
+  field_url_school_officials: true

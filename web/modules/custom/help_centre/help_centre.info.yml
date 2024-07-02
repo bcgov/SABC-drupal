@@ -1,0 +1,8 @@
+name: 'SABC Help Centre'
+description: 'Help Centre Block'
+#core: 8.x
+core_version_requirement: ^9 || ^10
+package: 'SABC Modules'
+dependencies:
+  - block
+type: module

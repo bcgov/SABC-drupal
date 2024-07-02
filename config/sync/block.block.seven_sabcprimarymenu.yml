@@ -1,0 +1,25 @@
+uuid: 0c77550f-966e-4e9e-a59d-45bffe2f022a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.menu-primary-menu
+  module:
+    - system
+  theme:
+    - seven
+id: seven_sabcprimarymenu
+theme: seven
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:menu-primary-menu'
+settings:
+  id: 'system_menu_block:menu-primary-menu'
+  label: 'SABC Primary Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 55107db4-5665-4905-8ad5-7fd6531886a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form_taxonomy_so
+    - node.type.sabc_school_officials
+    - taxonomy.vocabulary.sabc_school_officials_taxonomy
+id: node.sabc_school_officials.field_form_taxonomy_so
+field_name: field_form_taxonomy_so
+entity_type: node
+bundle: sabc_school_officials
+label: 'Form Taxonomy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sabc_school_officials_taxonomy: sabc_school_officials_taxonomy
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

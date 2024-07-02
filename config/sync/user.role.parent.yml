@@ -1,0 +1,12 @@
+uuid: 0594e284-9364-4418-ba13-4a5d8b7541b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: parent
+label: parent
+weight: 7
+is_admin: null
+permissions:
+  - 'delete own files'

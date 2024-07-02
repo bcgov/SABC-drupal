@@ -1,0 +1,22 @@
+uuid: 56faef65-4910-4911-a715-b9843b6420c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+    - system
+    - toolbar
+    - workbench
+id: reviewer
+label: reviewer
+weight: 8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'access workbench'
+  - 'delete own files'
+  - 'view own unpublished content'

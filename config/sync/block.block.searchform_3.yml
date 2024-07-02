@@ -1,0 +1,27 @@
+uuid: e13f5785-7d38-4c67-831d-2dd16b8822d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - sabc
+id: searchform_3
+theme: sabc
+region: help_centre
+weight: -15
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Hello. How can we help you today?'
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /help-centre

@@ -1,0 +1,22 @@
+uuid: 81155fa8-fd6b-4e82-83b7-2762c51d9407
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: help_centre_paths
+label: 'Help Centre Paths'
+type: 'canonical_entities:node'
+pattern: '/help-centre/[node:field_help_section_tags]/[node:title]/[node:field_prog_year]'
+selection_criteria:
+  555afe42-1889-4a30-9187-240166da8f87:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 555afe42-1889-4a30-9187-240166da8f87
+    context_mapping:
+      node: node
+    bundles:
+      content_snippets: content_snippets
+selection_logic: and
+weight: 0
+relationships: {  }

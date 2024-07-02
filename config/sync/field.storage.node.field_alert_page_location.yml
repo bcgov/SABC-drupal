@@ -1,0 +1,45 @@
+uuid: c9db0666-0ff8-4464-a191-dc8fece319cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_alert_page_location
+field_name: field_alert_page_location
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '<front>'
+      label: "Studentaidbc ' homepage'"
+    -
+      value: '*'
+      label: "All Pages '*'"
+    -
+      value: 'dashboard*'
+      label: 'All Dashboard pages'
+    -
+      value: dashboard
+      label: "Dashboard homepage 'dashboard'"
+    -
+      value: dashboard/login
+      label: "Dashboard Login 'dashboard/login' only"
+    -
+      value: LiveCycle
+      label: 'Dashboard LiveCycle pages.'
+    -
+      value: No-dashboard
+      label: "Studentaidbc pages, 'everything but /dashboard'"
+    -
+      value: 'front&dblogin'
+      label: "Studentaidbc ' homepage' & Dashboard Login 'dashboard/login'"
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

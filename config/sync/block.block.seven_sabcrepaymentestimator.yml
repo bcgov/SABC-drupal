@@ -1,0 +1,31 @@
+uuid: f16e6785-4d0e-4753-94ed-3ceb1d20ec92
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:7bf81fe9-d641-4c1c-aa5e-434bf7614fd0'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_sabcrepaymentestimator
+theme: seven
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:7bf81fe9-d641-4c1c-aa5e-434bf7614fd0'
+settings:
+  id: 'block_content:7bf81fe9-d641-4c1c-aa5e-434bf7614fd0'
+  label: 'SABC Repayment Estimator'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

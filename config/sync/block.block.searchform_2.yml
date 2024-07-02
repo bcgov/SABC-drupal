@@ -1,0 +1,27 @@
+uuid: 99d3754e-4770-41ae-99f2-d11d8f761f21
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - sabc
+id: searchform_2
+theme: sabc
+region: header
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/admin/*'

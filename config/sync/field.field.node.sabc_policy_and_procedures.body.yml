@@ -1,0 +1,23 @@
+uuid: 2d1ca91a-55e3-40ea-969f-c33821170ab4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sabc_policy_and_procedures
+  module:
+    - text
+id: node.sabc_policy_and_procedures.body
+field_name: body
+entity_type: node
+bundle: sabc_policy_and_procedures
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

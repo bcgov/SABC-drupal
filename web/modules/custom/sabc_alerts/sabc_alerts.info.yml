@@ -1,0 +1,6 @@
+name: 'SABC Alerts'
+type: module
+description: 'Growl style alerts that work with E-service notifications. Does a ping test of Eservices. Writes the result to the drupal log & emails out failure/success. Contains 3 content types:SABC Alerts:General,SABC Alerts:System:Target Days,SABC Alerts:System:Target Range.'
+#core: 8.x
+core_version_requirement: ^9 || ^10
+package: 'SABC Modules'

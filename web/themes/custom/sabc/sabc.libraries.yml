@@ -1,0 +1,15 @@
+global-styling:
+  css:
+    theme:
+      assets/css/app.css: {}
+      assets/fonts/font-awesome/css/font-awesome.min.css: {}
+      css/custom.css: {}
+global-scripts:
+  js:
+    assets/js/plugins/datatables.min.js: {}
+    js/sabc.js: {}
+    js/tool_tips.js: {}
+global-scripts-preload:
+  header: true
+  js:
+    assets/js/vendor/popper.min.js: {}

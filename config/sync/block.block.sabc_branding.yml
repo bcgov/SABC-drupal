@@ -1,0 +1,30 @@
+uuid: 6fb21f24-8c7f-4721-a767-f928e5c25bd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sabc
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: sabc_branding
+theme: sabc
+region: nav_branding
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/admin/*'

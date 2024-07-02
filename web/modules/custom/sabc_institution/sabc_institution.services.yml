@@ -1,0 +1,17 @@
+services:
+  sabc_institution.application:
+    class: Drupal\sabc_institution\Services\Application
+    arguments: ['@sabc_institution.aeit','@sabc_institution.sabc','@sabc_institution.soapclient','@sabc_institution.nusoapbase']
+
+  sabc_institution.aeit:
+    class: Drupal\sabc_institution\Services\Aeit
+
+  sabc_institution.sabc:
+    class: Drupal\sabc_institution\Services\Sabc
+
+  sabc_institution.soapclient:
+    class: Drupal\sabc_institution\Services\SoapClient
+
+  sabc_institution.nusoapbase:
+    class: Drupal\sabc_institution\Services\NusoapBase
+  

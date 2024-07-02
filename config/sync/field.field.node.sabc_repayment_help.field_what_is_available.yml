@@ -1,0 +1,21 @@
+uuid: 52430477-d364-4628-9086-453b3891be27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_what_is_available
+    - node.type.sabc_repayment_help
+  module:
+    - text
+id: node.sabc_repayment_help.field_what_is_available
+field_name: field_what_is_available
+entity_type: node
+bundle: sabc_repayment_help
+label: 'What is available?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

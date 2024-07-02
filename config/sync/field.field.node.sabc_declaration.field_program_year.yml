@@ -1,0 +1,19 @@
+uuid: 3d1933e2-f38d-4b92-903b-3ad1bd8f9abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_year
+    - node.type.sabc_declaration
+id: node.sabc_declaration.field_program_year
+field_name: field_program_year
+entity_type: node
+bundle: sabc_declaration
+label: 'Program Year'
+description: 'Beginning Year followed by Ending Year separated by a forward slash (/) - ex. <em>2013/2014</em>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

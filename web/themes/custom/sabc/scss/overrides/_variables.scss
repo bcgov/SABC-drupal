@@ -1,0 +1,49 @@
+// Override bootstrap framework variables.
+// Full list of variables in [path to themes/contrib]/bootstrap4/dist/bootstrap/4.4.1/scss/_variables.scss
+// or [path to themes/contrib]/bootstrap4/scss/_theme_variables.scss.
+
+$navbar-brand-image-height: 48px;
+$navbar-brand-image-height-lg: 48px;
+$navbar-brand-site-title-font-size: 0;
+
+.node--type-content-snippets h3, .node--type-content-snippets h4, .node--type-content-snippets h5{
+  font-size: 1.15rem;
+  color: #2f579c;
+  font-weight: 700;
+}
+
+em.highlight, .search-snippet strong {
+  font-style: normal;
+  background: #fff8ab;
+  color: #444444;
+  font-weight: 700;
+  padding: 0 2px;
+}
+h2.page-title {
+  text-transform: initial;
+}
+div.card.link-card:after {
+  content: "";
+  position: absolute;
+  background: url(../assets/img/pathway.png) no-repeat;
+  background-size: contain;
+  bottom: 0;
+  right: 0;
+  width: 49px;
+  height: 49px;
+  display: block;
+}
+div.card.link-card:hover:after {
+  background: url(../assets/img/pathway-hover.png) no-repeat;
+  background-size: contain;
+}
+.link-card p.card-text {
+  min-height: 95px;
+}
+.link-card div.card-body {
+  min-height: 330px;
+}
+b,
+strong {
+  font-weight: bold;
+}

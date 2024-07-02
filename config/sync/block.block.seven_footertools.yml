@@ -1,0 +1,31 @@
+uuid: b7fffdb0-3e7e-4fa7-824a-bca460c5f75b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:84ccd68a-aa45-4959-a36b-2299a74d2cfa'
+  module:
+    - block_content
+    - system
+  theme:
+    - seven
+id: seven_footertools
+theme: seven
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:84ccd68a-aa45-4959-a36b-2299a74d2cfa'
+settings:
+  id: 'block_content:84ccd68a-aa45-4959-a36b-2299a74d2cfa'
+  label: 'Footer Tools'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

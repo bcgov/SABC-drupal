@@ -1,0 +1,30 @@
+uuid: fc720a42-d469-48a9-b84b-145d19272968
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_reminders.body
+    - node.type.sabc_reminders
+  module:
+    - text
+    - user
+id: node.sabc_reminders.teaser
+targetEntityType: node
+bundle: sabc_reminders
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

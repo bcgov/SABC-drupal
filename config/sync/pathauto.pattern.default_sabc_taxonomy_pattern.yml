@@ -1,0 +1,33 @@
+uuid: f76f6d85-94fb-4cf2-bb0e-1fcb836b0748
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: default_sabc_taxonomy_pattern
+label: 'Default SABC Taxonomy Pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary]/[term:name]'
+selection_criteria:
+  a9dfe63f-5bb2-4ae5-a9fb-faa31938dbfd:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: a9dfe63f-5bb2-4ae5-a9fb-faa31938dbfd
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      help_tags: help_tags
+      sabc_blog_taxonomy: sabc_blog_taxonomy
+      sabc_content_tags: sabc_content_tags
+      sabc_content_workflow: sabc_content_workflow
+      sabc_form_library_taxonomy: sabc_form_library_taxonomy
+      sabc_glossary: sabc_glossary
+      sabc_page_names: sabc_page_names
+      sabc_program_taxonomy: sabc_program_taxonomy
+      sabc_py: sabc_py
+      sabc_school_officials_taxonomy: sabc_school_officials_taxonomy
+      tags: tags
+selection_logic: and
+weight: -5
+relationships: {  }

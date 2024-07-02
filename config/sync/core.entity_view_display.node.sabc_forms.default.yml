@@ -1,0 +1,74 @@
+uuid: b5f68943-5f5c-4aa8-84ea-396207f9c992
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_forms.body
+    - field.field.node.sabc_forms.field_file_desciption
+    - field.field.node.sabc_forms.field_order_id
+    - field.field.node.sabc_forms.field_sabc_forms
+    - field.field.node.sabc_forms.field_smart_forms_sabc_forms
+    - field.field.node.sabc_forms.field_url
+    - node.type.sabc_forms
+  module:
+    - file
+    - text
+    - user
+id: node.sabc_forms.default
+targetEntityType: node
+bundle: sabc_forms
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_file_desciption:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_order_id:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ' '
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sabc_forms:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_smart_forms_sabc_forms:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

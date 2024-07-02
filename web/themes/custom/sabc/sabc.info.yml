@@ -1,0 +1,39 @@
+name: sabc
+type: theme
+description: 'Student Aid BC Bootstrap4 Subtheme'
+core: 10.x
+core_version_requirement: ^9 || ^10
+base theme: bootstrap4
+
+# Stylesheets.
+stylesheets-remove:
+  - '@bootstrap4/css/style.css'
+
+# Libraries.
+libraries:
+  - sabc/global-styling
+  - sabc/global-scripts-preload
+  - sabc/global-scripts
+
+# Regions.
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  highlighted: 'Highlighted'
+  help: 'Help'
+  help_centre: "Help-centre header"
+  home_col_1: "SABC home page column 1"
+  home_col_2: "SABC home page column 2"
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  home_notices: 'SABC Status Notices'
+  home_news: 'SABC Home Latest News'
+  footer_tools: Footer Tools
+  footer_nav: Footer Navigation
+  footer_gov_nav: Footer Gov Navigation
+  widgets: Dashboard widgets region
+  sabc_institution_lookup: Institution Lookup

@@ -1,0 +1,21 @@
+uuid: 7ce3eeb4-6eb5-4a15-9432-0dc51b1c81af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_dec_type
+    - node.type.sabc_new_dec
+  module:
+    - options
+id: node.sabc_new_dec.field_new_dec_type
+field_name: field_new_dec_type
+entity_type: node
+bundle: sabc_new_dec
+label: 'Declaration Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

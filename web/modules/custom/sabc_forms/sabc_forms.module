@@ -1,0 +1,7 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Mail\MailFormatHelper;
+use Drupal\Component\Utility\Mail;
+use Drupal\Core\Render\Markup;
+

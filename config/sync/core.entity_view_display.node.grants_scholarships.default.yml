@@ -1,0 +1,81 @@
+uuid: c4b91569-3ac8-44ad-a43c-bea1d5dd8465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.grants_scholarships.field_am_i_eligible_
+    - field.field.node.grants_scholarships.field_excerpt_gs
+    - field.field.node.grants_scholarships.field_how_do_i_apply_
+    - field.field.node.grants_scholarships.field_is_external_meta_tag_neede
+    - field.field.node.grants_scholarships.field_taxonomy
+    - field.field.node.grants_scholarships.field_url_grants_scholarsh
+    - field.field.node.grants_scholarships.field_what_is_available
+    - node.type.grants_scholarships
+  module:
+    - text
+    - user
+id: node.grants_scholarships.default
+targetEntityType: node
+bundle: grants_scholarships
+mode: default
+content:
+  field_am_i_eligible_:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_excerpt_gs:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_how_do_i_apply_:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_is_external_meta_tag_neede:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_taxonomy:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_url_grants_scholarsh:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_what_is_available:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

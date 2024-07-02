@@ -1,0 +1,14 @@
+uuid: 8d20fa3e-3633-4661-a0fc-5652b0effaa4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Z0Z6TrqVuI40xwzKBoE5D669MmUV4U_qmamFRWm3C94
+id: blb_col_6_full_width
+layout_id: blb_col_6
+label: 'Full width'
+structure: '12'
+breakpoints:
+  tablet: tablet
+  mobile: mobile
+weight: 0

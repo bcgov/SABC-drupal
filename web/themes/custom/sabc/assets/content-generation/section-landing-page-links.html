@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oj.mustache/0.7.2/oj.mustache.js" integrity="sha512-bznmMpQAni3N9W94836tPBa9o6PFewUBcIsn9G9RNQ/k97iXqKld8Svn23SPnnC/L9koqoLdtrUTj2xJjEbvwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+
+    <script>
+      var mainTemplate = `
+      <p class="lead">{{intro}}</p>
+    
+      <div class="row">
+        <div class="card-deck col-md-12">
+    
+          {{cards}}
+    
+        </div>
+      </div>
+      `;
+    
+      var cardTemplate = `
+      <div class="col-md-4 col-xs-12">
+        <div class="card link-card bg-light mb-3">
+          <a class="card-block text-dark stretched-link text-decoration-none" href="{{target}}">
+            <div class="card-body">
+              <h1 class="card-title text-center">
+                <span class="icon-2x {{icon}} text-muted"></span>
+              </h1>
+              <h2>{{header}}</h2>
+              <p class="card-text">{{blurb}}</p>
+            </div>
+          </a>
+        </div>
+      </div> 
+      `;
+    
+      var getHtml = function(data) {
+        var cardHtml = "";
+        for (const link of data["links"]) {
+          var html = cardTemplate;
+          html = html.replace("{{target}}", link["target"]);
+          html = html.replace("{{icon}}", link["icon"]);
+          html = html.replace("{{header}}", link["header"]);
+          html = html.replace("{{blurb}}", link["blurb"]);
+          cardHtml += html;
+        }
+        
+        var mainHtml = mainTemplate;
+        mainHtml = mainHtml.replace("{{intro}}", data["intro"]);
+        mainHtml = mainHtml.replace("{{cards}}", cardHtml);
+    
+        return mainHtml;
+      };
+
+      var emptyData = {
+        "intro": "",
+        "links": [
+          {
+              "target": "",
+              "icon": "",
+              "header": "",
+              "blurb": ""
+          },
+        ]
+      }
+
+
+
+
+
+
+
+      var planData = {
+        "intro": "Planning your post-secondary education can feel overwhelming, but there are many resources available to make it easier.",
+        "links": [
+          {
+              "target": "/plan/occupations",
+              "icon": "icon-barchart",
+              "header": "Explore occupations.",
+              "blurb": "Deciding on the right education path begins with career exploration."
+          },
+          {
+              "target": "/plan/education",
+              "icon": "icon-monitor",
+              "header": "Plan your education.",
+              "blurb": "Find resources to help you decide what school to attend or what program to take."
+          },
+          {
+              "target": "/plan/debt",
+              "icon": "icon-uniF000",
+              "header": "Manage your debt.",
+              "blurb": "Attending post-secondary school requires a serious financial commitment."
+          }
+        ]
+      }
+
+      var exploreData = {
+        "intro": "If your employment income, savings, assets and support from family members is not enough to pay for your post-secondary education, there are additional options including loans, grants and awards.",
+        "links": [
+          {
+              "target": "/explore/full-time",
+              "icon": "icon-windows",
+              "header": "Full-time student funding.",
+              "blurb": "Find out what funding options are available to you as a full-time student."
+          },
+          {
+              "target": "/explore/part-time",
+              "icon": "icon-thumbnails",
+              "header": "Part-time student funding.",
+              "blurb": "Find out what funding option are available to you as a part-time student."
+          },
+          {
+              "target": "/explore/grants-scholarships",
+              "icon": "icon-uniF476",
+              "header": "Grants and scholarships.",
+              "blurb": "Grants and scholarships do not have to be repaid. Find out if you're eligible."
+          }
+        ]
+      }
+
+      var applyData = {
+        "intro": "Determine whether you are eligible for student financial assistance, then find out how to apply for and receive your student loan.",
+        "links": [
+        {
+              "target": "/apply/designated",
+              "icon": "",
+              "header": "Is your school designated?",
+              "blurb": "Find out about school designation and research student loan default rates."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/apply/eligibility",
+              "icon": "",
+              "header": "Determine your eligibility.",
+              "blurb": "Before you apply for a loan, you need to make sure you're eligible."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/apply/how-to-apply",
+              "icon": "",
+              "header": "How to apply for a loan.",
+              "blurb": "Find out how to apply for a loan as a full-time or part-time student."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/apply/receive",
+              "icon": "",
+              "header": "Receive your funding.",
+              "blurb": "Find out what happens when you're approved for funding and how to receive your money."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/apply/appeal",
+              "icon": "",
+              "header": "Appeal your assessment.",
+              "blurb": "Find out what to do if you don't agree with your application assessment."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/apply/overaward",
+              "icon": "",
+              "header": "Deal with an overaward.",
+              "blurb": "Find out what to do if you receive too much financial assistance."
+          },
+        ]
+      }
+
+      var maintainData = {
+        "intro": "While you are attending classes, there are certain things you must do to keep your interest-free loan status and stay eligible for future funding.",
+        "links": [
+        {
+              "target": "https://uat.studentaidbc.ca/maintain/responsibilities",
+              "icon": "icon-thumbs-up",
+              "header": "Your loan responsibilities.",
+              "blurb": "Find out how to keep your student loan in good standing."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/maintain/when-payments-are-not-required",
+              "icon": "icon-book",
+              "header": "When payments are not required.",
+              "blurb": "Find out how to ensure your loan stays interest-free while you're in school."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/maintain/circumstances",
+              "icon": "icon-comment4",
+              "header": "Report circumstance changes.",
+              "blurb": "Find out how to keep your student loan file up to date."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/maintain/audited",
+              "icon": "icon-searchfolder",
+              "header": "Verify the accuracy of your information.",
+              "blurb": "Find out what to do if your file is restricted while your information is verified."
+          },
+        ]
+      }
+
+      var repayData = {
+        "intro": "You have six months from your study period end date before you must start paying back your loan. Know what to expect and where to find help if you need it.",
+        "links": [
+        {
+              "target": "https://uat.studentaidbc.ca/repay/understand-loan-repayment",
+              "icon": "icon-clock",
+              "header": "Understand loan repayment.",
+              "blurb": "Find what you need to know about your student loans and repayment."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/repay/missed-payments",
+              "icon": "icon-error2",
+              "header": "If you miss loan payments.",
+              "blurb": "Find out what to do if you're behind in your monthly payments."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/repay/rehabilitation",
+              "icon": "icon-removefriend",
+              "header": "Rehabilitation after default.",
+              "blurb": "Find out how to be rehabilitated if you have defaulted on your loan."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/repay/repayment-help/",
+              "icon": "icon-wallet",
+              "header": "Get help with repayment.",
+              "blurb": "Find programs to help you manage your student repayment debt."
+          },
+          {
+              "target": "https://uat.studentaidbc.ca/repay/bankruptcy",
+              "icon": "icon-alert",
+              "header": "If you declare bankruptcy.",
+              "blurb": "Find out what to do about your student loan if you declare bankruptcy."
+          },
+        ]
+      }
+
+
+    </script>
+    
+    <script>
+
+      var appendData = function(data) {
+        var newDiv = document.createElement('div');
+        newDiv.innerHTML = getHtml(data);
+        document.body.appendChild(newDiv);
+      };
+
+      (function() {
+
+        for (const data of [planData, exploreData, applyData, maintainData, repayData]) {
+          appendData(data);
+          var hr = document.createElement('hr');
+          document.body.appendChild(hr);
+        }
+
+      })();
+
+    </script>
+
+  </body>
+</html>

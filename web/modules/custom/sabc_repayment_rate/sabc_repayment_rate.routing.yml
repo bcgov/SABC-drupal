@@ -1,0 +1,8 @@
+sabc_repayment_rate.repay:
+  path: '/ajax/repay'
+  defaults:
+    _controller: '\Drupal\sabc_repayment_rate\Controller\RepayController::getCalc'
+    _title: 'Repay'
+  methods:  [POST]
+  requirements:
+    _permission: 'access content'

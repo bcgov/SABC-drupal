@@ -1,0 +1,26 @@
+uuid: 4e269a01-2e5e-4459-8c46-b9554d8a2677
+langcode: en
+status: false
+dependencies:
+  module:
+    - sabc_repayment_rate
+    - system
+  theme:
+    - seven
+id: seven_sabcrepaymentrateblock
+theme: seven
+region: content
+weight: -7
+provider: null
+plugin: sabc_repayment_rate_block
+settings:
+  id: sabc_repayment_rate_block
+  label: 'Loan Repayment Estimator'
+  label_display: visible
+  provider: sabc_repayment_rate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /plan/debt

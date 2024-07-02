@@ -1,0 +1,18 @@
+uuid: 19874549-9155-4677-9d93-2f2dc2c5593a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'SABC School Officials'
+type: sabc_school_officials
+description: 'StudentAid BC school officials library'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

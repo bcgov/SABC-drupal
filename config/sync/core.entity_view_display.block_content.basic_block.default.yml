@@ -1,0 +1,22 @@
+uuid: b6500a50-ceca-4564-b749-07c5f6bef4f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_block
+    - field.field.block_content.basic_block.body
+  module:
+    - text
+id: block_content.basic_block.default
+targetEntityType: block_content
+bundle: basic_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

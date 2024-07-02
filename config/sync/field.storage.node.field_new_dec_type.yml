@@ -1,0 +1,30 @@
+uuid: e18cce2c-c242-4f31-b9cc-1cbfbc22d2af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_new_dec_type
+field_name: field_new_dec_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Spouse - Signature Required'
+      label: 'Spouse - Signature Required'
+    -
+      value: 'Spouse - No Signature Required'
+      label: 'Spouse - No Signature Required'
+    -
+      value: 'Spouse - E-Consent'
+      label: 'Spouse - E-Consent'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

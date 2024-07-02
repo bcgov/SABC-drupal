@@ -1,0 +1,10 @@
+institution_designation:
+  version: VERSION
+  css:
+    layout:
+      css/institution_designation.css: {}
+  js:
+    js/institution_designation.js: {}
+    js/formatter.min.js: {}
+  dependencies:
+    - core/jquery

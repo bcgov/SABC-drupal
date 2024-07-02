@@ -1,0 +1,19 @@
+uuid: 033fb0e0-6844-4f39-9d9f-f23cdad59ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_url
+    - taxonomy.vocabulary.sabc_blog_taxonomy
+id: taxonomy_term.sabc_blog_taxonomy.field_category_url
+field_name: field_category_url
+entity_type: taxonomy_term
+bundle: sabc_blog_taxonomy
+label: category_url
+description: 'This defines the url slug for this particular news category'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 88ebaf09-4526-46ce-82fe-900554cdda7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_declaration_title
+    - node.type.sabc_declaration
+  module:
+    - text
+id: node.sabc_declaration.field_declaration_title
+field_name: field_declaration_title
+entity_type: node
+bundle: sabc_declaration
+label: Declaration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

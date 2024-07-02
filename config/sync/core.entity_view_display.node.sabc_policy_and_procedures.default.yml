@@ -1,0 +1,28 @@
+uuid: 0670ab83-9968-47db-a3ea-0fdc36bade9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_policy_and_procedures.body
+    - node.type.sabc_policy_and_procedures
+  module:
+    - text
+    - user
+id: node.sabc_policy_and_procedures.default
+targetEntityType: node
+bundle: sabc_policy_and_procedures
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

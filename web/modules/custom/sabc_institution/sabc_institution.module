@@ -1,0 +1,9 @@
+<?php
+
+  /**
+  * Adds custom CSS and JS libraries to the form upon request
+  * Implements hook_form_alter().
+  */
+  function sabc_institution_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    $form['#attached']['library'][] = 'sabc_institution/sabc_institution';
+  }

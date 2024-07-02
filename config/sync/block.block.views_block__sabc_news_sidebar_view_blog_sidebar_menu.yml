@@ -1,0 +1,29 @@
+uuid: f2e21911-5027-4d0b-8c78-e9f252065412
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sabc_news_sidebar_view
+  module:
+    - system
+    - views
+  theme:
+    - sabc
+id: views_block__sabc_news_sidebar_view_blog_sidebar_menu
+theme: sabc
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:sabc_news_sidebar_view-blog_sidebar_menu'
+settings:
+  id: 'views_block:sabc_news_sidebar_view-blog_sidebar_menu'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news*\r\n/news/*\r\n/news/*/*\r\n/news?page=*\r\n/news"

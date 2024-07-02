@@ -1,0 +1,70 @@
+uuid: ae78ba18-eee9-408b-888e-b85de8349a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sabc_pathway_pages.body
+    - node.type.sabc_pathway_pages
+  module:
+    - text
+id: node.sabc_pathway_pages.default
+targetEntityType: node
+bundle: sabc_pathway_pages
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

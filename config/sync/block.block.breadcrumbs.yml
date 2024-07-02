@@ -1,0 +1,25 @@
+uuid: 2f533eae-3365-4c7b-8fe4-8349ed90e7ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sabc
+id: breadcrumbs
+theme: sabc
+region: breadcrumb
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '/admin/*'

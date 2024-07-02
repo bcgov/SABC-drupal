@@ -1,0 +1,457 @@
+#repayment-rate th span {
+    float: right;
+    font-size: 12px;
+}
+.ajax-loading {
+    background: rgba(0, 0, 0, 0) url("../img/ajax-loader.gif") no-repeat scroll center center;
+    margin: auto;
+    min-height: 300px;
+    position: relative;
+    width: 100%;
+}
+html.no-js #repayment-rate tbody tr {
+    cursor: auto;
+}
+tbody td.dataTables_empty + thead {
+    display: none;
+}
+#repayment-rate tbody td a i {
+    padding-right: 10px;
+}
+#repayment-rate th .icon-sortbynameascending, #repayment-rate th .icon-sync2, #repayment-rate th .icon-sortbynamedescending, #repayment-rate th .icon-sync2, #repayment-rate th .icon-sortbynamedescending, #repayment-rate th .icon-sortbynameascending {
+    display: none;
+}
+#repayment-rate th.tableSortDown .icon-sortbynamedescending, #repayment-rate th.tableSortUp .icon-sortbynameascending, #repayment-rate th.tableSort .icon-sync2 {
+    display: inline;
+}
+#repayment-rate th.tableSortDown .icon-sortbynameascending, #repayment-rate th.tableSortDown .icon-sync2, #repayment-rate th.tableSortUp .icon-sortbynamedescending, #repayment-rate th.tableSortUp .icon-sync2, #repayment-rate th.tableSort .icon-sortbynamedescending, #repayment-rate th.tableSort .icon-sortbynameascending {
+    display: none;
+}
+
+html.no-js #repayment-rate th .icon-sortbynameascending, html.no-js #repayment-rate th .icon-sync2, html.no-js #repayment-rate th .icon-sortbynamedescending {
+    display: none;
+}
+#repayment-rate_wrapper .dataTables_info {
+    display: inline;
+    float: left;
+}
+#repayment-rate_wrapper .dataTables_paginate {
+    float: right;
+}
+#repayment-rate_wrapper .alphabet-filter-widgets {
+    margin-bottom: 15px;
+}
+#repayment-rate_wrapper .alphabet-filter-widgets.btn-group {
+    display: block;
+}
+#repayment-rate_wrapper .alphabet-filter-widgets .btn {
+    border-radius: 3px;
+    float: left;
+    padding: 4px 0;
+    width: 3.97%;
+}
+@media all and (min-width: 1280px) {
+#repayment-rate_wrapper .alphabet-filter-widgets .btn {
+    width: 3.93%;
+}
+}
+#repayment-rate_wrapper .alphabet-filter-widgets #filter_all.btn {
+    margin-bottom: 10px;
+    width: 100% !important;
+}
+#repayment-rate_wrapper .dataTables_filter {
+    position: relative;
+}
+#repayment-rate_wrapper .dataTables_filter label i.clear-input {
+    display: none;
+    position: absolute;
+    right: 2%;
+    top: 40%;
+}
+#repayment-rate_wrapper .dataTables_filter label.active i.clear-input {
+    display: block;
+}
+#repayment-rate_wrapper .dataTables_filter label a {
+    border-bottom: medium none;
+    float: right;
+    margin-right: 2px;
+}
+#repayment-rate_wrapper .dataTables_filter label .popover-content {
+    font-weight: normal;
+}
+.repayment-rate-details .assistance-feature {
+    float: left;
+    margin-right: 10px;
+}
+@media only screen and (max-width: 767px) {
+.repayment-rate-details .assistance-feature.feature {
+    margin-right: 0;
+}
+}
+.repayment-rate-details .assistance-feature h2, .repayment-rate-details .assistance-feature h3 {
+    padding: 5px 0;
+}
+.repayment-rate-details .assistance-feature .assistance-button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.repayment-rate-details .assistance-feature .content {
+    padding: 0;
+}
+#repayment-rate_wrapper #repayment-rate a.no-results {
+    color: #5d5d5d;
+    font-weight: normal;
+}
+#repayment-rate_wrapper #repayment-rate strong.no-results {
+    color: #0d7abf;
+}
+#repayment-rate_wrapper #repayment-rate strong.no-results:hover {
+    text-decoration: underline;
+}
+
+/*	--------------------------------------------------
+	:: ACCORDIONS
+--------------------------------------------------- */
+.accordion {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+.accordion.nomargin {
+  margin-top: 0;
+}
+.accordion.halfmargin {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+.accordion-group {
+  margin-bottom: 16px;
+}
+.nomargin .accordion-group {
+  margin-bottom: 0;
+}
+.halfmargin .accordion-group {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.accordion-heading {
+  border-bottom: 0;
+  position: relative;
+  color: #ffffff;
+  background: #3f414a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.accordion-heading a {
+  color: #ffffff;
+  font-weight: 700;
+}
+.accordion-heading a:hover {
+  background: #28292e;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+.accordion-heading.large .accordion-toggle {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.accordion-heading h4 {
+  color: #ffffff;
+  margin: 0;
+  line-height: inherit;
+}
+.accordion-heading.light {
+  background: #ffffff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #5d5d5d;
+  border-bottom: 1px solid #e2e6ea;
+}
+.accordion-heading.light a {
+  color: #5d5d5d;
+}
+.accordion-heading.light :hover {
+  background: #f1f3f5;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.accordion-heading.unread {
+  background: #fffcce;
+}
+.accordion-heading.unread a:hover {
+  background: #fffcce;
+}
+a.accordion-toggle {
+  cursor: pointer;
+}
+a.accordion-toggle:hover {
+  color: #fff;
+}
+.accordion-inner {
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px;
+}
+.accordion-inner .content {
+  padding: 9px 15px;
+}
+.accordion-inner .repaymentLabel {
+  font-weight: bold;
+}
+.accordion-inner .total {
+  margin: 0 0 10px;
+}
+.nomargin .accordion-inner {
+  border: none;
+  border-bottom: 1px solid #e2e6ea;
+}
+.accordion-body.in {
+  overflow: visible;
+}
+
+/*************Slider Repayment calcuator****************/
+
+#slider label {
+  position: absolute;
+  margin-left: -10px;
+  text-align: center;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #3498db;
+}
+
+#slider span.label-num {
+  position: absolute;
+  margin-left: -6px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+
+#slider label:first-of-type,
+#slider label:last-child {
+  display: none;
+}
+
+#slider {
+  background-color: #34495e;
+  border-radius: 10px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+  background-color: #3498db;
+  border-radius: 10px;
+  outline: none;
+}
+
+#loan-repayment-estimator .fieldset-wrapper {
+  background: #f4f4f6 url('/nutmeg/assets/img/notepad-ripped.png') repeat-x left top;
+  border: 1px solid #ccc;
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  padding: 25px;
+}
+
+#loan-repayment-estimator .description {
+  display: none;
+}
+
+#loan-repayment-estimator legend {
+  box-shadow: inset 0 1px 0 #7bbbf7;
+  -moz-box-shadow: inset 0 1px 0 #7bbbf7;
+  background: #0f93db;
+  background: -moz-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0f93db), color-stop(100%, #0d7abf));
+  background: -webkit-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: -o-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: -ms-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  text-shadow: 0 -1px 0 #004b8d;
+  -webkit-box-shadow: inset 0 1px 0 #7bbbf7;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #004b8d;
+  margin-bottom: 0px;
+  padding: 15px 20px;
+  color: white;
+}
+
+#edit-loan-type--wrapper legend {
+  display: none;
+}
+
+#edit-loan-type--wrapper {
+  border: 0px;
+}
+
+#edit-loan-type--wrapper input{
+  display: none;
+}
+
+.block-sabcrepaymentrateblock h2 {
+  box-shadow: inset 0 1px 0 #7bbbf7;
+  -moz-box-shadow: inset 0 1px 0 #7bbbf7;
+  background: #0f93db;
+  background: -moz-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0f93db), color-stop(100%, #0d7abf));
+  background: -webkit-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: -o-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: -ms-linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  background: linear-gradient(top, #0f93db 0%, #0d7abf 100%);
+  text-shadow: 0 -1px 0 #004b8d;
+  -webkit-box-shadow: inset 0 1px 0 #7bbbf7;
+  -moz-border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #004b8d;
+}
+
+.form-item-loan-amt,
+.form-item-prime-rate {
+  position: relative;
+}
+
+#loan-repayment-estimator .form-item-loan-amt input {
+  padding-left: 50px;
+}
+
+#loan-repayment-estimator .form-submit
+{
+  margin-top: 20px;
+  width: 100%;
+  margin-left: auto;
+  background-color: #9eca55;
+  border: 1px solid #cecece;
+  color: #657d1e;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-image: -webkit-linear-gradient(top, #cae285, #9eca55);
+}
+
+#loan-repayment-estimator .form-item {
+  margin-bottom: 0px;
+}
+.form-item-loan-amt .add-on {
+  top: 33px;
+  left: 2px;
+  border-radius: 3px 0 0 3px;
+}
+
+#loan_period {
+  display: none;
+}
+
+.form-item-prime-rate .add-on {
+  top: 33px;
+  right: 2px;
+  border-radius: 0 3px 3px 0;
+}
+
+#edit-loan-type--wrapper .fieldset-wrapper {
+  padding-left: 0px;
+  border: 0px;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.form-item-prime-rate .add-on,
+.form-item-loan-amt .add-on {
+  position: absolute;
+  height: 38px;
+  width: 40px;
+  padding: 4px 10px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 34px;
+  text-align: center;
+  color: #ecf0f1;
+  text-shadow: 0 -1px 0 #262626;
+  background-color: #34495e;
+  display: block;
+}
+
+.form-item-loan-type {
+  display: inline-block;
+}
+
+.form-item-loan-type:last-child {
+  margin-left: -10px;
+}
+
+.form-item-loan-type label {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #5d5d5d;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #cecece;
+      border-bottom-color: rgb(206, 206, 206);
+  border-bottom-color: #b5b5b5;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  padding: 11px 19px;
+  border-radius: 0px;
+}
+
+
+.form-item-loan-type label.active {
+  background: #34495e;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #222f3d), color-stop(100%, #4f6f8f));
+  background: -webkit-linear-gradient(#222f3d, #4f6f8f);
+  background: -moz-linear-gradient(#222f3d, #4f6f8f);
+  background: -o-linear-gradient(#222f3d, #4f6f8f);
+  background: -ms-linear-gradient(#222f3d, #4f6f8f);
+  background: linear-gradient(#222f3d, #4f6f8f);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: inset 0 2px 5px -2px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  outline: 0;
+  border-color: #34495e;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.calculator-widget-instructions-inner ol.nice li {
+  padding-left: 0px;
+}

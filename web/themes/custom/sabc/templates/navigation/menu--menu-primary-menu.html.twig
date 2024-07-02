@@ -1,0 +1,100 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+We call a macro which calls itself to render the full tree.
+@see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.build_menu(items, attributes, 0) }}
+
+{% macro build_menu(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+    <ul{{ attributes.addClass('navbar-nav navbar-expand-xl') }}>
+    {% else %}
+    <ul class="dropdown-menu">
+    {% endif %}
+    {% for item in items %}
+      {{ menus.add_link(item, attributes, menu_level) }}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{%
+  set list_item_classes = [
+    'nav-item',
+    item.is_expanded ? 'dropdown'
+  ]
+  %}
+  {%
+    set link_class = [
+    'nav-item',
+    'nav-link',
+    item.in_active_trail ? 'active',
+    item.url == path('<current>') ? 'is-active',
+    menu_level == 0 and (item.is_expanded or item.is_collapsed) ? 'dropdown-toggle',
+  ]
+%}
+
+{% macro add_link(item, attributes, menu_level) %}
+  {% import _self as menus %}
+  {%
+    set list_item_classes = [
+    'nav-item',
+    'dropdown'
+  ]
+  %}
+  {%
+    set link_class = [
+    'nav-item',
+    'nav-link',
+    item.in_active_trail ? 'active',
+    item.url == path('<current>') ? 'is-active',
+    menu_level == 0 and (item.is_expanded or item.is_collapsed) ? 'dropdown-toggle',
+  ]
+  %}
+  {%
+    set toggle_class = [
+  ]
+  %}
+  <li{{ item.attributes.addClass(list_item_classes) }}>
+
+    {% set currentPath = path('<current>') %}
+    {% set itemPath = item.url.toString %}
+    {% set activeLink = itemPath == currentPath %}
+
+    {% set menuSplit = item.title | split(' ',2) %}
+    {% if menu_level == 0 and item.below %}
+      <a href="{{item.url}}" class="nav-item nav-link dropdown-toggle {{ activeLink ? 'is-active' }}" data-toggle="dropdown"><span>{{menuSplit[0]}}</span> {{menuSplit[1]}}</a>
+      {{ menus.build_menu(item.below, attributes, menu_level + 1) }}
+    {% elseif menu_level == 0 and (menuSplit[0] != "Form" and menuSplit[0] != "Institution") %}
+      <a href="{{item.url}}" class="nav-item nav-link {{ activeLink ? 'is-active' }}"><span>{{menuSplit[0]}}</span> {{menuSplit[1]}}</a>
+    {% elseif menu_level == 0 %}
+      <a href="{{item.url}}" class="nav-item nav-link {{ activeLink ? 'is-active' }}"><span>{{menuSplit[0]}}</span> {{menuSplit[1]}}</a>
+      {{ menus.build_menu(item.below, attributes, menu_level + 1) }}
+    {% else %}
+      {{ link(item.title, item.url, { 'class': link_class }) }}
+    {% endif %}
+  </li>
+{% endmacro %}

@@ -1,0 +1,22 @@
+uuid: cf568058-2cf9-4079-ab82-9ae2cb113cbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sabc_repayment_help
+label: 'SABC Repayment Help'
+type: 'canonical_entities:node'
+pattern: '/repay/repayment-help/[node:title]'
+selection_criteria:
+  25bbf0e3-7748-40a8-8651-e7a9dbf7a4f0:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 25bbf0e3-7748-40a8-8651-e7a9dbf7a4f0
+    context_mapping:
+      node: node
+    bundles:
+      sabc_repayment_help: sabc_repayment_help
+selection_logic: and
+weight: -5
+relationships: {  }

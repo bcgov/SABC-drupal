@@ -1,0 +1,14 @@
+uuid: 042f682b-46c9-42b4-afbb-1b7e348beb1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bcsc_parent
+  module:
+    - user
+id: user_remove_role_action.bcsc_parent
+label: 'Remove the bcsc_parent role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bcsc_parent

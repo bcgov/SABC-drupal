@@ -1,0 +1,12 @@
+uuid: 0ebad9ac-6a2d-4cc9-a9af-576fc77b9934
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: student
+label: student
+weight: 5
+is_admin: null
+permissions:
+  - 'delete own files'

@@ -1,0 +1,36 @@
+uuid: a8ee0ba8-c960-44bb-a180-69a8efe5b64a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sabc_new_dec.field_new_dec_page_footer
+    - field.field.node.sabc_new_dec.field_new_dec_req2_agreement
+    - field.field.node.sabc_new_dec.field_new_dec_req_agreement_text
+    - field.field.node.sabc_new_dec.field_new_dec_req_intro_text
+    - field.field.node.sabc_new_dec.field_new_dec_title
+    - field.field.node.sabc_new_dec.field_new_dec_title_pg_2_
+    - field.field.node.sabc_new_dec.field_new_dec_type
+    - field.field.node.sabc_new_dec.field_program_year
+    - node.type.sabc_new_dec
+  module:
+    - user
+id: node.sabc_new_dec.teaser
+targetEntityType: node
+bundle: sabc_new_dec
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_new_dec_page_footer: true
+  field_new_dec_req2_agreement: true
+  field_new_dec_req_agreement_text: true
+  field_new_dec_req_intro_text: true
+  field_new_dec_title: true
+  field_new_dec_title_pg_2_: true
+  field_new_dec_type: true
+  field_program_year: true

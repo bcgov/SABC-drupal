@@ -1,0 +1,6 @@
+name: 'SABC Forms'
+type: module
+description: 'Form builder for SABC forms.'
+#core: 8.x
+core_version_requirement: ^9 || ^10
+package: 'SABC Modules'

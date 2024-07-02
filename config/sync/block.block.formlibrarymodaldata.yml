@@ -1,0 +1,30 @@
+uuid: 8622472c-7f33-4877-9ba8-ac2db477d99f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:0e23106a-1c2d-4f8e-a5e8-0ba9d4c2d780'
+  module:
+    - block_content
+    - system
+  theme:
+    - sabc
+id: formlibrarymodaldata
+theme: sabc
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:0e23106a-1c2d-4f8e-a5e8-0ba9d4c2d780'
+settings:
+  id: 'block_content:0e23106a-1c2d-4f8e-a5e8-0ba9d4c2d780'
+  label: 'Form Library - Modal Data'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /form-library

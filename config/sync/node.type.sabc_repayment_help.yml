@@ -26,7 +26,7 @@ third_party_settings:
 name: 'SABC Repayment Help'
 type: sabc_repayment_help
 description: 'Use to add repayment programs for SABC site'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: true

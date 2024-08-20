@@ -12,7 +12,7 @@ third_party_settings:
 name: 'SABC School Officials'
 type: sabc_school_officials
 description: 'StudentAid BC school officials library'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: true

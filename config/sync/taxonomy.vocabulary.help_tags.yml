@@ -6,3 +6,4 @@ name: 'SABC Help Section Tags'
 vid: help_tags
 description: 'Help centre taxonomy'
 weight: 0
+new_revision: false

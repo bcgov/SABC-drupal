@@ -6,3 +6,4 @@ name: 'SABC Site Section Tags'
 vid: tags
 description: 'SABC site taxonamy'
 weight: 0
+new_revision: false

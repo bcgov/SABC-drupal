@@ -10,7 +10,7 @@ third_party_settings:
 name: 'Content Snippets'
 type: content_snippets
 description: 'Used to build content nodes for SABC site and Help Centre'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: true

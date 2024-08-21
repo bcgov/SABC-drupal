@@ -26,7 +26,7 @@ third_party_settings:
 name: 'SABC Alerts:General'
 type: sabc_alerts_general
 description: 'SABC Alerts:General. You can set the alert type, duration, page path.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: true

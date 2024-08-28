@@ -54,7 +54,7 @@
     //
     $(document).on('click', '.backdrop-quickview', function(){
       var qv = $(this).attr('data-target');
-      if ( ! $(qv).is('[data-disable-backdrop-click]') ) {
+      if ( ! $.find(qv).is('[data-disable-backdrop-click]') ) {
         quickview.close(qv);
       }
     });
@@ -114,7 +114,7 @@
   // Close quickview
   //
   quickview.close = function(e) {
-    $(e).removeClass('reveal');
+    $.find(e).removeClass('reveal');
     $('.backdrop-quickview').remove();
   };
 

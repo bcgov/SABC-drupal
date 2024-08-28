@@ -10,7 +10,7 @@ third_party_settings:
 name: 'SABC Reminders'
 type: sabc_reminders
 description: 'Use this content type to create reminders in the dashboard.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

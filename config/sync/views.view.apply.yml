@@ -164,7 +164,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: empty
           exception:
             value: '%1'
@@ -196,6 +196,7 @@ display:
             transform: true
           break_phrase: false
           not: false
+          target_entity_type_id: taxonomy_term
       filters:
         status:
           id: status
@@ -708,7 +709,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: empty
           exception:
             value: all
@@ -740,6 +741,7 @@ display:
             transform: false
           break_phrase: false
           not: false
+          target_entity_type_id: taxonomy_term
       filters:
         status:
           id: status

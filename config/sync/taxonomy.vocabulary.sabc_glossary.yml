@@ -6,3 +6,4 @@ name: 'SABC Glossary'
 vid: sabc_glossary
 description: 'Glossary tags'
 weight: 0
+new_revision: false

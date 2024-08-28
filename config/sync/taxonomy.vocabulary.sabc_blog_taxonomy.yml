@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'SABC Blog Taxonomy'
 vid: sabc_blog_taxonomy
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -57,52 +57,6 @@ class DefaultController extends ControllerBase implements ContainerInjectionInte
     return new static ($application, $aeit, $sabc, $soapclient);
   }
 
-  /**************************************************************************
-	 * Hook Menu - Setup the page for institution details
-	 **************************************************************************/
-	function sabc_institution_menu() {
-
-		$items = array();
-
-		$items['institution-data-load'] = array(
-			'title' => '',
-			'page callback' => 'sabcInstitutionDataLoad',
-			'access arguments' => array('access content')
-		);
-
-		$items['institution/%'] = array(
-			'title' => '',
-			'page callback' => 'sabcInstitutionDetailsPage',
-			'page arguments' => array(1),
-			'access arguments' => array('access content')
-		);
-
-		// PHP Module – Menu Item
-		$items['institution-details/%'] = array (
-			'title' => 'Institution Ajax',
-			'page callback' => 'sabcInstitutionDetailsPageAjax',
-			'access arguments' => array('access content'),
-			'page arguments' => array(1),
-			'type' => MENU_CALLBACK,
-		);
-
-		$items['institution-data-opener'] = array(
-			'title' => '',
-			'page callback' => 'test_opener',
-			'access arguments' => array('access content')
-		);
-		$items['school-details/%'] = array(
-			'title' => '',
-			'page callback' => 'school_detailed_records',
-			'access arguments' => array('access content'),
-			'page arguments' => array(1),
-			'type' => MENU_CALLBACK,
-		);
-
-
-		return $items;
-	}
-
   /**
    * {@inheritdoc}
    */

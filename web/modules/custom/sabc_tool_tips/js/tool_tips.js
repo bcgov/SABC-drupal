@@ -5,18 +5,7 @@
   Drupal.behaviors.tool_tips = {
     attach: function (context, settings) {
 		//GET ALL DATA-TOGGLES WITH TOOLTIP AND PUT INTO AN OBJECT
-		// console.log('hello2');
 		var v = new Object();
-		// JAN 7 2015 - CHECK FOR *BOTH* 'TOOLTIPS' *AND* 'POPOVERS'
-		// THIS ALLOWS FOR A DIFFERENCE IN OUTPUT BETWEEN DEV/TEST/PROD
-		// need to test in IE
-		$('a[data-toggle="popover"], a[data-toggle="tooltip"]').each(function(i){
-
-			//MAKE SURE WE HAVE A CLASS DEFINED ON ELEMENT
-			// if($(this).attr('class') != undefined){
-			// 	v[i] = $(this).attr('class');
-			// }
-		});
 
 		v = {0:'full-Time', 1:'study_period'}
 

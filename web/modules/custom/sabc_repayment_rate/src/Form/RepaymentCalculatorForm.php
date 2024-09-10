@@ -94,17 +94,10 @@ class RepaymentCalculatorForm extends FormBase {
       '#weight' => '4',
       '#attributes' => array('class' => array('sliderBar'), 'id' => 'loan_period')
     ];
-    //$form['#executes_submit_callback'] = FALSE;
     $form['wrapper']['cal']['actions'] = [
       '#type' => 'button',
       '#value' => $this->t('Calculate'),
       '#weight' => '5',
-      // '#ajax' => [
-      //   'callback' => '::setMessage',
-      //   'progress' => [
-      //     'type' => 'throbber',
-      //   ],
-      // ]
     ];
     $form['wrapper']['cal']['loan_summary'] = array(
 			'#type' => 'markup',
@@ -125,21 +118,6 @@ class RepaymentCalculatorForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function calculateLoan(array &$form, FormStateInterface $form_state) {
-    //$response = new AjaxResponse();
-
-	}
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function setMessage(array $form, FormStateInterface $form_state) {
     $floating = '2.5';
 		$fixed = '5';
@@ -151,7 +129,6 @@ class RepaymentCalculatorForm extends FormBase {
     $fixed_rate = 2;
     $variable_rate = 0;
 
-    //return $lt;
 		//TYPE OF LOAN INTEREST TO USE
 		$rt = (float)$form_state->getValue('prime_rate');
     if($lt == "fixed"){
@@ -163,7 +140,6 @@ class RepaymentCalculatorForm extends FormBase {
 		$fed_rate = $rt+2.5;
 
     //https://hive.aved.gov.bc.ca/jira/projects/SABC/issues/SABC-2640?filter=allopenissues
-		//$rt = ($fed_rate*0.6)+($prov_rate*0.4);
     $rt = ($fed_rate*0.6)+($prov_rate*0);
 
 		//CALCULATE MONTHLY INTEREST
@@ -290,12 +266,5 @@ class RepaymentCalculatorForm extends FormBase {
     );
     return $response;
    }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-
-
-  }
+   
 }

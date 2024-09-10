@@ -599,26 +599,10 @@
 			}
 		}
 
-		function fnDisableReadOnly(){
-
-		}
-
 		function fnRetrieveCalendarList($section, $ln, $vn, $start = '', $end = '', $query = '', $fields = '', $limit = 200){
 
 			//CHECK FOR RECURRING DATA
 			if($start != '' && $end != ''){
-
-				/*$date = date('2012-02-01');
-				$start = date('2012-02-01');
-				$end = date('2012-02-29');
-				echo date('Y-m-d', strtotime('next month', strtotime(date('2012-02-15'))));
-
-				while(strtotime($date) >= strtotime($start) && strtotime($date) <= strtotime($end)){
-
-					$d = date('Y-m-d', strtotime('next friday', strtotime($date)));
-
-					$date = $d;
-				}*/
 
 				$this->ln = $ln;
 				$this->vn = $vn;
@@ -918,14 +902,9 @@
 			}
 			else
 			{
-				//echo $client->request;
-				//echo $client->response;
 				return $result;
 			}
 		}
 
-		function fnWSError($faultCode, $faultString, $faultDetails){
-
-		}
 	}
 ?>

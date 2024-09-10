@@ -32,7 +32,6 @@
 
     if (!isset(${$cid})) {
       if (!$reset && ($cache = cache_get($cid, 'cache_block')) && !empty($cache->data)) {
-        //${$cid} = $cache->data;
         if(time() < $cache->expire){
           return $cache->data;
         }

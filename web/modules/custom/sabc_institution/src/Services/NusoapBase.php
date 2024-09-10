@@ -53,24 +53,6 @@ http://www.nusphere.com
  *	RFC 2617 HTTP Authentication: Basic and Digest Access Authentication
  */
 
-/* load classes
-
-// necessary classes
-require_once('class.soapclient.php');
-require_once('class.soap_val.php');
-require_once('class.soap_parser.php');
-require_once('class.soap_fault.php');
-
-// transport classes
-require_once('class.soap_transport_http.php');
-
-// optional add-on classes
-require_once('class.xmlschema.php');
-require_once('class.wsdl.php');
-
-// server class
-require_once('class.soap_server.php');*/
-
 // class variable emulation
 // cf. http://www.webkreator.com/php/techniques/php-static-class-variables.html
 $GLOBALS['_transient']['static']['private\aeit\classes\nusoap_base']['globalDebugLevel'] = 9;
@@ -151,7 +133,6 @@ class NusoapBase {
 	* @access   public
 	*/
     var $soap_defencoding = 'ISO-8859-1';
-	//var $soap_defencoding = 'UTF-8';
 
 	/**
 	* namespaces in an array of prefix => uri
@@ -968,7 +949,7 @@ function iso8601_to_timestamp($datestr){
 			}
 		}
 		return gmmktime($regs[4], $regs[5], $regs[6], $regs[2], $regs[3], $regs[1]);
-//		return strtotime("$regs[1]-$regs[2]-$regs[3] $regs[4]:$regs[5]:$regs[6]Z");
+
 	} else {
 		return false;
 	}

@@ -93,7 +93,6 @@ class nusoap_parser extends nusoap_base {
 			// Create an XML parser - why not xml_parser_create_ns?
 			$this->parser = xml_parser_create($this->xml_encoding);
 			// Set the options for parsing the XML data.
-			//xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, 1);
 			xml_parser_set_option($this->parser, XML_OPTION_CASE_FOLDING, 0);
 			xml_parser_set_option($this->parser, XML_OPTION_TARGET_ENCODING, $this->xml_encoding);
 			// Set the object for the parser.
@@ -317,7 +316,7 @@ class nusoap_parser extends nusoap_base {
 			// get unqualified name
 			$name = substr(strstr($name,':'),1);
 		}
-		
+
 		// build to native type
 		if(isset($this->body_position) && $pos > $this->body_position){
 			// deal w/ multirefs
@@ -353,7 +352,6 @@ class nusoap_parser extends nusoap_base {
 				$this->message[$pos]['result'] = $this->message[$pos]['xattrs'];
 			// set value of simpleType (or nil complexType)
 			} else {
-            	//$this->debug('adding data for scalar value '.$this->message[$pos]['name'].' of value '.$this->message[$pos]['cdata']);
 				if (isset($this->message[$pos]['nil']) && $this->message[$pos]['nil']) {
 					$this->message[$pos]['xattrs']['!'] = null;
 				} elseif (isset($this->message[$pos]['type'])) {
@@ -366,20 +364,9 @@ class nusoap_parser extends nusoap_base {
 						$this->message[$pos]['result'] = $this->message[$pos]['cdata'];
 					}
 				}
-
-				/* add value to parent's result, if parent is struct/array
-				$parent = $this->message[$pos]['parent'];
-				if($this->message[$parent]['type'] != 'map'){
-					if(strtolower($this->message[$parent]['type']) == 'array'){
-						$this->message[$parent]['result'][] = $this->message[$pos]['result'];
-					} else {
-						$this->message[$parent]['result'][$this->message[$pos]['name']] = $this->message[$pos]['result'];
-					}
-				}
-				*/
 			}
 		}
-		
+
         // for doclit
         if($this->status == 'header'){
         	if ($this->root_header != $pos) {
@@ -632,12 +619,5 @@ class nusoap_parser extends nusoap_base {
 		}
 	}
 }
-
-/**
- * Backward compatibility
- */
-class soap_parser extends nusoap_parser {
-}
-
 
 ?>

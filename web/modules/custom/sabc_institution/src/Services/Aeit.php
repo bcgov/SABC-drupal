@@ -394,11 +394,11 @@ class Aeit extends Sabc {
         }
 
         if(!empty($options)){
-          $client = new SoapClient($this->WSDL, $options);
+          $client = new \SoapClient($this->WSDL, $options);
         }
         else
         {
-          $client = new SoapClient($this->WSDL);
+          $client = new \SoapClient($this->WSDL);
         }
 
         if(count($params) > 0){

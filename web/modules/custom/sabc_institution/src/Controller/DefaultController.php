@@ -10,6 +10,7 @@ use Drupal\sabc_institution\Services\Aeit;
 use Drupal\sabc_institution\Services\Sabc;
 use Drupal\sabc_institution\Services\SoapClient;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Default controller for the sabc_institution module.

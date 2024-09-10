@@ -132,64 +132,58 @@ class Application extends Aeit {
     }
   }
 
-  public function fnGetSchoolDetails($schoolIDX){
-
+  public function fnGetSchoolDetails($schoolIDX)
+  {
     //CALL THE APPROPRIATE WEB SERVICE
-    $this->WSDL = \Drupal::service('sabc_institution.sabc')->fnWS('WS-HOSTS', 'GET_SCHOOLS');
+    $this->WSDL = $this->fnWS('WS-HOSTS', 'GET_SCHOOLS');
 
-    $ws = $this->fnRequest('getSchoolDetails', array('schoolIDX' => $schoolIDX), 'get_school_details_'.$schoolIDX.'', 300);
+    $ws = $this->fnRequest('getSchoolDetails', ['schoolIDX' => $schoolIDX], 'get_school_details_'.$schoolIDX.'', 300);
 
     //MAKE SURE RESPONSE IS VALID
-    if(isset($ws->schoolDetails)){
-
-      if(is_array($ws->schoolDetails)){
-        foreach($ws->schoolDetails as $school){
-
-          if($school->DesignationStatus == 'Under Review'){
-            $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the Ministry of Advanced Education. The results of the review will determine whether this school will continue to be eligible for designation.';
+    if (isset($ws->schoolDetails)) {
+      if (is_array($ws->schoolDetails)) {
+        foreach ($ws->schoolDetails as $school) {
+          if ($school->DesignationStatus == 'Under Review') {
+            $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the Ministry of Post-Secondary Education and Future Skills. The results of the review will determine whether this school will continue to be eligible for designation.';
           }
 
-          if($school->DesignationStatus == 'Pending'){
+          if ($school->DesignationStatus == 'Pending') {
             $ws->schoolDetails->DesignationStatusDescript = 'An application has been submitted by this post-secondary institution and a decision is still pending. You must wait until the school is designated before you can apply.';
           }
 
-          if($school->DesignationStatus == 'Denied'){
+          if ($school->DesignationStatus == 'Denied') {
             $school->DesignationStatus = 'Does Not Meet Criteria';
             $ws->schoolDetails->DesignationStatusDescript = 'This post-secondary institution does not meet the criteria to administer the StudentAid BC program.';
           }
 
-          if($school->DesignationStatus == 'Designated'){
+          if ($school->DesignationStatus == 'Designated') {
             $ws->schoolDetails->DesignationStatusDescript = 'This post-secondary institution meets the criteria to administer the StudentAid BC program.';
           }
         }
-      }
-      else
-      {
-        if($ws->schoolDetails->DesignationStatus == 'Under Review'){
-          $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the Ministry of Advanced Education. The results of the review will determine whether this school will continue to be eligible for designation.';
+      } else {
+        if ($ws->schoolDetails->DesignationStatus == 'Under Review') {
+          $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the Ministry of Post-Secondary Education and Future Skills. The results of the review will determine whether this school will continue to be eligible for designation.';
         }
 
-        if($ws->schoolDetails->DesignationStatus == 'Pending'){
+        if ($ws->schoolDetails->DesignationStatus == 'Pending') {
           $ws->schoolDetails->DesignationStatusDescript = 'An application has been submitted by this post-secondary institution and a decision is still pending. You must wait until the school is designated before you can apply.';
         }
 
-        if($ws->schoolDetails->DesignationStatus == 'Denied'){
+        if ($ws->schoolDetails->DesignationStatus == 'Denied') {
           $ws->schoolDetails->DesignationStatus = 'Does Not Meet Criteria';
           $ws->schoolDetails->DesignationStatusDescript = 'This post-secondary institution does not meet the criteria to administer the StudentAid BC program.';
         }
 
-        if($ws->schoolDetails->DesignationStatus == 'Designated'){
+        if ($ws->schoolDetails->DesignationStatus == 'Designated') {
           $ws->schoolDetails->DesignationStatusDescript = 'This post-secondary institution meets the criteria to administer the StudentAid BC program.';
         }
       }
+
       return $ws;
-    }
-    else
-    {
+    } else {
       return false;
     }
   }
-
   public function fnValidateSchoolCode($sc){
     $inst = $this->fnGetSchoolDetails($sc);
 

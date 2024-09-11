@@ -54,7 +54,6 @@ class login extends userProfile
                 } //NOT A VALID PROFILE ERROR SO TRIGGER SYSTEM ERROR
                 else {
                     $this->fnError('SYSTEM ERROR :: USER_ACCOUNT ->getUserProfile', $usrProfile->getMessage(), $usrProfile, $triggerDefault = true);
-                    //$up = null;
                 }
             }
 
@@ -74,7 +73,6 @@ class login extends userProfile
             }
 
             $this->fnClearUserCache();
-            // drupal_goto('dashboard');
 
             return $user;
         }
@@ -115,7 +113,6 @@ class login extends userProfile
                     $form_state['email'] = NULL;
                 }
 
-                //	return $user;
                 return $form_state;
             }
         } else if (isset($form_state['access_code']) && !empty($form_state['access_code'])) {
@@ -369,10 +366,8 @@ class login extends userProfile
 
             $args = arg();
             //CHECK IF USER EXISTS IN DRUPAL DB. $this->uid is the users GUID which has been set by login or create user profile
-            //$this->fnClearUserCache();
              if (isset($_SESSION['bcsc_profile'])) {
                  $saml = openssl_encrypt(json_encode($_SESSION['bcsc_profile']), "AES-128-CFB", '&jl8938l!_90kdkd98kedjao', 0, 'UijHyt6$9K!$ERri');
-                 //user_capture_saml($uid, $saml);
              }
             if ($bcscusrProfile = $this->fnGetBCSCUserProfile()) {
                 $assuranceLevel1 = $bcscusrProfile->userProfile->assuranceLevel;
@@ -632,21 +627,6 @@ class login extends userProfile
                 );
 
                 if (!empty($autoClaim) && $autoClaim['status'] == true) {
-                    /*
-                                        $array["name"] = $uid;
-                                        $array["pass"] = user_password();
-                                        $array["status"] = 1;
-                                        $array["timezone"] = variable_get('date_default_timezone', 0);
-                                        $array['lastlogin'] = NULL;
-                                        //GET ALL ROLES AVAILABLE IN DRUPAL EXCEPT ANNON
-
-                                        $roles = user_roles(TRUE);
-                                        $rid = array_search($userRole, $roles);
-                                        $array['roles'] = array($rid => $userRole);
-
-                                        $account = user_save("", $array);
-                                        $user = $account;
-                    */
                     user_login_finalize($user->uid);
 
                     if ($autoClaim['statusCode'] == 429) {
@@ -654,8 +634,6 @@ class login extends userProfile
                     } else {
                         $_GET['destination'] = 'dashboard/apply/appendix/' . $appendixType . '/' . $autoClaim['documentGUID'] . '/' . $programYear;
                     }
-
-                    //$_GET['destination'] = 'dashboard/apply/appendix/' . $autoClaim['appendix_type'] . '/' . $autoClaim['documentGUID'] . '/' . $programYear;
                 } else {
                     return false;
                 }

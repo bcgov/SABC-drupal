@@ -27,18 +27,6 @@ class InstitutionForm extends FormBase {
       '#type' => 'markup',
       '#markup' => '<div class="result_message"></div>'
     ];
-    // $form['search_for_an_institution'] = [
-    //   '#type' => 'search',
-    //   '#title' => $this->t('Search for an Institution'),
-    //   '#weight' => '0',
-    // ];
-    // $form['submit'] = [
-    //   '#type' => 'button',
-    //   '#value' => $this->t('Submit'),
-    //   '#ajax' => [
-    //     'callback' => '::build_institution_output',
-    //   ],
-    // ];
 
     return $form;
   }

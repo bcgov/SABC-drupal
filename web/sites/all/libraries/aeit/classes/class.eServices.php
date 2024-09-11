@@ -5,10 +5,6 @@ require_once(DRUPAL_ROOT . $path_aeit_library . 'common.inc');
 
 class eServices {
 
-  function __construct() {
-    //parent::__construct($v);
-  }
-
   function fnGetService($service, $action) {
 
     if(is_file('private://aeit/config/config.ini')){

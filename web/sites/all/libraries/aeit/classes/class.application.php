@@ -64,7 +64,6 @@ $path_aeit_library = \Drupal::configFactory()->getEditable('sabc_private_data_fo
       $bigArray = array();
       foreach ($totalschools as $k => $v){
         array_push($bigArray, array('name' => rtrim($v)));
-        //$val2 = array(json_decode($bigArray));
       }
       return $bigArray;
     }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * @file
@@ -33,7 +33,7 @@ class RepayController extends ControllerBase {
         // get your POST parameter
         $_POST = \Drupal::request()->request->all();
 		$response = 'not found';
-       // $decoded = \Drupal\Component\Serialization\Json::decode($json_string);
+
 		if(!empty($_POST)){
 			$floating = '2.5';
 			$fixed = '5';
@@ -57,7 +57,6 @@ class RepayController extends ControllerBase {
 			$fed_rate = $rt+2.5;
 
 		//https://hive.aved.gov.bc.ca/jira/projects/SABC/issues/SABC-2640?filter=allopenissues
-			//$rt = ($fed_rate*0.6)+($prov_rate*0.4);
 		$rt = ($fed_rate*0.6)+($prov_rate*0);
 
 			//CALCULATE MONTHLY INTEREST
@@ -97,7 +96,7 @@ class RepayController extends ControllerBase {
 			$total_int_payable2 = $total_payable2 - $t2;
 			$total_int_payable3 = $total_payable3 - $t;
 
-		$response = 
+		$response =
 			'<div class="accordion" id="accordion2">
 			<div class="accordion-group">
 			<div class="accordion-heading">
@@ -108,7 +107,7 @@ class RepayController extends ControllerBase {
 				</a>
 			</div>
 			<div id="collapseOne" class="accordion-body collapse in show">
-		
+
 			<div class="accordion-inner">
 				<div class="repaymentLabel">Months to repay loan</div><div class="total">'.$g_nr_payments.'</div>
 				<div class="clearfix"></div>
@@ -125,8 +124,8 @@ class RepayController extends ControllerBase {
 				</div>
 			</div>
 			</div>
-		
-		
+
+
 			<div class="accordion-group">
 			<div class="accordion-heading">
 				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">

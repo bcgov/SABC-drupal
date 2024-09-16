@@ -15,8 +15,6 @@ function sabc_preprocess_html(&$variables) {
   // Body colour theme.
   $variables['b4_body_schema'] = theme_get_setting('b4_body_schema');
   $variables['b4_body_bg_schema'] = theme_get_setting('b4_body_bg_schema');
-  // Debug
-  //ksm($variables);
 }
 
 function sabc_preprocess_region(&$variables) {

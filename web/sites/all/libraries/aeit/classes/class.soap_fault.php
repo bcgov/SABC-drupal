@@ -80,11 +80,4 @@ class nusoap_fault extends nusoap_base {
 	}
 }
 
-/**
- * Backward compatibility
- */
-class soap_fault extends nusoap_fault {
-}
-
-
 ?>

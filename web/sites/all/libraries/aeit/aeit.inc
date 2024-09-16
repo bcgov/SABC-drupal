@@ -214,8 +214,6 @@ class aeit {
         $this->fnError('LC_SYSTEM_RESPONSE_ERROR!', $response->error, $response);
         $this->fnError('LC_SYSTEM_ERROR****', $url, $url);
 
-        //return false;
-
       } else {
         if($response->code == 200){
 
@@ -544,12 +542,10 @@ shortly', 'wsError error', false);
 
       function fnSanitizeData($text, $type='text'){
           if($type == 'email') {
-              //return str_replace(['(', ')', '[', ']', ':', '<', '>', "'", '"'], '', $text);
               $text = filter_var($text, FILTER_SANITIZE_EMAIL);
               return trim($text);
           }
 
-          //return str_replace(['#', '.', '~', '!', '@', '$', '%', '^', '(', ')', '_', '+', '=', '{', '}', '[', ']', '|', '/', ':', '*', '<', '>', '?', ',', "'", '"'], '', $text);
           return str_replace(['"'], '', $text);
       }
 

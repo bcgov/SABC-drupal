@@ -9,8 +9,6 @@ Use Drupal\Core\Messenger\MessengerInterface;
 
 ini_set('default_socket_timeout', 40);
 
-//require_once('fnCommon.inc');
-
 class Aeit extends Sabc {
 
   public $WSDL; //WSDL LOCATION FOR SERVICE
@@ -375,8 +373,6 @@ class Aeit extends Sabc {
     //flag to see if we have cache
     $cache = false;
 
-    //if(!empty($this->uid) || arg(1) == 'login' || arg(1) == 'login2' || $this->valid == true){
-      //IF DEBUG IS TRUE OUTPUT ANY ERRORS
       if($debug == true){
         ini_set('display_errors', 1);
         $options = array('trace' => 1, 'exception' => true);
@@ -394,11 +390,11 @@ class Aeit extends Sabc {
         }
 
         if(!empty($options)){
-          $client = new SoapClient($this->WSDL, $options);
+          $client = new \SoapClient($this->WSDL, $options);
         }
         else
         {
-          $client = new SoapClient($this->WSDL);
+          $client = new \SoapClient($this->WSDL);
         }
 
         if(count($params) > 0){
@@ -489,11 +485,6 @@ class Aeit extends Sabc {
       {
         MessengerInterface::addMessage('We are currently experiencing technical difficulties and are working on restoring service.  Please check back shortly.', 'wsError error');
       }
-    //}
-    // else
-    // {
-    //   return array('uicode', 0);
-    // }
   }
 
   function array_to_objecttree($array) {
@@ -551,12 +542,10 @@ shortly', 'wsError error', false);
 
       function fnSanitizeData($text, $type='text'){
           if($type == 'email') {
-              //return str_replace(['(', ')', '[', ']', ':', '<', '>', "'", '"'], '', $text);
               $text = filter_var($text, FILTER_SANITIZE_EMAIL);
               return trim($text);
           }
 
-          //return str_replace(['#', '.', '~', '!', '@', '$', '%', '^', '(', ')', '_', '+', '=', '{', '}', '[', ']', '|', '/', ':', '*', '<', '>', '?', ',', "'", '"'], '', $text);
           return str_replace(['"'], '', $text);
       }
 

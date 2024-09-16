@@ -1883,26 +1883,4 @@ class SabcDesignationForm extends FormBase
     return json_decode($result, true);
   }
 
-  function hook_mail()
-  {
-
-  }
-//
-//  /**
-//   * Implements hook_mail().
-//   */
-//  function sabc_forms_mail($key, &$message, $params)
-//  {
-//
-//    if ($message['key'] == 'designation') {
-//      $message['subject'] = $message['params']['subject'];
-//      $message['body'][] = Markup::create($message['params']['body_admin']);
-//      $message['params']['files'] = $message['params']['attachments'];
-//    } else if ($message['key'] == 'sabc_designation_applicant') {
-//      $message['subject'] = $message['params']['subject_applicant'];
-//      $message['headers'] = $message['params']['headers_applicant'];
-//      $message['body'][] = Markup::create($message['params']['body_applicant']);
-//    }
-//  }
-
 }

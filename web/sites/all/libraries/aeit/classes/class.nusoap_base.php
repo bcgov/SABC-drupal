@@ -51,24 +51,6 @@ http://www.nusphere.com
  *	RFC 2617 HTTP Authentication: Basic and Digest Access Authentication
  */
 
-/* load classes
-
-// necessary classes
-require_once('class.soapclient.php');
-require_once('class.soap_val.php');
-require_once('class.soap_parser.php');
-require_once('class.soap_fault.php');
-
-// transport classes
-require_once('class.soap_transport_http.php');
-
-// optional add-on classes
-require_once('class.xmlschema.php');
-require_once('class.wsdl.php');
-
-// server class
-require_once('class.soap_server.php');*/
-
 // class variable emulation
 // cf. http://www.webkreator.com/php/techniques/php-static-class-variables.html
 $GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'] = 9;
@@ -141,7 +123,7 @@ class nusoap_base {
 	* @access   public
 	*/
 	var $XMLSchemaVersion = 'http://www.w3.org/2001/XMLSchema';
-	
+
     /**
 	* charset encoding for outgoing messages
 	*
@@ -408,7 +390,7 @@ class nusoap_base {
 		$this->debug("in serialize_val: name=$name, type=$type, name_ns=$name_ns, type_ns=$type_ns, use=$use, soapval=$soapval");
 		$this->appendDebug('value=' . $this->varDump($val));
 		$this->appendDebug('attributes=' . $this->varDump($attributes));
-		
+
     	if (is_object($val) && get_class($val) == 'soapval' && (! $soapval)) {
     		$this->debug("serialize_val: serialize soapval");
         	$xml = $val->serialize($use);
@@ -823,7 +805,6 @@ class nusoap_base {
 		if (isset($this->namespaces[$prefix])) {
 			return $this->namespaces[$prefix];
 		}
-		//$this->setError("No namespace registered for prefix '$prefix'");
 		return false;
 	}
 
@@ -888,10 +869,6 @@ class nusoap_base {
 		return $this->varDump($this);
 	}
 }
-
-// XML Schema Datatype Helper Functions
-
-//xsd:dateTime helpers
 
 /**
 * convert unix timestamp to ISO 8601 compliant date string
@@ -966,7 +943,7 @@ function iso8601_to_timestamp($datestr){
 			}
 		}
 		return gmmktime($regs[4], $regs[5], $regs[6], $regs[2], $regs[3], $regs[1]);
-//		return strtotime("$regs[1]-$regs[2]-$regs[3] $regs[4]:$regs[5]:$regs[6]Z");
+
 	} else {
 		return false;
 	}
@@ -982,7 +959,7 @@ function iso8601_to_timestamp($datestr){
 function usleepWindows($usec)
 {
 	$start = gettimeofday();
-	
+
 	do
 	{
 		$stop = gettimeofday();

@@ -70,10 +70,6 @@ class userProfile extends aeit{
 
         //Changed by Hemant: Added following because it was throwing error undefined variable
         $bcscRequired = array('dateOfBirth','social_insurance_number','email','Street1','City','Country','Phone','assuranceLevel','userGUID');
-        // if (isset($_SESSION['bcsc_profile'])) {
-        //     $saml = openssl_encrypt(json_encode($_SESSION['bcsc_profile']), "AES-128-CFB", '&jl8938l!_90kdkd98kedjao', 0, 'UijHyt6$9K!$ERri');
-        //     user_capture_saml($uid, $saml);
-        // }
 
         //CALL THE APPROPRIATE WEB SERVICE
         if (isset($p['values']['userGUID'])){
@@ -153,44 +149,6 @@ class userProfile extends aeit{
                     $p['values']['username'] = $p['values']['user_id'];
                     $p['values']['pswd'] = $p['values']['password'];
                 }
-
-                /*
-                // ADD JIRA CUSTOMER ACCOUNT
-                // use $this->uid as password
-                $url = fnWS('JIRA-API', '')."/rest/api/2/user";
-
-                $data = json_encode(array(
-                    'name' => $this->fnEncrypt($createProfile->userProfile->userGUID),
-                    'password' => $this->fnEncrypt($createProfile->userProfile->userGUID),
-                    'emailAddress' => $p['values']['email'],
-                    'displayName' => ($p['values']['first_name'] . ' ' . $p['values']['last_name']),
-                    'notification' => false
-                ));
-
-                $headers = array(
-                    'Accept: application/json',
-                    'Content-Type: application/json',
-                    'Authorization: Basic '.fnWS('JIRA-AUTH', '')
-                );
-
-                $req = $this->fnCurlRequest('POST', $url, $data, $headers);
-
-                if($req != 'error'){
-                    //remove user from default group - jira-users
-                    $url = fnWS('JIRA-API', '')."/rest/api/2/group/user?groupname=jira-users&username=".$this->fnEncrypt($createProfile->userProfile->userGUID);
-
-                    $this->fnCurlRequest('DELETE', $url, '', $headers);
-
-                    //add user to jira group jira-sssb-servicedesk-customers
-                    $data = json_encode(array(
-                        'name' => $this->fnEncrypt($createProfile->userProfile->userGUID)
-                    ));
-
-                    $url = fnWS('JIRA-API', '')."/rest/api/2/group/user?groupname=jira-sssb-servicedesk-customers";
-
-                    $this->fnCurlRequest('POST', $url, $data, $headers);
-                }
-                */
 
                 //LOG USER INTO DASHBOARD
                 $l = new login(false);
@@ -458,29 +416,22 @@ class userProfile extends aeit{
 
             // Retreive verified field from web service response
             // Set TRUE or FALSE return value
-            //$resposnse->userProfile->verified = 'srwe';
             if(!isset($resposnse->faultcode)){
                 if ( !empty( $resposnse->userProfile->verified ) ) {
                     $verified = $resposnse->userProfile->verified;
-                    //$isUserVerified = $verified == "Y" ? true : false;
                     if($verified === "Y"){
                         $isUserVerified = true;
                     }
 
                 } else {
                     $this->fnError('SYSTEM ERROR :: USER_VERIFY ->getUserProfile', $resposnse->userProfile->verified, $resposnse, $triggerDefault = true);
-                    //error_log('10 isUserVerified: ' . $isUserVerified, 0);
                 }
-                //error_log('E-Service verified: ' . $resposnse->userProfile->verified, 0);
-                //error_log('PHP isUserVerified: ' . $isUserVerified, 0);
-
             }else{
                 $this->fnError('SYSTEM ERROR :: USER_VERIFY FAULT CODE.', $resposnse->faultcode);
             }
 
         }
 
-        //error_log('PHP fnVerifyUser isUserVerified: ' . $isUserVerified, 0);
         return $isUserVerified;
 
     }
@@ -521,10 +472,7 @@ class userProfile extends aeit{
             $age 	= $diff->y;
 
             // Set Verification Method
-            //$verificationMethod = ( $age < 19 ) ? 'attestation' : 'bcsc';
             $verificationMethod = 'bcsc';
-
-
         }
 
         return $verificationMethod;
@@ -909,10 +857,7 @@ class userProfile extends aeit{
                                     }
                                 }
                                 else {
-                                    if ($applicationEvent->eventItems->eventItem->eventCode == "Waiting" /*&&
-													 ($event->eventType == "Appendix 1" ||
-														$event->eventType == "Appendix 2" ||
-														$event->eventType == "Appendix 3")*/) {
+                                    if ($applicationEvent->eventItems->eventItem->eventCode == "Waiting") {
                                         $outstandingDocs[] .= $applicationEvent->eventItems->eventItem->eventType;
                                     }
                                 }

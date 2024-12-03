@@ -62,7 +62,6 @@ module:
   views_taxonomy_term_name_depth: 0
   views_taxonomy_term_name_into_id: 0
   views_ui: 0
-  webprofiler: 0
   workbench: 0
   workbench_access: 0
   pathauto: 1

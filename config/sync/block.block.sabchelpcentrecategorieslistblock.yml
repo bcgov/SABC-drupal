@@ -10,7 +10,7 @@ dependencies:
 id: sabchelpcentrecategorieslistblock
 theme: sabc
 region: content
-weight: 0
+weight: -12
 provider: null
 plugin: sabc_help_centre_categories_list_block
 settings:

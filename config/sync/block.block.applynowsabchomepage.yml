@@ -12,7 +12,7 @@ dependencies:
 id: applynowsabchomepage
 theme: sabc
 region: content
-weight: -12
+weight: -14
 provider: null
 plugin: 'block_content:ec167fb5-3259-4dd4-9ab9-5e700cc956cc'
 settings:

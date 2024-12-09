@@ -1,0 +1,20 @@
+uuid: a26d7952-f27a-485a-a9ec-44f1626d7b26
+langcode: en
+status: true
+dependencies:
+  module:
+    - sabc_institution
+  theme:
+    - sabc
+id: sabc_dashboardinstitutionlookup
+theme: sabc
+region: content
+weight: -11
+provider: null
+plugin: sabc_institution_d_Institution
+settings:
+  id: sabc_institution_d_Institution
+  label: 'Dashboard :: Institution Lookup'
+  label_display: visible
+  provider: sabc_institution
+visibility: {  }

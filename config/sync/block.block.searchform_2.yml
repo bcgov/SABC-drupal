@@ -10,7 +10,7 @@ dependencies:
 id: searchform_2
 theme: sabc
 region: header
-weight: -6
+weight: -17
 provider: null
 plugin: search_form_block
 settings:

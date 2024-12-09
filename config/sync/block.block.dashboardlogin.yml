@@ -12,7 +12,7 @@ dependencies:
 id: dashboardlogin
 theme: sabc
 region: header
-weight: -7
+weight: -18
 provider: null
 plugin: 'block_content:5d0e4d99-d450-48db-b0de-354b58de868f'
 settings:

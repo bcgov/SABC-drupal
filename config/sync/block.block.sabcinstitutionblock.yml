@@ -10,7 +10,7 @@ dependencies:
 id: sabcinstitutionblock
 theme: sabc
 region: content
-weight: -10
+weight: -9
 provider: null
 plugin: sabc_institution_block
 settings:

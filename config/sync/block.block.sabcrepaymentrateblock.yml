@@ -10,7 +10,7 @@ dependencies:
 id: sabcrepaymentrateblock
 theme: sabc
 region: content
-weight: -15
+weight: -10
 provider: null
 plugin: sabc_repayment_rate_block
 settings:

@@ -1770,7 +1770,7 @@ class SabcDesignationForm extends FormBase
     //$to = 'hemantsanvaria@gmail.com';
     $to_primary_contact = $form_input['institution_contacts__primary_contact_email'];
 
-    $message_applicant = <<<html
+    $message_applicant ='
         <p>Institution Official,</p>
 
         <p>Thank you for your designation application, this email is to confirm it has been received by the Ministry of Advanced Education Skills and Training.</p>
@@ -1782,8 +1782,7 @@ class SabcDesignationForm extends FormBase
         StudentAid BC<br>
         Ministry of Advanced Education Skills and Training<br>
         E-Mail: designat@gov.bc.ca<br>
-        </p>
-    html;
+        </p>';
 
 
     /** @var \Drupal\symfony_mailer\EmailFactoryInterface $emailFactory */
@@ -1817,8 +1816,8 @@ class SabcDesignationForm extends FormBase
     $emailFactory = \Drupal::service('email_factory');
     $email = $emailFactory->newTypedEmail('sabc_designation', 'sabc_designation_applicant')
       ->setTo($to_primary_contact)
-      ->setSubject($params['subject_applicant'])
-      ->setBody(['#markup' => Markup::create($params['body_applicant'])]);
+      ->setSubject('Institution Designation Application')
+      ->setBody(['#markup' => Markup::create($message_applicant)]);
     $email->send();
 
   }

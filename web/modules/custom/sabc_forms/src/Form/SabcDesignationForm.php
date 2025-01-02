@@ -1780,7 +1780,7 @@ class SabcDesignationForm extends FormBase
         <p>
         Institution and Program Designation Team<br>
         StudentAid BC<br>
-        Ministry of Advanced Education Skills and Training<br>
+        Ministry of Post-Secondary Education and Future Skills<br>
         E-Mail: designat@gov.bc.ca<br>
         </p>';
 

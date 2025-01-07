@@ -1773,7 +1773,7 @@ class SabcDesignationForm extends FormBase
     $message_applicant ='
         <p>Institution Official,</p>
 
-        <p>Thank you for your designation application, this email is to confirm it has been received by the Ministry of Advanced Education Skills and Training.</p>
+        <p>Thank you for your designation application, this email is to confirm it has been received by the Ministry of Post-Secondary Education and Future Skills.</p>
         <p>Please allow approximately 4 - 6 weeks for review and processing time. We will contact you with the outcome once our review is complete.</p>
         <p>Thank you,</p>
 

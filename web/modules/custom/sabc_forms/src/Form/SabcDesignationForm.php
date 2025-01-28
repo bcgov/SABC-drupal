@@ -1784,7 +1784,11 @@ class SabcDesignationForm extends FormBase
         E-Mail: designat@gov.bc.ca<br>
         </p>';
 
-
+    if (empty($to)) {
+      $messenger = \Drupal::messenger();
+      $messenger->addMessage('Error with recipient email address. Please try again later or contact the administrator.', 'error');
+      return;
+    }
     /** @var \Drupal\symfony_mailer\EmailFactoryInterface $emailFactory */
     $emailFactory = \Drupal::service('email_factory');
     $email = $emailFactory->newTypedEmail('sabc_designation', 'designation')
@@ -1806,10 +1810,20 @@ class SabcDesignationForm extends FormBase
       $fid = $form_input['file_additional_info']['fids'];
       $this->attach_files($fid, $email);
     }
-    $email->send();
 
-    $messenger = \Drupal::messenger();
-    $messenger->addMessage('Mail has been sent.', 'status');
+    try {
+      $email->send();
+      $messenger = \Drupal::messenger();
+      $messenger->addMessage('Mail has been sent.', 'status');
+    }
+    catch (\Exception $e) {
+      $messenger = \Drupal::messenger();
+      $messenger->addMessage('An error occurred while submitting the form. Please try again later or contact the administrator.', 'error');
+
+      // Log error
+      \Drupal::logger('sabc_designation')->error('An error occurred while submitting the form to Designat. : @message', ['@message' => $e->getMessage()]);
+    }
+
 
     //SEND COPY TO INSTITUTION
     /** @var \Drupal\symfony_mailer\EmailFactoryInterface $emailFactory */
@@ -1818,8 +1832,14 @@ class SabcDesignationForm extends FormBase
       ->setTo($to_primary_contact)
       ->setSubject('Institution Designation Application')
       ->setBody(['#markup' => Markup::create($message_applicant)]);
-    $email->send();
 
+    try {
+      $email->send();
+    }
+    catch (\Exception $e) {
+      // Log error
+      \Drupal::logger('sabc_designation')->error('An error occurred while submitting the form to the institution. : @message', ['@message' => $e->getMessage()]);
+    }
   }
 
   public function attach_files($fid, $email)

@@ -1552,7 +1552,10 @@ class SabcDesignationForm extends FormBase
       '#required' => TRUE,
       '#attributes' => array('id' => 'upload_academic_calendar', 'title' => ' Upload Academic Calendar'),
       '#title' => Markup::create(' Upload Academic Calendar'),
-      '#upload_validators' => array('file_validate_extensions' => array('pdf doc docx')),
+      '#upload_validators' => array(
+        'file_validate_extensions' => array('pdf doc docx'),
+        'file_validate_size' => array(2516582), // 2.4MB
+      ),
       '#upload_location' => 'temporary://',
     );
 
@@ -1569,7 +1572,10 @@ class SabcDesignationForm extends FormBase
       '#title' => Markup::create(' Upload Program Outline'),
       '#prefix' => Markup::create('<div class="col-md-12">'),
       '#suffix' => Markup::create('</div>'),
-      '#upload_validators' => array('file_validate_extensions' => array('pdf doc docx')),
+      '#upload_validators' => array(
+        'file_validate_extensions' => array('pdf doc docx'),
+        'file_validate_size' => array(2516582), // 2.4MB
+      ),
       '#upload_location' => 'temporary://',
     );
 
@@ -1585,7 +1591,10 @@ class SabcDesignationForm extends FormBase
       '#title' => Markup::create(' Upload Additional Information'),
       '#prefix' => Markup::create('<div class="col-md-12">'),
       '#suffix' => Markup::create('</div>'),
-      '#upload_validators' => array('file_validate_extensions' => array('pdf doc docx')),
+      '#upload_validators' => array(
+        'file_validate_extensions' => array('pdf doc docx'),
+        'file_validate_size' => array(2516582), // 2.4MB
+      ),
       '#upload_location' => 'temporary://',
     );
 

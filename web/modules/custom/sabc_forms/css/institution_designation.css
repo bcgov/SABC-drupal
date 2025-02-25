@@ -34,6 +34,13 @@ div.error {
     float: right;
 }
 
+.padding-left {
+  padding-left: 30px;
+}
+
+.markup-info {
+  font-size: 14px;
+}
 /* #edit-regulatory-information-out-province-institution-provincial-approval--wrapper input[type="radios"] {
     display: none;
 }

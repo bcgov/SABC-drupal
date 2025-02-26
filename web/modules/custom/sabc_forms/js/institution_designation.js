@@ -144,10 +144,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         }
 
-        if(jQuery(this).val() == "United States"){ //US
-            jQuery("#regulatory_information_us").show();
-            jQuery("#regulatory_information__institution_is_regulated").hide();
+        if(jQuery(this).val() == "United States") { //US
+          jQuery("#regulatory_information_us").show();
+          jQuery("#regulatory_information__institution_is_regulated").hide();
 
+            var $titleIvCode = jQuery("#regulatory_information__title_iv_code");
+            var $notEligible = jQuery("#regulatory_information__not_eligible");
+
+            $titleIvCode.hide();
+            $notEligible.hide();
+
+            jQuery('input[name="regulatory_information__institution_approved_for_title_iv_code"]').change(function () {
+              var isYes = jQuery(this).val() === "Yes";
+
+              $titleIvCode.toggle(isYes);
+              $notEligible.toggle(!isYes);
+            });
         }
 
         if(jQuery(this).val() == "International"){ //International

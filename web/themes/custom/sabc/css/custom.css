@@ -3268,7 +3268,9 @@ table.table-bordered p {
   border-radius: 0.25rem;
   padding: 14px;
 }
-
+.status-notices p {
+  margin-bottom: 8px;
+}
 .status-notices ul {
   list-style: none;
   margin: 0;

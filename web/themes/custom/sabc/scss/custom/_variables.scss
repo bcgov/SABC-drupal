@@ -1386,6 +1386,9 @@ table.table-bordered {
 
 // Application Processing Dates (Status Notices)
 .status-notices {
+  p {
+    margin-bottom: 8px;
+  }
   ul {
     list-style: none;
     margin: 0;

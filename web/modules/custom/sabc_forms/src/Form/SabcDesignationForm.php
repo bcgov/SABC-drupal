@@ -333,8 +333,8 @@ class SabcDesignationForm extends FormBase
     );
     $form['institution_information']['row4']['institution_information__federal_location_code'] = array(
       '#type' => 'textfield',
-      '#title' => Markup::create('Federal Education Institution (EI) Code <span class="icon-info pull-right" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="The Federal Education Institution (EI) Code can be found on the Master Designation List (MDL) at www.Canlearn.ca - If you do not have a code, select \'No\' for the previous question."></span>'),
-      '#attributes' => array('maxlength' => '4', 'title' => 'The Federal Education Institution (EI) Code can be found on the Master Designation List (MDL) at www.Canlearn.ca - If you do not have a code, select \'No\' for the previous question.'),
+      '#title' => Markup::create('Federal Education Institution (EI) Code <span class="icon-info pull-right" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="The Federal Education Institution (EI) Code can be found on the Master Designation List (MDL) at www.Canada.ca - If you do not have a code, select \'No\' for the previous question."></span>'),
+      '#attributes' => array('maxlength' => '4', 'title' => 'The Federal Education Institution (EI) Code can be found on the Master Designation List (MDL) at www.Canada.ca - If you do not have a code, select \'No\' for the previous question.'),
       '#prefix' => Markup::create('<div class="col-md-6" id="institution_sabc_code">'),
       '#suffix' => Markup::create('</div>'),
       '#default_value' => NULL

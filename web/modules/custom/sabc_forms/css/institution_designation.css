@@ -34,14 +34,10 @@ div.error {
     float: right;
 }
 
-/* #edit-regulatory-information-out-province-institution-provincial-approval--wrapper input[type="radios"] {
-    display: none;
+.padding-left {
+  padding-left: 30px;
 }
 
-#regulatory_information_international input[type="radios"]{
-    display: none;
+.markup-info {
+  font-size: 14px;
 }
-
-#regulatory_information_international_medical input[type="radios"] {
-    display: none;
-} */

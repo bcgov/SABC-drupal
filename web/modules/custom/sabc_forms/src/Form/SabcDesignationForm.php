@@ -319,10 +319,10 @@ class SabcDesignationForm extends FormBase
       '#prefix' => Markup::create('<div class="row">'),
       '#suffix' => Markup::create('</div>'),
     );
-    $form['institution_information']['row4']['institution_information__have_sabc_code'] = array(
+    $form['institution_information']['row4']['institution_information__have_federal_education_institution_code'] = array(
       '#type' => 'select',
       '#required' => TRUE,
-      '#title' => Markup::create('Do you have an StudentAid BC Institution code?'),
+      '#title' => Markup::create('Do you have a Federal Education Institution (EI) Code?'),
       '#options' => array(
         'Yes' => $this->t('Yes'),
         'No' => $this->t('No'),
@@ -333,8 +333,8 @@ class SabcDesignationForm extends FormBase
     );
     $form['institution_information']['row4']['institution_information__federal_location_code'] = array(
       '#type' => 'textfield',
-      '#title' => Markup::create('SABC Institution Code <span class="icon-info pull-right" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="SABC Institution Code is the same as the Federal Location Code and can be found on the Master Designation List (MDL) at www.Canlearn.ca."></span>'),
-      '#attributes' => array('maxlength' => '4', 'title' => 'SABC Institution Code is the same as the Federal Location Code and can be found on the Master Designation List (MDL) at www.Canlearn.ca.'),
+      '#title' => Markup::create('Federal Education Institution (EI) Code <span class="icon-info pull-right" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="The Federal Education Institution (EI) Code can be found on the Master Designation List (MDL) at www.Canada.ca - If you do not have a code, select \'No\' for the previous question."></span>'),
+      '#attributes' => array('maxlength' => '4', 'title' => 'The Federal Education Institution (EI) Code can be found on the Master Designation List (MDL) at www.Canada.ca - If you do not have a code, select \'No\' for the previous question.'),
       '#prefix' => Markup::create('<div class="col-md-6" id="institution_sabc_code">'),
       '#suffix' => Markup::create('</div>'),
       '#default_value' => NULL
@@ -510,13 +510,33 @@ class SabcDesignationForm extends FormBase
     );
     */
     //Title IV Code
-    $form['regulatory_information']['us_institution']['regulatory_information__title_iv_code'] = array(
-      '#type' => 'textfield',
-      '#attributes' => array('id' => 'regulatory_information__title_iv_code'),
-      '#title' => Markup::create('Your institution must be approved for Title IV funding by the US Department of Education, please provide your Title IV code in the box below:'),
-      '#prefix' => Markup::create('<div class="col-md-6" id="regulatory_information_title_iv_container">'),
+    $form['regulatory_information']['us_institution']['regulatory_information__institution_approved_for_title_iv_code'] = array(
+      '#type' => 'radios',
+      '#required' => true,
+      '#attributes' => array('id' => 'regulatory_information__institution_approved_for_title_iv_code'),
+      '#title' => Markup::create('Is your institution approved for Title IV funding by the US Department of Education?'),
+      '#prefix' => Markup::create('<div class="col-md-6" id="regulatory_information__institution_approved_for_title_iv_code">'),
       '#suffix' => Markup::create('</div>'),
-      '#default_value' => NULL
+      '#options' => array(
+        'Yes' => 'Yes',
+        'No' => 'No'
+      )
+    );
+
+    // Title IV Code - YES - Provide your Title IV code
+    $form['regulatory_information']['us_institution']['regulatory_information__title_iv_code']  = array(
+      '#type' => 'textfield',
+      '#title' => Markup::create('Please provide your Title IV code in the box below:'),
+      '#prefix' => Markup::create('<div class="col-md-6" id="regulatory_information__title_iv_code">'),
+      '#suffix' => Markup::create('</div>')
+    );
+
+    // Title IV Code - NO - Not eligible for designation with StudentAid BC
+    $form['regulatory_information']['us_institution']['regulatory_information__not_eligible'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div class="warning-message"><strong>Warning:</strong> Not eligible for designation with StudentAid BC</div>',
+      '#prefix' => '<div class="col-md-6 alert alert-status alert-danger" id="regulatory_information__not_eligible">',
+      '#suffix' => '</div>',
     );
 
     //Fields for International Medical institutions
@@ -663,7 +683,7 @@ class SabcDesignationForm extends FormBase
       '#attributes' => array('class' => array('short'), 'id' => 'institution_contact_legal_bceid', 'title' => 'Partner portal access is used to complete designation process, update location and program information, submit Appendix 3 information.'),
       '#title' => Markup::create('Legal Authority Business BCeID. <span class="icon-info pull-right" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="Partner portal access is used to complete designation process, update location and program information, submit Appendix 3 information."></span>'),
       '#prefix' => Markup::create('<div class="col-md-6">'),
-      '#suffix' => Markup::create('<small><i>To be completed if this individual is to be set up as the administrator for the institution’s use of the online Partner Portal</i></small></div>'),
+      '#suffix' => Markup::create('<small><i>To be completed if this individual is to be set up as the administrator for the institution’s use of the online Partner Portal and Student Information Management System (SIMS).</i></small><br><br></div>'),
       '#default_value' => NULL
     );
 
@@ -765,6 +785,14 @@ class SabcDesignationForm extends FormBase
       '#suffix' => Markup::create('</div><div class="w-100"></div>'),
       '#default_value' => NULL
     );
+
+    $form['program_information']['row1']['regulatory_information__program_eligibility_requirements'] = [
+      '#type' => 'markup',
+      '#markup' => '<div class="markup-info"><b>Program Eligibility Requirements:</b> <ol class="padding-left"> <li>The program must lead to a formal credential (degree, diploma, certificate or citation) issued by the governing body of the institution and be recognized by the appropriate authority that designated the Institution.</li> <li>The institution must offer and deliver the program on a full-time basis at 100 percent of the full course load.</li> <li>The program must be at least 12 weeks in duration within a time frame of 15 weeks.</li> <li>The full-time program may have breaks in study so long as they do not exceed 10 percent of the total study period of the program.</li> <li>The institution must establish entrance requirements for the program.</li> </ol> <p>For further information regarding Program Eligibility, please review <a href="https://studentaidbc.ca/sites/all/files/school-officials/policy_manual_24_25.pdf" target="_blank">Chapter 2 of the StudentAid BC Policy Manual.</a></p></div>',
+      '#prefix' => '<div class="col-md-12" id="regulatory_information__program_eligibility_requirements">',
+      '#suffix' => '</div>',
+    ];
+
     $form['program_information']['row1']['program_information__previously_eligible'] = array(
       '#type' => 'radios',
       //'#required' => TRUE,
@@ -847,19 +875,25 @@ class SabcDesignationForm extends FormBase
       '#prefix' => Markup::create('<br/><div class="row">'),
       '#suffix' => Markup::create('</div><div class="w-100"></div>'),
     );
+
     $form['program_information']['row2']['program_information__admission_requirements'] = array(
-      '#type' => 'radios',
+      '#type' => 'checkboxes',
       '#attributes' => array(
         'required' => 'required',
       ),
-      '#title' => Markup::create('Admission requirements (select one): <span class="icon-info" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="All students must have either graduated from high school or equivalent, or be 19 years of age or older for the program to be eligible. This requirement must apply to all students within a program, not only those applying for SABC funding."></span>'),
+      '#title' => Markup::create('StudentAid BC admission requirements (select all that apply): <span class="icon-info" data-toggle="popover" data-trigger="hover" data-placement="auto" data-content="All students must have either graduated from high school or equivalent, or be 19 years of age or older for the program to be eligible. This requirement must apply to all students within a program, not only those applying for SABC funding."></span>'),
       '#prefix' => Markup::create('<div class="col-md-6">'),
-      '#suffix' => Markup::create('</div><div class="w-100"></div>'),
+      '#suffix' => Markup::create('</div><div class="w-100"></div><br>'),
       '#options' => array(
-        'All students must have a minimum of a high school diploma or equivalent' => 'All students must have a minimum of a high school diploma or equivalent',
-        'There is no minimum academic requirement' => 'There is no minimum academic requirement',
-      )
+        'Students to have graduated from grade 12 or equivalent' => 'Students to have graduated from grade 12 or equivalent',
+        'Students are 19 years old or older before the start of classes' => 'Students are 19 years old or older before the start of classes',
+        'For post-secondary level academic credit-based program: The program has entrance requirements established by the institution that enable completion of the program of study.' => 'For post-secondary level academic credit-based program: The program has entrance requirements established by the institution that enable completion of the program of study.',
+        'This program is approved by the SkilledTradesBC and students must meet the entrance requirements set by the B.C. ITA.' => 'This program is approved by the SkilledTradesBC and students must meet the entrance requirements set by the B.C. ITA.',
+        'None of the above' => 'None of the above'
+      ),
+      '#multiple' => TRUE
     );
+
     $form['program_information']['row2']['program_information__age'] = array(
       '#type' => 'textfield',
       '#attributes' => array('id' => 'program_information_admission_requirements_extra', 'title' => 'Minimum age'),
@@ -951,8 +985,7 @@ class SabcDesignationForm extends FormBase
       '#suffix' => Markup::create('</div><div class="w-100"></div>'),
       '#options' => array(
         'On site' => '&nbsp;On site',
-        'Online/blended' => '&nbsp;Online/blended <br/><small><i>If your institution is outside B.C., to be eligible for StudentAid BC designation you must provide a program that is 100% onsite as part of your designation application.
-<br/>To assess your online program as part of your designation application you must provide an onsite equivalent of the program for assessment by completing and adding a <a href="https://studentaidbc.ca/sites/all/files/school-officials/confirmation-distance-eligibility.pdf" target="_blank">Confirmation of StudentAid BC Distance Education Eligibility</a> form and supporting documentation to the supporting documentation section below.</i></small>'
+        'Online/blended' => '&nbsp;Online/blended <br/><small><i>You are required to submit a <a href="https://studentaidbc.ca/sites/all/files/school-officials/confirmation-distance-eligibility.pdf" target="_blank">Confirmation of StudentAid BC Distance Education Eligibility form</a> and supporting documentation. If it is not received with your application, it will not be reviewed.</i></small>'
       )
     );
     $form['program_information']['row2']['program_information__practice_education'] = array(
@@ -1707,7 +1740,7 @@ class SabcDesignationForm extends FormBase
 
     foreach ($form_input as $key => $input) {
 
-      if ($key != 'file_calendar' && $key != 'file_outline' && $key != 'file_additional_info') {
+      if ($key != 'file_calendar' && $key != 'file_outline' && $key != 'file_additional_info' && $key != 'program_eligibility_requirements') {
         $new_section = explode("__", $key);
 
         if (!empty($input) && strtoupper($new_section[0] != 'G-RECAPTCHA-RESPONSE') && strtoupper($new_section[0]) != "HPOT" && strtoupper($new_section[0]) != "OP" && strtoupper($new_section[0]) != "FORM_BUILD_ID" && strtoupper($new_section[0]) != "FORM_ID" && strtoupper($new_section[0]) != "FORM_TOKEN") {

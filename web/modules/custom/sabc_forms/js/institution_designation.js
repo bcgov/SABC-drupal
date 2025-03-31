@@ -118,9 +118,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
           jQuery(this).removeClass('js-form-required form-required');
         });
 
-      jQuery("#regulatory_information__institution_is_regulated").show();
-
-
         if(jQuery(this).val() == "B.C. Private"){ //BC
             jQuery("#regulatory_information_bc").show();
             jQuery("#regulatory_information_bc input[type='radio']").attr('disabled', false);
@@ -139,14 +136,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if(jQuery(this).val() == "Out of Province"){ //Out of Province
             jQuery("#regulatory_information_out_province").show();
             jQuery("#regulatory_information_out_province input[type='radio']").attr('disabled', false);
-
             jQuery("#regulatory_information__institution_is_regulated").hide();
-
         }
 
         if(jQuery(this).val() == "United States") { //US
           jQuery("#regulatory_information_us").show();
           jQuery("#regulatory_information__institution_is_regulated").hide();
+          jQuery('#edit-regulatory-information-institution-approved-for-title-iv-code--wrapper').attr('required',true);
 
             var $titleIvCode = jQuery("#regulatory_information__title_iv_code");
             var $notEligible = jQuery("#regulatory_information__not_eligible");

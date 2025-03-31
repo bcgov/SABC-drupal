@@ -118,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
           jQuery(this).removeClass('js-form-required form-required');
         });
 
+      jQuery("#regulatory_information__institution_is_regulated").show();
+
         if(jQuery(this).val() == "B.C. Private"){ //BC
             jQuery("#regulatory_information_bc").show();
             jQuery("#regulatory_information_bc input[type='radio']").attr('disabled', false);

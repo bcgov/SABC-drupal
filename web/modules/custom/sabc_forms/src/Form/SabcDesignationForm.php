@@ -93,7 +93,7 @@ class SabcDesignationForm extends FormBase
         'International Medical' => 'International Medical'
       ),
       '#required' => TRUE,
-      '#attributes' => array('class' => array('col-sm-4', 'inline'), 'id' => 'institution_type'),
+      '#attributes' => array('class' => array('col-sm-12', 'inline'), 'id' => 'institution_type'),
       '#prefix' => Markup::create('<div class="col">'),
       '#suffix' => Markup::create('</div>'),
     );
@@ -512,7 +512,7 @@ class SabcDesignationForm extends FormBase
     //Title IV Code
     $form['regulatory_information']['us_institution']['regulatory_information__institution_approved_for_title_iv_code'] = array(
       '#type' => 'radios',
-      '#required' => true,
+      '#required' => false,
       '#attributes' => array('id' => 'regulatory_information__institution_approved_for_title_iv_code'),
       '#title' => Markup::create('Is your institution approved for Title IV funding by the US Department of Education?'),
       '#prefix' => Markup::create('<div class="col-md-6" id="regulatory_information__institution_approved_for_title_iv_code">'),
@@ -1905,6 +1905,18 @@ class SabcDesignationForm extends FormBase
   public function validateForm(array &$form, FormStateInterface $form_state)
   {
     parent::validateForm($form, $form_state);
+
+    $institution_type = $form_state->getValue('institution_information__institution_type');
+    $title_iv_approved = $form_state->getValue('regulatory_information__institution_approved_for_title_iv_code');
+    $title_iv_code = $form_state->getValue('regulatory_information__title_iv_code');
+
+    if ($institution_type === 'United States' && empty($title_iv_approved) ) {
+      $form_state->setErrorByName('regulatory_information__institution_approved_for_title_iv_code', $this->t('Please select if your institution is approved for Title IV funding by the US Department of Education.'));
+    }
+
+    if ($institution_type === 'United States' && $title_iv_approved === 'Yes' && empty($title_iv_code)) {
+      $form_state->setErrorByName('regulatory_information__title_iv_code', $this->t('Please provide your Title IV code.'));
+    }
 
     \Drupal::logger('sabc_forms')->notice("Validation entered");
 

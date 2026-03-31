@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     jQuery("#program_not_eligible8").hide();
     jQuery("#program_not_eligible8_1").hide();
     jQuery("#apply_all_program_dates_container").hide();
-    jQuery("#regulatory_information__international_institution_us_dept_edu_iv_title").hide();
 
     jQuery("#institution_sabc_code").hide();
     jQuery("#regulatory_information_bc").hide();
@@ -165,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             jQuery("#regulatory_information_international input[type='radio']").attr('disabled', false);
 
             jQuery("#regulatory_information__institution_is_regulated").hide();
-            jQuery("#regulatory_information_us").show();
         }
 
         if(jQuery(this).val() == "International Medical"){ //International Medical
@@ -1073,15 +1071,6 @@ jQuery(window).on('load', function() {
   }
   */
 
-  jQuery("#regulatory_information__international_institution_us_dept_edu_iv_title").hide();
-  jQuery("input[name='regulatory_information__international_institution_listed_with[U.S. Department of Education has approved for Title IV funding]']").click(function(){
-    //if( jQuery(this).is(':checked') == true && jQuery("#institution_type").val() == 'International'){
-    if( jQuery(this).is(':checked') == true ){
-      jQuery("#regulatory_information__international_institution_us_dept_edu_iv_title").show();
-    }else {
-      jQuery("#regulatory_information__international_institution_us_dept_edu_iv_title").hide();
-    }
-  });
 
 
   jQuery("#regulatory_information__international_medical_institution_us_dept_edu_iv_title").hide();

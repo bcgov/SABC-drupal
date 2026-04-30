@@ -471,8 +471,21 @@ class SabcDesignationForm extends FormBase
         'My institution is not listed with any of these options' => '&nbsp;My institution is not listed with any of these options',
         'International Association of Universities (website or handbook)' => '&nbsp;International Association of Universities (website or handbook)',
         'Association of Commonwealth Universities' => '&nbsp;Association of Commonwealth Universities',
-        'Europa World of Learning: The International Guide to the Academic World' => '&nbsp;Europa World of Learning: The International Guide to the Academic World'
+        'Europa World of Learning: The International Guide to the Academic World' => '&nbsp;Europa World of Learning: The International Guide to the Academic World',
+        'U.S. Department of Education has approved for Title IV funding' => '&nbsp;U.S. Department of Education has approved for Title IV funding'
       )
+    );
+    $form['regulatory_information']['international_institution']['row3'] = array(
+      '#type' => 'item',
+      '#prefix' => Markup::create('<div class="row">'),
+      '#suffix' => Markup::create('</div>'),
+    );
+
+    $form['regulatory_information']['international_institution']['row3']['regulatory_information__international_institution_us_dept_edu_iv_title'] = array(
+      '#type' => 'textfield',
+      '#title' => Markup::create('Please provide your Title IV code in the box below:'),
+      '#prefix' => Markup::create('<div class="col-md-6" id="regulatory_information__international_institution_us_dept_edu_iv_title">'),
+      '#suffix' => Markup::create('</div>')
     );
 
 

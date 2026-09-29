@@ -56,14 +56,13 @@ function sabc_preprocess_block(&$variables) {
 function sabc_preprocess_page(&$variables) {
   // Drupal 11 introduced placeholder rendering for block plugins
   // Render the side menu before Twig checks whether the side bar is empty
-  $sidebar_blocks = [
-    'sabcprimary_sidemenu',
-    'formslibrarysubnav',
-  ];
+  foreach (['sidebar_first', 'sidebar_second'] as $region) {
+    if (empty($variables['page'][$region])) {
+      continue;
+    }
 
-  foreach ($sidebar_blocks as $block_id) {
-    if (isset($variables['page']['sidebar_first'][$block_id])) {
-      $variables['page']['sidebar_first'][$block_id]['#create_placeholder'] = FALSE;
+    foreach (Drupal\Core\Render\Element::children($variables['page'][$region]) as $block_id) {
+      $variables['page'][$region][$block_id]['#create_placeholder'] = FALSE;
     }
   }
 }

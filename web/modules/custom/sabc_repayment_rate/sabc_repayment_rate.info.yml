@@ -1,7 +1,7 @@
 name : SABC Repayment Rate Lookup
 description : Repayment Rate Lookup
 #core: 8.x
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 package: 'SABC Modules'
 type: module
 libraries:

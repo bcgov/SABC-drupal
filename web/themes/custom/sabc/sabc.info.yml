@@ -1,8 +1,8 @@
 name: sabc
 type: theme
 description: 'Student Aid BC Bootstrap4 Subtheme'
-core: 10.x
-core_version_requirement: ^9 || ^10
+#core: 10.x
+core_version_requirement: ^10 || ^11
 base theme: bootstrap4
 
 # Stylesheets.

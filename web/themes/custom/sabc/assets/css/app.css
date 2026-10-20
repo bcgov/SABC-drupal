@@ -23894,7 +23894,8 @@ body .topbar-secondary + main {
   background-repeat: repeat-x;
 }
 
-@media print {
+/* commented out print styles. It hid all page content when printing */
+/* @media print {
   body * {
     visibility: hidden;
   }
@@ -23907,7 +23908,7 @@ body .topbar-secondary + main {
   .printing-area * {
     visibility: visible;
   }
-}
+} */
 
 .menu {
   list-style: none;

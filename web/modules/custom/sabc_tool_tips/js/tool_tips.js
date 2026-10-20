@@ -23,7 +23,8 @@
 				if(data != false){
 
 					//PARSE JSON RESPONSE
-					var obj = jQuery.parseJSON(data);
+					// var obj = jQuery.parseJSON(data);
+					var obj = JSON.parse(data);
 
 					//LOCATE ELEMENTS BASED ON CLASSNAME AND INJECT VALUE INTO DATA-ORIGINAL-TITLE
 					jQuery.each(obj, function(i, val) {

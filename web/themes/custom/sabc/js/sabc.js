@@ -17,9 +17,21 @@
   Drupal.behaviors.preventPDFInBrowser = {
     attach: function (context, settings) {
       // Force user to download fillable PDF's and not open in browser
+      // $(".prevent-left-click").click(function(e){
+      //   e.preventDefault();
+      //   $("#preventLeftClickModal").modal('show');
+      // });
+
       $(".prevent-left-click").click(function(e){
+        var $modal = $("#preventLeftClickModal");
+
+        // If no modal is found, allow the default link behavior
+        if (!$modal.length) {
+          return;
+        }
+
         e.preventDefault();
-        $("#preventLeftClickModal").modal('show');
+        $modal.modal("show");
       });
     }
   }

@@ -188,20 +188,20 @@ body .topbar-secondary + main {
 
 
 
+// commented out print styles. It hid all page content when printing
+// @media print {
+//   body * {
+//     visibility: hidden;
+//   }
 
-@media print {
-  body * {
-    visibility: hidden;
-  }
+//   .printing-area {
+//     visibility: visible;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
 
-  .printing-area {
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    * {
-      visibility: visible;
-    }
-  }
-}
+//     * {
+//       visibility: visible;
+//     }
+//   }
+// }

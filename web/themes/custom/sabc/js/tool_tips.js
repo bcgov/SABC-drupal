@@ -26,13 +26,14 @@
 			  data: v,
 			  url: '/ajax/tool-tips'
 			}).done(function( data ) {
-				console.log(data);
+				//console.log(data);
 
 				//MAKE SURE WE HAVE DATA BACK
 				if(data != false){
 
 					//PARSE JSON RESPONSE
-					var obj = jQuery.parseJSON(data);
+					// var obj = jQuery.parseJSON(data);
+					var obj = JSON.parse(data);
 
 					//LOCATE ELEMENTS BASED ON CLASSNAME AND INJECT VALUE INTO DATA-ORIGINAL-TITLE
 					jQuery.each(obj, function(i, val) {

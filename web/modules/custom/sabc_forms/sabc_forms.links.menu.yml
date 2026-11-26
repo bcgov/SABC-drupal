@@ -10,3 +10,9 @@ sabc_forms.private_data:
   parent: sabc_forms.admin
   route_name: sabc_forms.sabc_private_data_form
   menu_name: sabc_forms
+sabc_forms.ministry_settings:
+  title: 'Manage SABC Ministry Name'
+  description: 'Configure the Ministry name.'
+  parent: system.admin_config_system
+  route_name: sabc_forms.sabc_ministry_settings_form
+  menu_name: sabc_forms

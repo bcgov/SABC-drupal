@@ -2,6 +2,7 @@
 
 namespace Drupal\sabc_forms\Form;
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Markup;
@@ -1812,17 +1813,18 @@ class SabcDesignationForm extends FormBase
     //$to = 'hemantsanvaria@gmail.com';
     $to_primary_contact = $form_input['institution_contacts__primary_contact_email'];
 
+    $ministry_name = Html::escape(SabcMinistrySettingsForm::getMinistryName());
     $message_applicant ='
         <p>Institution Official,</p>
 
-        <p>Thank you for your designation application, this email is to confirm it has been received by the Ministry of Post-Secondary Education and Future Skills.</p>
+        <p>Thank you for your designation application, this email is to confirm it has been received by the ' . $ministry_name . '.</p>
         <p>Please allow approximately 4 - 6 weeks for review and processing time. We will contact you with the outcome once our review is complete.</p>
         <p>Thank you,</p>
 
         <p>
         Institution and Program Designation Team<br>
         StudentAid BC<br>
-        Ministry of Post-Secondary Education and Future Skills<br>
+        ' . $ministry_name . '<br>
         E-Mail: designat@gov.bc.ca<br>
         </p>';
 

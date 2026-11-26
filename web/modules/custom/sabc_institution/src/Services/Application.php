@@ -2,6 +2,7 @@
 
 namespace Drupal\sabc_institution\Services;
 
+use Drupal\sabc_forms\Form\SabcMinistrySettingsForm;
 use Drupal\sabc_institution\Services\Aeit;
 
 /**
@@ -144,7 +145,7 @@ class Application extends Aeit {
       if (is_array($ws->schoolDetails)) {
         foreach ($ws->schoolDetails as $school) {
           if ($school->DesignationStatus == 'Under Review') {
-            $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the Ministry of Post-Secondary Education and Future Skills. The results of the review will determine whether this school will continue to be eligible for designation.';
+            $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the ' . SabcMinistrySettingsForm::getMinistryName() . '. The results of the review will determine whether this school will continue to be eligible for designation.';
           }
 
           if ($school->DesignationStatus == 'Pending') {
@@ -162,7 +163,7 @@ class Application extends Aeit {
         }
       } else {
         if ($ws->schoolDetails->DesignationStatus == 'Under Review') {
-          $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the Ministry of Post-Secondary Education and Future Skills. The results of the review will determine whether this school will continue to be eligible for designation.';
+          $ws->schoolDetails->DesignationStatusDescript = 'This school is currently being reviewed by the ' . SabcMinistrySettingsForm::getMinistryName() . '. The results of the review will determine whether this school will continue to be eligible for designation.';
         }
 
         if ($ws->schoolDetails->DesignationStatus == 'Pending') {
